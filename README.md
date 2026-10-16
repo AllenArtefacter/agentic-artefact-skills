@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.1**。
+跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.2**。
 
 ## 给 agent 一个链接即可安装
 
@@ -14,13 +14,13 @@
 
 也可以将两句话合并发送。安装 skill 与 Google 授权是两个步骤；不需要用户手动 clone 或复制文件。执行 agent 需要联网和本地文件写入能力，私有仓库还需要 GitHub 访问权限。
 
-## 安装
+## 安装时 agent 会做什么
 
-面向 agent 的完整步骤见 [INSTALL.md](INSTALL.md)。以下为手动安装方式。
+安装执行步骤统一放在 [INSTALL.md](INSTALL.md)，本 README 只介绍使用方式。用户无需下载 ZIP、手动 clone 或复制文件。
 
-下载 `dist/project-collaboration-v0.7.1.zip`，解压后将完整的 `project-collaboration` 目录放到宿主的 skills 目录。Codex 可使用 `~/.codex/skills/`；其他 agent 按各自技能加载方式安装。仓库也保留了 `skills/project-collaboration/` 源码，可直接复制。安装不会启动后台服务。
+Agent 会检查宿主、安装 skill，并检查 Google 接入工具。默认使用 **gws**；**gog 是可选替代，不要求同时安装**。缺少所需依赖时，agent 列出具体安装方案，按全局限制询问用户，确认后自行执行并验证。Python 3.10+ 仅在运行本地 Python 脚本时需要。
 
-需要 Python 3.10+ 运行本地脚本；Google API 路线需要已安装并配置 OAuth 的 [gws](https://github.com/googleworkspace/cli)。凭据不写入项目文件，也不提交到仓库。API 启用、OAuth 应用及公司访问策略由接入维护者配置一次，同事分别用自己的 Google 账号授权。
+工具安装完成后，agent 发起 Google 登录，用户在浏览器授权。安装 CLI 不会自动提供 OAuth 应用配置或启用 API；这些由团队接入维护者配置一次，同事使用自己的 Google 账号登录。Agent 会分别报告 skill 已安装、工具就绪、授权成功、项目可访问，不能将它们混为“安装成功”。
 
 ## 两个入口
 

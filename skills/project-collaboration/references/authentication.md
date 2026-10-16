@@ -6,6 +6,10 @@ initialize 和 work 共用这个前置步骤。已有本机 gws 配置时优先�
 
 若用户明确没有 Cloud/IT 权限，且当前问题需要项目级配置，改用 [浏览器接入](browser-access.md) 验证已有网页访问。普通 Google 网页登录不依赖本项目启用 Drive API；仍受实际文件权限约束。不要继续把 IAM/API 启用清单交给普通成员。以下是选择 API 接入时的流程。
 
+## 0. 工具依赖
+
+先执行 [dependencies.md](dependencies.md)：检查实际可用工具，缺少工具时由 agent 提出安装方案、取得确认并执行，不直接把安装任务交给用户。以下命令针对 gws；gog 或其他连接器按其自身文档认证，不能混用命令或凭据。
+
 ## 1. 检查
 
 Agent 执行 `gws auth status`，必要时查看 `gws auth login --help`。不要只因配置文件存在就判断已授权。有效登录且具有本次所需权限时直接复用，并用后续只读探测核验实际账号和 folder。
@@ -57,7 +61,7 @@ gws 自行管理本机凭据。后续读写优先直接调用已登录的 gws；
 
 `drive_reader.py` 是独立的只读备选工具，当前不自动读取 gws 加密凭据。其 token-env/credentials-file 流程只用于用户已选择该接入方式的环境，不能在 gws 登录成功后当作第二次必需授权。使用 gws 时也要执行项目范围过滤、分页、读取新版本和写后验证；Python reader 的本地 inbox/ack 不会自动覆盖直接 gws 调用，不得声称它已经记录了本次同步。
 
-如果 gws 未安装、OAuth client 缺失或执行宿主不支持维持本机 OAuth 回调，报告具体缺项并给最小解决办法。只有 agent 确实无法执行时才请用户手动运行命令。已有可用连接器和授权可沿用，不创建多套重复凭据。
+如果 gws 未安装，先按 dependencies.md 处理安装；若 OAuth client 缺失或执行宿主不支持维持本机 OAuth 回调，报告具体缺项并给最小解决办法。只有 agent 确实无法执行时才请用户手动运行命令。已有可用连接器和授权可沿用，不创建多套重复凭据。
 
 参考：[gws authentication](https://github.com/googleworkspace/cli#authentication)。本机已核对 login 支持 --services 和 status 子命令；本次技能修改未发起真实重新登录。
 

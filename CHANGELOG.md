@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.2 — 2026-10-16
+
+- Make INSTALL.md the single agent installation procedure; remove manual ZIP instructions from README.
+- Add agent-run dependency checks, confirmed installation and separate access validation.
+- Use gws by default; gog is optional, not an additional dependency.
+
 ## 0.7.1 — 2026-10-16
 
 - Add project-root access boundary and explicit confirmation before all mutations.
