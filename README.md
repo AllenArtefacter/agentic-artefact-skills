@@ -1,0 +1,67 @@
+# Agentic Artefact Skills
+
+跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.0**。
+
+## 安装
+
+下载 `dist/project-collaboration-v0.7.0.zip`，解压后将完整的 `project-collaboration` 目录放到宿主的 skills 目录。Codex 可使用 `~/.codex/skills/`；其他 agent 按各自技能加载方式安装。仓库也保留了 `skills/project-collaboration/` 源码，可直接复制。安装不会启动后台服务。
+
+需要 Python 3.10+ 运行本地脚本；Google API 路线需要已安装并配置 OAuth 的 [gws](https://github.com/googleworkspace/cli)。凭据不写入项目文件，也不提交到仓库。API 启用、OAuth 应用及公司访问策略由接入维护者配置一次，同事分别用自己的 Google 账号授权。
+
+## 两个入口
+
+### initialize
+
+> 使用 project-collaboration 初始化这个项目 folder。项目背景是……，成员和职责是……。
+
+Agent 检查身份和目录，准备项目上下文、人员、状态、计划及任务入口，发布后回读验证。已有项目采用补齐流程，不覆盖重建。生成本地草稿不代表已发布。
+
+### work
+
+> 我是……，邮箱是……。使用 project-collaboration 对这个项目执行 work，告诉我目前需要做什么。
+
+Agent 读取个人 ME.md、团队 Project 和 STATUS，定位本人负责/参与/审核任务，只读取本轮需要的资料。完成授权的工作后更新产出和状态，回读核验。
+
+## 默认资料布局
+
+团队正文使用原生 **Google Docs**；结构化任务表优先 **Google Sheets**；汇报使用 **Google Slides**。Sheets 不可用时允许 Docs 任务表并说明限制。Project 和 STATUS 是逻辑名称，不要求 `.md` 后缀。
+
+```text
+Project                 Google Doc：背景、范围、成员与职责
+STATUS                  Google Doc：当前进展、阻塞、下一步
+00_Start_Here/          项目索引及入口
+01_Management/          工作计划、任务和决策
+02_Meetings/            内部、客户、catchup 纪要
+04_Deliverables/        报告及正式产出
+05_Materials/           输入与参考资料
+90_Archive/             旧版和归档
+```
+
+尊重已有项目实际结构，不自动补回被删目录。通用说明、流程和空白模板只放在 skill 内。离线空间全部属于个人；个人草稿不会自动上传。
+
+项目索引是低频维护的导航。文件版本、修改时间由 Drive 管理；当前用户、读取进度、同步游标和机器映射保存在各自本机。
+
+## 能力与限制
+
+- agent 可通过 gws 进行已授权的 Drive / Docs / Sheets / Slides 操作；需要授权时由 agent 启动登录并引导用户浏览器完成。
+- 本地 scaffold / initialize 脚本仅生成 Markdown / JSON 草稿，发布时转换或填充为原生 Google 文件。
+- 独立 Python reader 支持项目范围清单、内容读取、全量清单差异和本地确认，不执行云端写入；它与 gws 使用独立凭据入口和同步状态。
+- 浏览器是 API 受阻时的备用入口，不能绕过文件权限。
+- 不含通用的一键云端部署器、事务化写入协调器、Changes API 增量 worker 或后台通知服务。任务分工不等于访问权限。
+- 单账号 Drive 读写、文件移动和原生 Docs 转换已在项目试点验证；不代表任意公司策略或多账号场景已通过。单元测试使用模拟 API。
+
+## 本地草稿与测试
+
+```sh
+python3 skills/project-collaboration/scripts/scaffold.py --space team --output /absolute/path/new-draft --name "Example project" --folder GOOGLE_FOLDER_URL
+python3 skills/project-collaboration/scripts/initialize.py --brief /absolute/path/brief.json --output /absolute/path/filled-draft
+python3 -m unittest discover -s tests -p 'test_project_collaboration.py'
+```
+
+brief 结构见 `skills/project-collaboration/assets/initialize-brief.json`。输出目录必须不存在。
+
+[Skill 入口](skills/project-collaboration/SKILL.md) · [授权](skills/project-collaboration/references/authentication.md) · [空间模型](skills/project-collaboration/references/workspace-model.md) · [读取器](skills/project-collaboration/references/google-reader.md)
+
+## 发布内容
+
+只包含可复用 skill、空白模板、脚本、测试和说明；不包含客户资料、真实人员名单、项目 ID、个人 ME.md 或任何登录凭据。原仓库许可证见 LICENSE。

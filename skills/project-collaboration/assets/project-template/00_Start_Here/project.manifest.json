@@ -1,0 +1,44 @@
+{
+  "schema_version": 4,
+  "project_id": "{{PROJECT_ID}}",
+  "project_name": "{{PROJECT_NAME}}",
+  "team_root_id_or_url": "{{PROJECT_FOLDER}}",
+  "shared_drive_id": null,
+  "space": "online_team",
+  "initialization_status": "template_only",
+  "timezone": "Asia/Shanghai",
+  "canonical_files": {
+    "working_plan_id": null,
+    "project_control_id": null,
+    "project_context_id": null,
+    "project_status_id": null
+  },
+  "calendar": {
+    "id": null,
+    "authority": "schedule_and_attendance"
+  },
+  "external_release_root_id": null,
+  "control_steward": null,
+  "workstream_ids": [],
+  "sprint_enabled": false,
+  "sync_mode": "on_demand",
+  "authority": {
+    "task_status": "Project Control/Tasks",
+    "deliverable_status": "Project Control/Deliverables",
+    "content": "canonical_file_id",
+    "event_time": "Google Calendar",
+    "project_membership": "Project.md/personnel table",
+    "personal_identity": "Personal ME.md (declared source)"
+  },
+  "personal_settings": "Stored only in each member local workspace; do not list private folder IDs here.",
+  "required_team_context": [
+    {
+      "path": "Project.md",
+      "file_id_key": "project_context_id"
+    },
+    {
+      "path": "STATUS.md",
+      "file_id_key": "project_status_id"
+    }
+  ]
+}

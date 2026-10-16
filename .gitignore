@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Personal and runtime material
+projects/
+.env
+.env.*
+credentials*.json
+client_secret*.json
+token_cache.json
+credentials.enc
+.DS_Store
