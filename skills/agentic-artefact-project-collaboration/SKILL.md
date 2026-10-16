@@ -1,9 +1,13 @@
 ---
-name: project-collaboration
-description: Initialize an AI consulting project folder with context, vision and team responsibilities, or work in an existing Google Shared Drive project by reading current context, finding personal tasks and publishing traceable updates.
+name: agentic-artefact-project-collaboration
+description: Artefact team project collaboration only. Use when the user explicitly requests agentic-artefact-project-collaboration or identifies the work as an Artefact team/client project; initialize project context or work from shared Google Drive context and assigned tasks. Do not trigger for personal projects, generic project planning, or unrelated Google Drive work.
 ---
 
-# Project collaboration
+# Agentic Artefact Project Collaboration
+
+## Applicability / 适用范围
+
+This skill is for Artefact team/client projects. Invoke only when explicitly named by the user or when the user has clearly identified the current project as an Artefact team project. A company email, Google Drive link, project folder, or generic initialize/work request alone does not establish that scope. Do not apply this skill or its restrictions to unrelated personal projects. If the project identity is unclear, clarify before binding it; never assume every project of an Artefact employee is a team project.
 
 Provide two user-facing modes: **initialize** and **work**. These are skill workflow modes, not slash commands automatically installed in every agent host. Infer the mode from the user's request; the user need not memorize command syntax.
 

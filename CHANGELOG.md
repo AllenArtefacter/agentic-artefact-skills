@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.3 — 2026-10-16
+
+- Rename skill to agentic-artefact-project-collaboration.
+- Scope discovery metadata and instructions to explicitly identified Artefact team projects.
+- Add branded interface metadata and legacy-install migration instructions.
+
 ## 0.7.2 — 2026-10-16
 
 - Make INSTALL.md the single agent installation procedure; remove manual ZIP instructions from README.

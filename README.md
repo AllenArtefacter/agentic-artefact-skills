@@ -1,16 +1,16 @@
 # Agentic Artefact Skills
 
-跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.2**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.7.3**。
 
 ## 给 agent 一个链接即可安装
 
 把下面这句话发给 Codex / Claude Code 等支持本地 skills 的 agent：
 
-> 请安装 https://github.com/AllenArtefacter/agentic-artefact-skills 中的 project-collaboration skill，先读取仓库 INSTALL.md 并按指引执行。
+> 请安装 https://github.com/AllenArtefacter/agentic-artefact-skills 中的 agentic-artefact-project-collaboration skill，先读取仓库 INSTALL.md 并按指引执行。
 
 安装后加入已有项目：
 
-> 使用 project-collaboration 的 work 模式，项目是【Google Drive 文件夹链接】。我是【姓名】，邮箱【邮箱】，职责【职责】。
+> 使用 agentic-artefact-project-collaboration 的 work 模式，项目是【Google Drive 文件夹链接】。我是【姓名】，邮箱【邮箱】，职责【职责】。
 
 也可以将两句话合并发送。安装 skill 与 Google 授权是两个步骤；不需要用户手动 clone 或复制文件。执行 agent 需要联网和本地文件写入能力，私有仓库还需要 GitHub 访问权限。
 
@@ -26,13 +26,13 @@ Agent 会检查宿主、安装 skill，并检查 Google 接入工具。默认使
 
 ### initialize
 
-> 使用 project-collaboration 初始化这个项目 folder。项目背景是……，成员和职责是……。
+> 使用 agentic-artefact-project-collaboration 初始化这个项目 folder。项目背景是……，成员和职责是……。
 
 Agent 检查身份和目录，准备项目上下文、人员、状态、计划及任务入口，发布后回读验证。已有项目采用补齐流程，不覆盖重建。生成本地草稿不代表已发布。
 
 ### work
 
-> 我是……，邮箱是……。使用 project-collaboration 对这个项目执行 work，告诉我目前需要做什么。
+> 我是……，邮箱是……。使用 agentic-artefact-project-collaboration 对这个项目执行 work，告诉我目前需要做什么。
 
 Agent 读取个人 ME.md、团队 Project 和 STATUS，定位本人负责/参与/审核任务，只读取本轮需要的资料。完成授权的工作后更新产出和状态，回读核验。
 
@@ -73,14 +73,14 @@ STATUS                  Google Doc：当前进展、阻塞、下一步
 ## 本地草稿与测试
 
 ```sh
-python3 skills/project-collaboration/scripts/scaffold.py --space team --output /absolute/path/new-draft --name "Example project" --folder GOOGLE_FOLDER_URL
-python3 skills/project-collaboration/scripts/initialize.py --brief /absolute/path/brief.json --output /absolute/path/filled-draft
+python3 skills/agentic-artefact-project-collaboration/scripts/scaffold.py --space team --output /absolute/path/new-draft --name "Example project" --folder GOOGLE_FOLDER_URL
+python3 skills/agentic-artefact-project-collaboration/scripts/initialize.py --brief /absolute/path/brief.json --output /absolute/path/filled-draft
 python3 -m unittest discover -s tests -p 'test_project_collaboration.py'
 ```
 
-brief 结构见 `skills/project-collaboration/assets/initialize-brief.json`。输出目录必须不存在。
+brief 结构见 `skills/agentic-artefact-project-collaboration/assets/initialize-brief.json`。输出目录必须不存在。
 
-[Skill 入口](skills/project-collaboration/SKILL.md) · [授权](skills/project-collaboration/references/authentication.md) · [空间模型](skills/project-collaboration/references/workspace-model.md) · [读取器](skills/project-collaboration/references/google-reader.md)
+[Skill 入口](skills/agentic-artefact-project-collaboration/SKILL.md) · [授权](skills/agentic-artefact-project-collaboration/references/authentication.md) · [空间模型](skills/agentic-artefact-project-collaboration/references/workspace-model.md) · [读取器](skills/agentic-artefact-project-collaboration/references/google-reader.md)
 
 ## 发布内容
 

@@ -6,14 +6,14 @@
 
 仓库：https://github.com/AllenArtefacter/agentic-artefact-skills
 
-技能目录：`skills/project-collaboration/`，入口：`SKILL.md`。
+技能目录：`skills/agentic-artefact-project-collaboration/`，入口：`SKILL.md`。
 
 先读取技能入口与相关安装材料，确认与用户请求一致。安装整个技能目录，保留 scripts、references、assets 等相对路径，不能只复制 SKILL.md。仓库 README、测试、dist 不需要放进技能目录。
 
 优先使用当前宿主提供的 GitHub skill 安装器，传入上述仓库及技能目录。Codex 可使用自带 skill-installer 的 install-skill-from-github.py：
 
 ```sh
-python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo AllenArtefacter/agentic-artefact-skills --path skills/project-collaboration
+python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo AllenArtefacter/agentic-artefact-skills --path skills/agentic-artefact-project-collaboration
 ```
 
 这里的路径占位符必须根据宿主实际安装位置解析，不可原样运行。
@@ -24,7 +24,7 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 ## 2. 检查并安装接入依赖
 
-读取 [依赖安装流程](skills/project-collaboration/references/dependencies.md) 并执行，不能只告诉用户“需要预先安装 gws”。默认检查 gws；已有可用 gog 或连接器时先验证是否覆盖本次所需操作，不要求同时安装两套工具。
+读取 [依赖安装流程](skills/agentic-artefact-project-collaboration/references/dependencies.md) 并执行，不能只告诉用户“需要预先安装 gws”。默认检查 gws；已有可用 gog 或连接器时先验证是否覆盖本次所需操作，不要求同时安装两套工具。
 
 缺少依赖时列出实际缺项、安装方式和将修改的位置，询问用户后由 agent 执行安装并验证。只安装本次需要的组件，不顺带安装全部 Google skills。不把工具安装成功等同于 OAuth 或项目访问成功。
 
@@ -41,3 +41,7 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 先读取 skill 的授权指南，检查本机工具和当前账号。需要登录时由 agent 发起支持的 OAuth 流程，返回工具实际生成的授权链接，由用户在浏览器完成；不能编造授权地址。缺失工具时按其官方安装文档处理。API 未启用、公司策略限制、文件权限不足分别报告，不能反复登录来替代修复。
 
 将个人身份和项目绑定保存在本机个人空间。读取团队 Project、STATUS 和任务入口，匹配本人任务，并按任务需要读取会议、材料及产出。给用户简短说明项目目标、现状、本人待办和阻塞。不得将加入已有项目误执行为 initialize，不自动重建团队文件夹或改写成员名单。
+
+## 从旧名称迁移
+
+旧版本技能名为 `project-collaboration`。安装新版前检查宿主个人技能目录是否仍有旧版本；说明新旧名称并询问用户是否迁移。确认后将旧目录备份到技能扫描目录之外，再安装新版，避免旧的通用描述继续触发。未获确认则不删除或更改旧安装，明确提示旧版仍可能被加载。不要保留同时启用的同内容别名。
