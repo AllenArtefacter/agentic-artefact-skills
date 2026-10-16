@@ -40,6 +40,8 @@ If the user has no Cloud/IT administrator support and the API route is blocked b
 
 ## API route prerequisite: agent-run authentication
 
+Read [team-google-setup.md](references/team-google-setup.md) for the team OAuth project, client configuration onboarding and Allen contact. The agent must guide setup and browser consent; the repository does not bundle client credentials.
+
 Before either mode accesses Google, check the tool using [dependencies.md](references/dependencies.md). If required tools are missing, propose their installation and, after user confirmation, execute and verify it; gws is the default, gog is an optional alternative, never a second mandatory dependency. Then follow [authentication.md](references/authentication.md). Prefer existing local gws configuration: agent checks `gws auth status`, starts `gws auth login --services drive,sheets` when needed, keeps the interactive login process alive, and returns its actual consent URL for the user to open in their browser. The agent then verifies login, current identity and target folder access and resumes the requested mode. Do not delegate terminal startup to the user when the agent can execute it; do not request tokens in chat.
 
 Ordinary teammates are not assumed to be Google Cloud administrators. Diagnose 403 from actual error details and project configuration; do not send members to IAM or repeatedly re-login for a consumer-project issue. For gws 0.22.5 consumer-project failures, use the verified OAuth-only compatibility path in authentication.md before concluding IAM is needed. Follow that guide to distinguish API enablement from identity/ACL issues and prepare a maintainer handoff only for the actual remaining blocker.

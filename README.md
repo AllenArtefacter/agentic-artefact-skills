@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.7.3**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.7.4**。
 
 ## 给 agent 一个链接即可安装
 
@@ -21,6 +21,10 @@
 Agent 会检查宿主、安装 skill，并检查 Google 接入工具。默认使用 **gws**；**gog 是可选替代，不要求同时安装**。缺少所需依赖时，agent 列出具体安装方案，按全局限制询问用户，确认后自行执行并验证。Python 3.10+ 仅在运行本地 Python 脚本时需要。
 
 工具安装完成后，agent 发起 Google 登录，用户在浏览器授权。安装 CLI 不会自动提供 OAuth 应用配置或启用 API；这些由团队接入维护者配置一次，同事使用自己的 Google 账号登录。Agent 会分别报告 skill 已安装、工具就绪、授权成功、项目可访问，不能将它们混为“安装成功”。
+
+## 团队 Google 接入
+
+团队 GCP project：`gen-lang-client-0444403763`。Agent 会按 [OAuth 接入指引](skills/agentic-artefact-project-collaboration/references/team-google-setup.md) 检查客户端配置、引导浏览器授权并验证项目访问。首次缺少客户端配置时，联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com) 获取；不需要每位同事创建 GCP project。
 
 ## 两个入口
 
@@ -84,4 +88,4 @@ brief 结构见 `skills/agentic-artefact-project-collaboration/assets/initialize
 
 ## 发布内容
 
-只包含可复用 skill、空白模板、脚本、测试和说明；不包含客户资料、真实人员名单、项目 ID、个人 ME.md 或任何登录凭据。原仓库许可证见 LICENSE。
+只包含可复用 skill、空白模板、脚本、测试和说明；不包含客户资料、项目成员名单、客户项目文件夹 ID、个人 ME.md 或任何登录凭据。包含经维护者指定公开的团队 GCP project ID 和接入联系邮箱。原仓库许可证见 LICENSE。

@@ -34,7 +34,9 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 安装本身无需 Google 凭据，不会启动监听器，也不会自动加入项目。不为验证安装而修改真实项目。不要求用户把 token 发到聊天或提交仓库。
 
-## 4. 加入已有项目
+## 4. 团队 OAuth 配置与加入项目
+
+先读取 [团队 Google 接入](skills/agentic-artefact-project-collaboration/references/team-google-setup.md)。团队 GCP project ID 为 `gen-lang-client-0444403763`，接入问题联系 [Allen](mailto:allen.liang@artefact.com)。Agent 必须检查团队客户端配置，缺失时指引获取本地 JSON；经确认配置后启动真实授权流程并返回链接。不得仅让用户自己运行登录命令，也不得把 project ID 当作 OAuth 客户端配置。
 
 若用户已给出项目文件夹及身份，继续按安装后的 skill 执行 work；否则简短提示用户提供 Google Drive 文件夹链接、姓名、邮箱和职责。已有信息直接复用。
 

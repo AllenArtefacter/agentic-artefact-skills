@@ -1,5 +1,7 @@
 # Agent 执行 Google 授权
 
+**团队配置入口：** 先读取 [team-google-setup.md](team-google-setup.md)。本团队 OAuth 应用所属 GCP project 为 `gen-lang-client-0444403763`；配置缺失或接入失败时指引用户联系 allen.liang@artefact.com。不得仅凭 project ID 发起登录，也不得自动给普通成员新建 GCP project。
+
 initialize 和 work 共用这个前置步骤。已有本机 gws 配置时优先复用；需要重新登录时由 agent 执行命令，用户只负责在浏览器选择账号并确认 Google 授权。不要把终端操作清单交回用户，也不要请求用户粘贴 access token、refresh token 或授权回调 code。
 
 ## 没有管理员支持时

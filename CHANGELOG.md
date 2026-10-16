@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.4 — 2026-10-16
+
+- Document the team OAuth project and Allen support contact.
+- Require agent-guided client setup, browser consent and scoped read verification.
+- Clarify that client credentials are distributed separately, not bundled.
+
 ## 0.7.3 — 2026-10-16
 
 - Rename skill to agentic-artefact-project-collaboration.
