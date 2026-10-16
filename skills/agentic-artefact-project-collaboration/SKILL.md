@@ -34,19 +34,11 @@ For this Google Drive workflow, publish human-facing content in native Google fo
 
 Use a native project index to record canonical links and actual folder layout when the team prefers all-Google files; keep any machine JSON mapping in personal local state. Read/export native Docs through the available API. Migration preserves content, records new IDs, rewrites links, verifies readback and archives old files only after verification. Archived copies are not authoritative. Prefer targeted, revision-controlled native edits for ongoing work.
 
-## Access route
+## Google access: host integration first
 
-If the user has no Cloud/IT administrator support and the API route is blocked by project setup, use [browser-access.md](references/browser-access.md) with the user's normal Google web session and project folder URL. Do not make Cloud API enablement a mandatory teammate task. Verify browser tools and actual web access; this route does not imply full inventory/background sync. The same initialize/work flows apply through visible UI operations.
+Follow [dependencies.md](references/dependencies.md) before accessing Google. Prefer the current host's connected Google Drive / Workspace plugin, connector or MCP. If unavailable, guide the user to install/connect the host-supported integration, using discovery and installation tools where available. User completes Google consent and any host installation approval. Verify actual tools and scoped project reads before claiming readiness.
 
-## API route prerequisite: agent-run authentication
-
-Read [team-google-setup.md](references/team-google-setup.md) for the team OAuth project, client configuration onboarding and Allen contact. The agent must guide setup and browser consent; the repository does not bundle client credentials.
-
-Before either mode accesses Google, check the tool using [dependencies.md](references/dependencies.md). If required tools are missing, propose their installation and, after user confirmation, execute and verify it; gws is the default, gog is an optional alternative, never a second mandatory dependency. Then follow [authentication.md](references/authentication.md). Prefer existing local gws configuration: agent checks `gws auth status`, starts `gws auth login --services drive,sheets` when needed, keeps the interactive login process alive, and returns its actual consent URL for the user to open in their browser. The agent then verifies login, current identity and target folder access and resumes the requested mode. Do not delegate terminal startup to the user when the agent can execute it; do not request tokens in chat.
-
-Ordinary teammates are not assumed to be Google Cloud administrators. Diagnose 403 from actual error details and project configuration; do not send members to IAM or repeatedly re-login for a consumer-project issue. For gws 0.22.5 consumer-project failures, use the verified OAuth-only compatibility path in authentication.md before concluding IAM is needed. Follow that guide to distinguish API enablement from identity/ACL issues and prepare a maintainer handoff only for the actual remaining blocker.
-
-After gws authentication, use gws directly for authorized Google operations. The Python reader does not consume gws encrypted credentials; do not require a second token setup or export secrets just to use it. The gws path and Python reader have separate synchronization state.
+Do not require gws, gog, a custom GCP project or client JSON for the default path. These are optional fallbacks, not prerequisites. Only if the user chooses CLI access follow [cli-dependencies.md](references/cli-dependencies.md), [team-google-setup.md](references/team-google-setup.md) and [authentication.md](references/authentication.md). Browser fallback also requires user choice. Never assume every Google MCP provides identical operations or managed OAuth.
 
 ## initialize
 

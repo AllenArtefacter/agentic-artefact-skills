@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.7.4**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.0**。
 
 ## 给 agent 一个链接即可安装
 
@@ -14,17 +14,17 @@
 
 也可以将两句话合并发送。安装 skill 与 Google 授权是两个步骤；不需要用户手动 clone 或复制文件。执行 agent 需要联网和本地文件写入能力，私有仓库还需要 GitHub 访问权限。
 
-## 安装时 agent 会做什么
+## 安装与连接
 
-安装执行步骤统一放在 [INSTALL.md](INSTALL.md)，本 README 只介绍使用方式。用户无需下载 ZIP、手动 clone 或复制文件。
+[INSTALL.md](INSTALL.md) 是 agent 的统一安装入口。用户不需要手动下载 ZIP。
 
-Agent 会检查宿主、安装 skill，并检查 Google 接入工具。默认使用 **gws**；**gog 是可选替代，不要求同时安装**。缺少所需依赖时，agent 列出具体安装方案，按全局限制询问用户，确认后自行执行并验证。Python 3.10+ 仅在运行本地 Python 脚本时需要。
+1. Agent 安装 skill，检查当前宿主已有的 Google Drive / Workspace MCP 或连接器。
+2. 已连接则直接验证；未连接时，agent 提供安装/连接入口，并执行宿主允许且用户确认的配置。
+3. 用户完成必要的安装确认和 Google 浏览器授权，agent 验证指定项目访问后继续 work。
 
-工具安装完成后，agent 发起 Google 登录，用户在浏览器授权。安装 CLI 不会自动提供 OAuth 应用配置或启用 API；这些由团队接入维护者配置一次，同事使用自己的 Google 账号登录。Agent 会分别报告 skill 已安装、工具就绪、授权成功、项目可访问，不能将它们混为“安装成功”。
+**默认不需要 gws/gog、团队 OAuth JSON 或自行配置 GCP。** MCP/连接器的具体能力和认证方式以所选实现为准；没有合适集成时才询问是否使用 CLI 或浏览器备用路线。
 
-## 团队 Google 接入
-
-团队 GCP project：`gen-lang-client-0444403763`。Agent 会按 [OAuth 接入指引](skills/agentic-artefact-project-collaboration/references/team-google-setup.md) 检查客户端配置、引导浏览器授权并验证项目访问。首次缺少客户端配置时，联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com) 获取；不需要每位同事创建 GCP project。
+接入问题联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com)。自带 OAuth 的 CLI 备用方案仍保留在 [团队配置指南](skills/agentic-artefact-project-collaboration/references/team-google-setup.md)，不再作为新人默认步骤。
 
 ## 两个入口
 
@@ -67,7 +67,7 @@ STATUS                  Google Doc：当前进展、阻塞、下一步
 
 ## 能力与限制
 
-- agent 可通过 gws 进行已授权的 Drive / Docs / Sheets / Slides 操作；需要授权时由 agent 启动登录并引导用户浏览器完成。
+- 优先通过宿主 Google MCP/连接器执行已确认操作；按实际工具验证 Drive / Docs / Sheets / Slides 能力。gws/gog 仅为可选备用。
 - 本地 scaffold / initialize 脚本仅生成 Markdown / JSON 草稿，发布时转换或填充为原生 Google 文件。
 - 独立 Python reader 支持项目范围清单、内容读取、全量清单差异和本地确认，不执行云端写入；它与 gws 使用独立凭据入口和同步状态。
 - 浏览器是 API 受阻时的备用入口，不能绕过文件权限。

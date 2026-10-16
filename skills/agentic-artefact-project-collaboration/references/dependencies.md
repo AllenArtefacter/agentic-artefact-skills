@@ -1,28 +1,31 @@
-# 接入依赖检查与安装
+# Google 接入：优先宿主 MCP / 连接器
 
-本流程供仓库 INSTALL.md 和已安装 skill 的 initialize / work 共用。遵守 SKILL.md 的全局限制；安装或修改本机依赖前列出具体方案并取得确认。用户已明确确认同一安装方案时不重复询问。
+本 skill 的默认接入方式是宿主提供的 Google Drive / Google Workspace 插件、连接器或 MCP，不默认安装 gws/gog，也不默认要求团队 OAuth JSON 或 GCP 配置。MCP 是协议，不是唯一产品；不同实现的认证要求和能力不同。
 
-## 选择工具
+## 1. 检查已有连接
 
-- 默认使用 gws（Google Workspace CLI）。先检查可执行文件及 `gws --version`、`gws --help`；已有可用版本则复用，不自动升级。
-- gog 是另一个独立 CLI，不是 gws 的依赖。已有 gog 或其他已授权连接器时，按其实际帮助与文档确认是否支持本次 Drive / Docs / Sheets / Slides 操作。支持则可复用；不把 gws 命令直接套给 gog，不假定二者共享凭据。
-- 无可用接入工具时，默认准备 gws 安装方案。不要同时安装 gws 和 gog，也不要仅因机器上存在 gog 就认为已能读取项目。
-- Python 3.10+ 仅在执行本 skill 的 Python 脚本时需要。Node/npm 仅是 gws 的一种安装途径，不是使用预编译 gws 二进制的强制前置。
+识别当前宿主，检查实际可调用的 Google 工具及连接状态。已安装不等于已连接，已连接不等于支持所需操作。若已连接，复用，不启动第二套登录。
 
-## 由 agent 执行安装
+按本轮任务检查：指定文件夹元数据和范围内列举、原生文档读取，以及需要时的 Docs/Sheets/Slides 编辑能力。只读探测限制在用户指定项目及其子目录内；无 folder 链接时先索取，不通过整个 Drive 搜索来验证连接。不用试写验证权限。
 
-1. 检查操作系统、架构、现有工具与包管理器，不输出凭据。
-2. 查阅 [gws 上游安装说明](https://github.com/googleworkspace/cli#installation)，选择适合当前机器的方式。已有 Homebrew 时可用 `brew install googleworkspace-cli`；已有符合上游要求的 Node/npm 时可用 `npm install -g @googleworkspace/cli`；也可从上游 Releases 下载匹配系统和架构的预编译二进制到用户可写位置。具体以当前上游文档为准。
-3. 展示所选命令、组件、目标位置及是否需要 PATH 调整，询问用户确认。不要同时执行多个安装方案，不自动 sudo 或覆盖现有配置。
-4. 确认后由 agent 执行，检查退出状态，再运行 `gws --version` / `gws --help` 验证。若 PATH 尚未生效，使用实际安装绝对路径核验，报告所需后续步骤。
-5. 失败时报告具体错误。仅当当前宿主确实不能执行安装时，才将最小手动步骤交给用户。
+## 2. 没有连接时由 agent 引导
 
-用户明确选择 gog 时使用 [gog 上游安装说明](https://github.com/openclaw/gogcli)，确认后执行对应安装；不将 gog 包装成必需依赖。
+- **Codex**：使用宿主插件发现/管理能力查找 Google Drive；读取返回的插件身份与状态，提供宿主支持的安装/连接入口或建议卡片。已安装则引导连接而不是重复安装。插件支持统一 Drive/Docs/Sheets/Slides 时不额外要求分别安装。不得把建议卡片已显示说成已安装。
+- **Claude / Claude Code**：先检查当前会话可见的连接器/MCP。优先使用该宿主现有 Google Workspace/Drive 集成；参照当前官方文档及实际 UI 引导启用。不要假设所有 Claude 客户端共享连接、权限和能力。
+- **其他宿主或自定义 MCP**：查阅宿主和选定提供方的官方文档，确定准确包名、服务器 URL、安装方法和认证方式。不凭“Google MCP”名称安装未知第三方服务器，不编造 MCP URL。
 
-## 接入验收
+能调用安装/配置工具时，先展示具体方案并询问用户，确认后由 agent 执行；宿主仅提供安装卡片或 UI 时，请用户点击对应按钮。Google 账号选择、同意授权，以及宿主要求的安装/信任确认由用户完成，不代替用户同意权限。
 
-工具就绪后进入 [authentication.md](authentication.md)。gws 的 OAuth 命令仅适用于 gws；其他接入工具遵循其自身登录流程，同时保留相同项目范围和写入确认限制。
+只给当前所需的最短步骤，说明下一步完成后 agent 会继续；不让用户手动下载 JSON 或配置 GCP，除非选定集成确实要求自带 OAuth 客户端，并已说明用户选择。不要承诺所有 MCP 都免客户端配置。
 
-OAuth client 缺失时，向团队接入维护者获取正确配置途径；不要求每位同事新建 GCP 项目，也不把 client secret、token 收集到聊天。API 未启用和公司策略限制不能靠安装另一个 CLI 解决。
+已授权工具返回真实登录 URL 时可直接提供；宿主只提供连接按钮时引导该按钮，不编造链接。连接成功后重新检查工具可用性及指定项目只读访问；需要新会话才能加载时明确说明。
 
-分别报告：skill 安装状态、CLI/连接器状态、OAuth 状态、指定项目只读探测结果。未给项目链接时，可完成安装和工具检查，但不能声称项目 context 已加载。安装不启动后台服务。
+## 3. 验证后继续
+
+分别报告 skill 安装、Google 连接、当前账号（工具能够核验时）和项目可访问性。账号不可查询时如实说明，不以本地 ME.md 代替实际登录证据。完成后继续 initialize/work，所有修改仍先询问用户。
+
+能力不足时说明缺少哪项，保留已可用的只读工作；不要立即要求换工具或扩大权限。无合适宿主集成时，向用户提出可选路线：经同意使用 [CLI 接入](cli-dependencies.md) 或 [浏览器接入](browser-access.md)。CLI 的团队 OAuth 配置见 team-google-setup.md；只有选择此路线才读取并执行。
+
+Python 仅在运行本 skill 的本地脚本时需要，不是使用远程 Google 连接器的前置。安装 skill 不会启动监听器。
+
+参考：[Claude Google Workspace connectors](https://support.claude.com/en/articles/10166901-use-google-workspace-connectors)、[Claude Code MCP](https://code.claude.com/docs/en/mcp)。具体入口以当前宿主实际界面和官方文档为准。

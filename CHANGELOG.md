@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0 — 2026-10-16
+
+- Prefer host Google Drive/Workspace MCP and connectors across installation, initialize and work.
+- Guide host installation and human OAuth consent; verify actual scoped capabilities.
+- Move gws/gog and team OAuth configuration to opt-in fallback documentation.
+
 ## 0.7.4 — 2026-10-16
 
 - Document the team OAuth project and Allen support contact.

@@ -1,5 +1,8 @@
 # Artefact 团队 Google OAuth 接入
 
+> **仅用于用户选择的 CLI / 自带 OAuth 客户端备用路线。默认先执行 dependencies.md，使用宿主 Google 集成，不要求本页配置。**
+
+
 - 团队接入使用的 GCP project ID：`gen-lang-client-0444403763`。
 - 接入维护者：Allen Liang，联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com)。遇到配置、测试用户、API 或权限问题时联系 Allen；agent 不自动发送邮件。
 - 这是 OAuth 应用所属的技术项目，不是客户项目文件夹。知道 project ID 不等于已配置登录；登录必须使用此项目下的团队 Desktop app OAuth 客户端。

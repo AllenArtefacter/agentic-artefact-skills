@@ -22,11 +22,11 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 目标目录存在时先比较：相同则报告已安装；不同则保留现有内容并说明更新差异，按用户的更新授权执行，不能直接覆盖个人修改。不要为安装本 skill 修改其他 skills。
 
-## 2. 检查并安装接入依赖
+## 2. 引导 Google 集成接入
 
-读取 [依赖安装流程](skills/agentic-artefact-project-collaboration/references/dependencies.md) 并执行，不能只告诉用户“需要预先安装 gws”。默认检查 gws；已有可用 gog 或连接器时先验证是否覆盖本次所需操作，不要求同时安装两套工具。
+执行 [Google 接入流程](skills/agentic-artefact-project-collaboration/references/dependencies.md)。优先复用当前宿主的 Google Drive/Workspace MCP 或连接器；缺失时由 agent 查找正确集成并提供安装/连接入口。能由 agent 执行的配置在确认后执行；用户完成宿主要求的安装点击和 Google 浏览器授权。
 
-缺少依赖时列出实际缺项、安装方式和将修改的位置，询问用户后由 agent 执行安装并验证。只安装本次需要的组件，不顺带安装全部 Google skills。不把工具安装成功等同于 OAuth 或项目访问成功。
+不默认安装 gws/gog，不索取团队客户端 JSON，不要求用户配置 GCP。仅在用户明确选择备用 CLI 路线时执行对应指南。不要把“安装了插件”当作“已授权”，也不要把“已授权”当作“能访问项目”。
 
 ## 3. 验证与说明
 
@@ -34,15 +34,11 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 安装本身无需 Google 凭据，不会启动监听器，也不会自动加入项目。不为验证安装而修改真实项目。不要求用户把 token 发到聊天或提交仓库。
 
-## 4. 团队 OAuth 配置与加入项目
+## 4. 加入已有项目
 
-先读取 [团队 Google 接入](skills/agentic-artefact-project-collaboration/references/team-google-setup.md)。团队 GCP project ID 为 `gen-lang-client-0444403763`，接入问题联系 [Allen](mailto:allen.liang@artefact.com)。Agent 必须检查团队客户端配置，缺失时指引获取本地 JSON；经确认配置后启动真实授权流程并返回链接。不得仅让用户自己运行登录命令，也不得把 project ID 当作 OAuth 客户端配置。
+用户提供 Artefact 项目文件夹链接、姓名、邮箱和职责后，使用 work 模式。先验证当前连接能读取指定项目，再读取 Project、STATUS 和任务入口。只读测试不修改项目、不访问父目录。个人绑定或共享资料更改遵守先询问的全局限制。
 
-若用户已给出项目文件夹及身份，继续按安装后的 skill 执行 work；否则简短提示用户提供 Google Drive 文件夹链接、姓名、邮箱和职责。已有信息直接复用。
-
-先读取 skill 的授权指南，检查本机工具和当前账号。需要登录时由 agent 发起支持的 OAuth 流程，返回工具实际生成的授权链接，由用户在浏览器完成；不能编造授权地址。缺失工具时按其官方安装文档处理。API 未启用、公司策略限制、文件权限不足分别报告，不能反复登录来替代修复。
-
-将个人身份和项目绑定保存在本机个人空间。读取团队 Project、STATUS 和任务入口，匹配本人任务，并按任务需要读取会议、材料及产出。给用户简短说明项目目标、现状、本人待办和阻塞。不得将加入已有项目误执行为 initialize，不自动重建团队文件夹或改写成员名单。
+连接问题联系 [Allen](mailto:allen.liang@artefact.com)，不自动发邮件。不要求普通成员处理 GCP IAM；公司管理员限制不能通过换 CLI 绕过。
 
 ## 从旧名称迁移
 

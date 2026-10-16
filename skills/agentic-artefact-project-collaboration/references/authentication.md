@@ -1,5 +1,8 @@
 # Agent 执行 Google 授权
 
+> **仅用于用户选择的 CLI / 自带 OAuth 客户端备用路线。默认先执行 dependencies.md，使用宿主 Google 集成，不要求本页配置。**
+
+
 **团队配置入口：** 先读取 [team-google-setup.md](team-google-setup.md)。本团队 OAuth 应用所属 GCP project 为 `gen-lang-client-0444403763`；配置缺失或接入失败时指引用户联系 allen.liang@artefact.com。不得仅凭 project ID 发起登录，也不得自动给普通成员新建 GCP project。
 
 initialize 和 work 共用这个前置步骤。已有本机 gws 配置时优先复用；需要重新登录时由 agent 执行命令，用户只负责在浏览器选择账号并确认 Google 授权。不要把终端操作清单交回用户，也不要请求用户粘贴 access token、refresh token 或授权回调 code。
@@ -10,7 +13,7 @@ initialize 和 work 共用这个前置步骤。已有本机 gws 配置时优先�
 
 ## 0. 工具依赖
 
-先执行 [dependencies.md](dependencies.md)：检查实际可用工具，缺少工具时由 agent 提出安装方案、取得确认并执行，不直接把安装任务交给用户。以下命令针对 gws；gog 或其他连接器按其自身文档认证，不能混用命令或凭据。
+已选择 CLI 路线后执行 [cli-dependencies.md](cli-dependencies.md)：检查实际可用工具，缺少工具时由 agent 提出安装方案、取得确认并执行，不直接把安装任务交给用户。以下命令针对 gws；gog 或其他连接器按其自身文档认证，不能混用命令或凭据。
 
 ## 1. 检查
 
@@ -63,7 +66,7 @@ gws 自行管理本机凭据。后续读写优先直接调用已登录的 gws；
 
 `drive_reader.py` 是独立的只读备选工具，当前不自动读取 gws 加密凭据。其 token-env/credentials-file 流程只用于用户已选择该接入方式的环境，不能在 gws 登录成功后当作第二次必需授权。使用 gws 时也要执行项目范围过滤、分页、读取新版本和写后验证；Python reader 的本地 inbox/ack 不会自动覆盖直接 gws 调用，不得声称它已经记录了本次同步。
 
-如果 gws 未安装，先按 dependencies.md 处理安装；若 OAuth client 缺失或执行宿主不支持维持本机 OAuth 回调，报告具体缺项并给最小解决办法。只有 agent 确实无法执行时才请用户手动运行命令。已有可用连接器和授权可沿用，不创建多套重复凭据。
+如果 gws 未安装，先按 cli-dependencies.md 处理安装；若 OAuth client 缺失或执行宿主不支持维持本机 OAuth 回调，报告具体缺项并给最小解决办法。只有 agent 确实无法执行时才请用户手动运行命令。已有可用连接器和授权可沿用，不创建多套重复凭据。
 
 参考：[gws authentication](https://github.com/googleworkspace/cli#authentication)。本机已核对 login 支持 --services 和 status 子命令；本次技能修改未发起真实重新登录。
 

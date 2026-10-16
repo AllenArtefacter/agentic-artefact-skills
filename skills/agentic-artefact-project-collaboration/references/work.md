@@ -2,13 +2,13 @@
 
 **全局限制：** 遵守 SKILL.md 的 Global restrictions：不得访问项目父目录或其他范围外目录；任何删除 / 更改先展示具体方案并询问用户。以下创建、发布、更新、归档步骤均受此限制。
 
-先选择接入方式：用户没有 Cloud/IT 支持且 API 不可用时，按 [browser-access.md](browser-access.md) 操作正常 Google 网页；选择 API 路线时执行 [authentication.md](authentication.md)：agent 检查已有 gws；需要时主动启动登录、返回实际授权链接，等用户浏览器认证后验证并继续。已有配置只需重新登录，不把命令交回用户执行。
+先按 [dependencies.md](dependencies.md) 检查宿主 Google MCP/连接器；已有连接直接复用，否则指引安装与授权。验证指定项目的只读访问后继续。gws/gog 与团队 OAuth JSON 仅在用户选择 CLI 备用路线时使用。
 
 既用于新同事第一次加入，也用于成员每天继续工作。已有团队项目不重复 initialize。
 
 ## 第一次加入（work 的准备阶段）
 
-1. 指定团队 folder、个人本地 workspace 和个人 Google 凭据。
+1. 指定团队 folder、个人本地 workspace 和本人 Google 连接（不收集 token）。
 2. 必要时复制 local-personal 模板，创建 ME.md；先列出团队文件并读 Project.md，从正式成员表确认 person_id、邮箱和职责。姓名/邮箱缺失时补问本人，不新建一份团队成员身份。
 3. 默认使用已登录 gws 关联目标 folder 并核对连接账户；如选择独立 Python reader，才用其 join / whoami 与本地状态。Google 账号、本人声明和团队成员信息冲突时先说明；可继续不依赖个人归属的一般阅读。
 4. 个人端只保留 ME.md 作为必读身份入口；团队端只保留 Project.md / STATUS.md 两份必读上下文。
