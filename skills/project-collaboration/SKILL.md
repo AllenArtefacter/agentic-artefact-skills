@@ -14,6 +14,16 @@ Provide two user-facing modes: **initialize** and **work**. These are skill work
 
 A new teammate joining an existing project uses work, not initialize. Missing setup or access is a reported gap, never a reason to rebuild or overwrite the team folder.
 
+## Global restrictions / 全局限制
+
+These restrictions apply to initialize, work, API tools, browser operations and every supporting workflow in this skill.
+
+1. **项目根目录是访问边界。** 只读取用户指定的 Google Drive 项目文件夹及其子目录。不得跳转、打开、列举或搜索其 parent folder（父目录）、祖先目录、同级目录或整个 Drive。不得通过面包屑、快捷方式、文档链接或 API 查询越界；遇到指向范围外的资料，停止并请用户明确指定新的访问范围。父目录 ID 即使出现在 API 返回值中，也不构成访问授权。
+2. **所有删除 / 更改必须先询问用户。** 执行前展示具体文件或文件夹、拟进行的操作及影响，取得用户对该具体变更的明确确认后才执行。包括编辑内容、更新 STATUS/任务状态、重命名、移动、归档、覆盖、删除/移入垃圾箱、变更权限，以及向团队空间新建或上传资料。对现有本地项目文件的更改或删除也遵守此规则；可先在新的个人临时目录准备不覆盖现有文件的草稿供审阅。
+3. **可以合并确认，不能推定确认。** 一次可列出一批明确变更让用户确认；用户已明确批准同一批具体操作时无需重复询问。仅要求 initialize、work、继续工作，或拥有写入权限，不等于批准尚未展示的变更。新增目标或变更内容超出已确认范围时重新询问。未确认时保持只读，并报告待确认方案。
+
+These are skill-wide operational restrictions, not host/system-level enforcement. Supporting workflow instructions to publish or update remain subject to these restrictions.
+
 ## Cloud document format
 
 For this Google Drive workflow, publish human-facing content in native Google formats: Docs for Project, STATUS, plans and meeting notes; Sheets for structured trackers when available; Slides for presentations. Project and STATUS are logical context documents, not mandatory `.md` extensions. References to Project.md / STATUS.md elsewhere denote their local source equivalents. Resolve live native files by recorded IDs; never recreate Markdown copies beside them. Local Markdown templates remain private build inputs. If Sheets is unavailable, a native Docs tracker is acceptable with the limitation stated.
@@ -54,7 +64,7 @@ With gws, read current identity, scoped folder inventory and changed source file
 
 Consult the skill's folder guidance before placing output; read a project-specific README only if one exists. Publish only filled project artifacts or targeted edits via an available authorized writer. Update task/deliverable evidence and status after actual success. Update STATUS.md when the work changes project-level progress, blockers, confirmed decisions or next priorities. Update Project.md only for confirmed context, scope, membership or responsibility changes.
 
-Without a cloud writer, complete local work and an explicit outbox proposal; report pending publication instead of claiming shared updates. Existing user authorization applies; do not add repeated confirmation for already authorized internal writes.
+Without a cloud writer, complete local work and an explicit outbox proposal; report pending publication instead of claiming shared updates. Apply the global restrictions before any mutation; a previous approval covers only the specific changes it approved.
 
 ## Common rules
 

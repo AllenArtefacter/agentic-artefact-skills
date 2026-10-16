@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.1 — 2026-10-16
+
+- Add project-root access boundary and explicit confirmation before all mutations.
+- Apply restrictions consistently to initialize, work and browser workflows.
+- Document agent-led installation from a GitHub URL.
+
 ## 0.7.0 — 2026-10-16
 
 - initialize / work workflows for cross-agent Google Drive projects.

@@ -1,5 +1,7 @@
 # initialize — 项目经理建立团队项目
 
+**全局限制：** 遵守 SKILL.md 的 Global restrictions：不得访问项目父目录或其他范围外目录；任何删除 / 更改先展示具体方案并询问用户。以下创建、发布、更新、归档步骤均受此限制。
+
 先选择接入方式：用户没有 Cloud/IT 支持且 API 不可用时，按 [browser-access.md](browser-access.md) 操作正常 Google 网页；选择 API 路线时执行 [authentication.md](authentication.md)：agent 检查已有 gws；需要时主动启动登录、返回实际授权链接，等用户浏览器认证后验证并继续。已有配置只需重新登录，不把命令交回用户执行。
 
 这是一次项目级启动流程。已有项目的新同事加入属于 work。项目经理是通常执行者，实际以用户授权的项目设置负责人为准。

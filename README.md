@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.0**。
+跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.1**。
 
 ## 给 agent 一个链接即可安装
 
@@ -18,7 +18,7 @@
 
 面向 agent 的完整步骤见 [INSTALL.md](INSTALL.md)。以下为手动安装方式。
 
-下载 `dist/project-collaboration-v0.7.0.zip`，解压后将完整的 `project-collaboration` 目录放到宿主的 skills 目录。Codex 可使用 `~/.codex/skills/`；其他 agent 按各自技能加载方式安装。仓库也保留了 `skills/project-collaboration/` 源码，可直接复制。安装不会启动后台服务。
+下载 `dist/project-collaboration-v0.7.1.zip`，解压后将完整的 `project-collaboration` 目录放到宿主的 skills 目录。Codex 可使用 `~/.codex/skills/`；其他 agent 按各自技能加载方式安装。仓库也保留了 `skills/project-collaboration/` 源码，可直接复制。安装不会启动后台服务。
 
 需要 Python 3.10+ 运行本地脚本；Google API 路线需要已安装并配置 OAuth 的 [gws](https://github.com/googleworkspace/cli)。凭据不写入项目文件，也不提交到仓库。API 启用、OAuth 应用及公司访问策略由接入维护者配置一次，同事分别用自己的 Google 账号授权。
 
@@ -54,6 +54,12 @@ STATUS                  Google Doc：当前进展、阻塞、下一步
 尊重已有项目实际结构，不自动补回被删目录。通用说明、流程和空白模板只放在 skill 内。离线空间全部属于个人；个人草稿不会自动上传。
 
 项目索引是低频维护的导航。文件版本、修改时间由 Drive 管理；当前用户、读取进度、同步游标和机器映射保存在各自本机。
+
+## 全局限制
+
+- 仅访问指定项目文件夹及其子目录，不得访问父目录、同级目录或整个 Drive。
+- 所有删除 / 更改先展示具体方案并询问用户，确认后执行；包含新建、上传、重命名、移动、归档与状态更新。
+- 这是 skill 的行为规范，不替代 Drive 权限隔离。
 
 ## 能力与限制
 

@@ -1,5 +1,7 @@
 # 浏览器接入：没有 Cloud / IT 配置权限时
 
+**全局限制：** 遵守 SKILL.md 的 Global restrictions：不得访问项目父目录或其他范围外目录；任何删除 / 更改先展示具体方案并询问用户。以下创建、发布、更新、归档步骤均受此限制。
+
 用户没有 Google Cloud/IT 管理权限，且当前 OAuth 项目未启用 API 时，不要求其申请管理员角色、创建项目、换 token 或反复登录。若用户的 Google 网页访问正常，采用浏览器 UI 作为 initialize/work 的接入方式。
 
 ## 前提与进入
