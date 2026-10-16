@@ -2,7 +2,21 @@
 
 跨 Codex、Claude Code 等 agent 的 Google Drive 项目协作 skill。当前版本：**0.7.0**。
 
+## 给 agent 一个链接即可安装
+
+把下面这句话发给 Codex / Claude Code 等支持本地 skills 的 agent：
+
+> 请安装 https://github.com/AllenArtefacter/agentic-artefact-skills 中的 project-collaboration skill，先读取仓库 INSTALL.md 并按指引执行。
+
+安装后加入已有项目：
+
+> 使用 project-collaboration 的 work 模式，项目是【Google Drive 文件夹链接】。我是【姓名】，邮箱【邮箱】，职责【职责】。
+
+也可以将两句话合并发送。安装 skill 与 Google 授权是两个步骤；不需要用户手动 clone 或复制文件。执行 agent 需要联网和本地文件写入能力，私有仓库还需要 GitHub 访问权限。
+
 ## 安装
+
+面向 agent 的完整步骤见 [INSTALL.md](INSTALL.md)。以下为手动安装方式。
 
 下载 `dist/project-collaboration-v0.7.0.zip`，解压后将完整的 `project-collaboration` 目录放到宿主的 skills 目录。Codex 可使用 `~/.codex/skills/`；其他 agent 按各自技能加载方式安装。仓库也保留了 `skills/project-collaboration/` 源码，可直接复制。安装不会启动后台服务。
 
