@@ -1,0 +1,55 @@
+{
+  "format_version": 1,
+  "default_folders": [
+    "00_Start_Here",
+    "01_Management",
+    "02_Meetings",
+    "03_Deliverables",
+    "04_Materials",
+    "90_Archive"
+  ],
+  "subfolders": {
+    "02_Meetings": [
+      "raw",
+      "note"
+    ]
+  },
+  "files": [
+    {
+      "folder": "",
+      "title": "Project",
+      "mime_type": "application/vnd.google-apps.document",
+      "template": "project-template/Project.md"
+    },
+    {
+      "folder": "",
+      "title": "STATUS",
+      "mime_type": "application/vnd.google-apps.document",
+      "template": "project-template/STATUS.md"
+    },
+    {
+      "folder": "00_Start_Here",
+      "title": "Project Index",
+      "mime_type": "application/vnd.google-apps.document",
+      "template": "document-templates/project-index.md"
+    },
+    {
+      "folder": "01_Management",
+      "title": "Tasks",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "template": "tasks-layout.json"
+    },
+    {
+      "folder": "03_Deliverables",
+      "title": "Deliverables",
+      "mime_type": "application/vnd.google-apps.document",
+      "template": "document-templates/deliverables-index.md"
+    },
+    {
+      "folder": "04_Materials",
+      "title": "Materials",
+      "mime_type": "application/vnd.google-apps.document",
+      "template": "document-templates/materials-index.md"
+    }
+  ]
+}

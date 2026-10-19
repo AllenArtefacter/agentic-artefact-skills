@@ -1,0 +1,20 @@
+{
+  "name": "agentic-artefact-skills",
+  "interface": {
+    "displayName": "Agentic Artefact Skills"
+  },
+  "plugins": [
+    {
+      "name": "agentic-artefact-project-collaboration",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agentic-artefact-project-collaboration"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

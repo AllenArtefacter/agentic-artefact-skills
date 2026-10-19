@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "agentic-artefact-project-collaboration",
-      "source": ".",
+      "source": "./",
       "description": "Artefact team/client project collaboration from shared Google Drive context: initialize a project or work on assigned tasks, meeting notes and status updates.",
       "category": "productivity"
     }

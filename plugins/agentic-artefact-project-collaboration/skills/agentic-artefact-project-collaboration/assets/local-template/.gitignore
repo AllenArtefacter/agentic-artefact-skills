@@ -1,0 +1,6 @@
+.collab/
+context/inventory.json
+context/changes.json
+context/exports/
+.env
+*.credentials.json

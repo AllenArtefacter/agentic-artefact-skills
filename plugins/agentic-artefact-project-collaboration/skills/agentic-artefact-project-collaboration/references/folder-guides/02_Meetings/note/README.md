@@ -1,0 +1,3 @@
+# Meeting notes
+
+Read raw sources → create/update one native note per meeting ID → preserve title/date/person chips → maintain the compact Meeting Briefs card → extract actions to Backlog unless already explicitly confirmed → link task IDs and sources. Record decisions with matching DEC IDs in note and brief. Compare earlier meetings for unresolved contradictions; do not treat newer text as automatic override. Verify source chips, task links and decision scope. Publish only with applicable user authorization; never send to attendees automatically. Follow [meeting-notes.md](../../../meeting-notes.md).

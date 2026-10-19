@@ -1,5 +1,12 @@
 # Changelog
 
+## Marketplace packaging — 2026-10-19
+
+- Add a Codex marketplace and validated plugin package alongside the Claude marketplace.
+- Preserve root skills as the source of truth; build and verify the Codex distribution.
+- Document host-specific installation, updates and duplicate-install migration.
+- Remove unsupported Claude manifest displayName and normalize its source path.
+
 ## 0.15.6 — 2026-10-19
 
 - Explicitly invite users to promote Backlog items by task name or ID through conversation.

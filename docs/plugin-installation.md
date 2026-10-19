@@ -1,0 +1,65 @@
+# Plugin installation and updates
+
+Use one installation method per host: marketplace plugin or standalone skill. This package provides collaboration instructions and templates; it does not install a Google MCP server, grant Drive access or share anyone's login.
+
+## Codex
+
+Run these in a terminal with a Codex CLI that supports `codex plugin` (or ask your agent to execute them):
+
+```sh
+codex plugin marketplace add AllenArtefacter/agentic-artefact-skills
+codex plugin add agentic-artefact-project-collaboration@agentic-artefact-skills
+```
+
+Start a new conversation after installation. If the CLI has no plugin command, update the client or use the standalone skill instructions in INSTALL.md.
+
+To fetch a new release and install it:
+
+```sh
+codex plugin marketplace upgrade agentic-artefact-skills
+codex plugin add agentic-artefact-project-collaboration@agentic-artefact-skills
+```
+
+Start a new conversation to load the update. Marketplace refresh and plugin installation are separate steps. Do not assume Claude's “Check for updates” wording or automatic-update behavior applies to every Codex version.
+
+## Claude Code
+
+Run these in a terminal:
+
+```sh
+claude plugin marketplace add AllenArtefacter/agentic-artefact-skills
+claude plugin install agentic-artefact-project-collaboration@agentic-artefact-skills
+```
+
+For automatic updates, open `/plugin` → Marketplaces → agentic-artefact-skills → Enable auto-update. Third-party marketplaces do not enable automatic updates by default. To update manually:
+
+```sh
+claude plugin marketplace update agentic-artefact-skills
+claude plugin update agentic-artefact-project-collaboration@agentic-artefact-skills
+```
+
+Reload plugins if your version supports it, or start a new session. Other Claude surfaces may expose GitHub marketplace installation in their UI; follow that client's available controls rather than treating terminal commands as UI steps.
+
+[Claude marketplace documentation](https://code.claude.com/docs/en/plugin-marketplaces) · [Claude installation and updates](https://code.claude.com/docs/en/discover-plugins)
+
+## Existing standalone installation
+
+Check for an existing `agentic-artefact-project-collaboration` skill before installing the plugin. Explain the migration and obtain approval before moving the standalone folder outside the host's skill discovery directory. Preserve personal modifications. Do not leave both copies active or delete other skills. Plugin updates do not update old standalone copies.
+
+## After installation
+
+Follow INSTALL.md sections 2–4. Show the onboarding screenshot and steps when a Google connection is missing; use the user's own account. Verify read access only to the project folder the user supplies. Introduce meeting summaries, personal tasks, project status, output registration and project initialization.
+
+## Maintainers
+
+Root `skills/` remains the editable source for Claude and standalone installations. Codex reads the self-contained distribution at `plugins/agentic-artefact-project-collaboration/`, listed by `.agents/plugins/marketplace.json`. Do not edit its copied skills directly or reference files outside the installed plugin.
+
+After editing root skills, run:
+
+```sh
+python3 scripts/build_codex_plugin.py
+python3 scripts/build_codex_plugin.py --check
+python3 -m unittest discover -s tests -p 'test_project_collaboration.py'
+```
+
+Commit generated package changes with the source changes. Run the check command before every push to catch stale copies. When publishing a new content release, increment both plugin manifests' versions together; refresh README and CHANGELOG as appropriate. No credentials, personal project bindings or customer materials belong in either package.

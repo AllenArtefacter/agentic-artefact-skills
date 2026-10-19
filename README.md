@@ -2,6 +2,10 @@
 
 面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.15.6**。
 
+## Codex / Claude 插件安装
+
+本仓库同时提供 Claude marketplace 和 Codex marketplace。支持插件的客户端优先通过 marketplace 安装，后续由客户端管理更新。[安装与更新步骤](docs/plugin-installation.md)。普通 SKILL.md 安装方式仍可用，但手动复制的 skill 不会随插件更新。
+
 ## 给 agent 一个链接即可安装
 
 把下面这句话发给 Codex / Claude Code 等支持本地 skills 的 agent：

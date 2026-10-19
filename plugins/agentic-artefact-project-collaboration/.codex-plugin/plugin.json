@@ -1,0 +1,26 @@
+{
+  "name": "agentic-artefact-project-collaboration",
+  "version": "0.15.6",
+  "description": "Artefact team/client project collaboration from shared Google Drive context: initialize a project or work on assigned tasks, meeting notes and status updates.",
+  "author": {
+    "name": "Allen Liang",
+    "email": "allen.liang@artefact.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agentic Artefact Project Collaboration",
+    "shortDescription": "Project context, meeting notes and tasks for Artefact teams.",
+    "longDescription": "Artefact team/client project collaboration from shared Google Drive context: initialize a project or work on assigned tasks, meeting notes and status updates.",
+    "developerName": "Artefact",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Summarize meeting notes for my Artefact project.",
+      "Show my tasks in this Artefact project.",
+      "Summarize the current Artefact project status."
+    ]
+  },
+  "homepage": "https://github.com/AllenArtefacter/agentic-artefact-skills",
+  "repository": "https://github.com/AllenArtefacter/agentic-artefact-skills",
+  "license": "Apache-2.0"
+}

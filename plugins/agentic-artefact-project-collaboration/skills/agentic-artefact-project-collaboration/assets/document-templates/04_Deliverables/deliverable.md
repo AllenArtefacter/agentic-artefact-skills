@@ -1,0 +1,26 @@
+# {{DELIVERABLE_TITLE}}
+
+ID: {{DELIVERABLE_ID}}
+Owner: {{OWNER_PERSON_CHIP}}
+Index: {{DELIVERABLES_INDEX_FILE_CHIP}}
+Tasks: {{TASK_IDS_AND_LINKS}}
+
+## Purpose and acceptance criteria
+
+{{PURPOSE_AND_ACCEPTANCE_CRITERIA}}
+
+## Content
+
+{{DELIVERABLE_CONTENT}}
+
+## Sources
+
+{{INPUT_FILE_CHIPS_AND_VERSIONS}}
+
+## Review
+
+{{REVIEW_EVIDENCE}}
+
+## Release and acceptance
+
+{{RELEASE_AND_ACCEPTANCE_EVIDENCE}}

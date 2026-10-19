@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic Artefact · 项目协作"
+  short_description: "Artefact 团队项目初始化与协作，仅用于明确指定的团队项目"
+  default_prompt: "使用 $agentic-artefact-project-collaboration 的 work 模式，读取我指定的 Artefact 团队项目背景、现状和本人任务。"
