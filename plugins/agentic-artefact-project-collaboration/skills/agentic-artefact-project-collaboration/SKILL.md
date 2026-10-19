@@ -9,6 +9,10 @@ For Codex desktop installation or onboarding questions, prefer the UI marketplac
 
 For Claude web/desktop installation or onboarding, prefer Customize → Plugins → Add → Add marketplace and show [both screenshots and steps](references/claude-marketplace-install.md). Keep terminal-only Claude Code instructions separate.
 
+## First-use project selection
+
+Before reading any cloud project context, establish the project root from a user-provided Google Drive folder link or an already confirmed binding in the current context. If missing, ask for the folder link first; do not search Drive broadly, guess a project, or treat another user’s/example folder as the current project. For personal tasks, also ask for the user’s own email if unknown. Reuse confirmed context rather than restarting onboarding. Installation and clicking a starter prompt do not themselves select a project.
+
 ## Applicability / 适用范围
 
 This skill is for Artefact team/client projects. Invoke only when explicitly named by the user or when the user has clearly identified the current project as an Artefact team project. A company email, Google Drive link, project folder, or generic initialize/work request alone does not establish that scope. Do not apply this skill or its restrictions to unrelated personal projects. If the project identity is unclear, clarify before binding it; never assume every project of an Artefact employee is a team project.

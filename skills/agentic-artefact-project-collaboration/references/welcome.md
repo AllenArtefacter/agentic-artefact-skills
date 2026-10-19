@@ -4,7 +4,9 @@ After successful installation, proactively explain the skill's main uses in the 
 
 Suggested Chinese wording:
 
-已安装。这个 skill 帮你围绕 Artefact 项目资料协作，你可以直接说：
+已安装。请先发我这个 Artefact 项目的 Google Drive 文件夹链接；如果要查你的任务，也请提供你自己的邮箱。已有明确项目绑定时无需重复提供。
+
+确定项目后，你可以直接说：
 
 - **总结会议**：“根据这份录音/文字记录整理会议纪要，提炼待办和决策。”
 - **我的任务**：“看看我有哪些任务、截止日期和已有产出。”

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.10 — 2026-10-19
+
+- Make starter prompts request the project Drive folder before project work.
+- Align standalone skill prompt and welcome; reuse confirmed bindings and never infer a project from installation.
+
 ## 0.16.9 — 2026-10-19
 
 - Prefer Claude web/desktop Add marketplace onboarding with both supplied screenshots.
