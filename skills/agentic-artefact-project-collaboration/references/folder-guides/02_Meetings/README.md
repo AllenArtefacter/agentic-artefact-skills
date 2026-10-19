@@ -1,17 +1,7 @@
 # 02_Meetings
 
-用途：会议与行动来源。
+Use exactly two default subfolders: raw and note.
 
-## 存放与主记录
+raw holds unchanged original files. note holds one native Google Doc per meeting and one running Meeting Briefs document. Every note links to its raw sources; each brief entry links to the note and raw files.
 
-按 YYYY-MM/分类/ 日期_主题_MEET-ID；分类 internal / client / catchup。
-
-## 使用与编辑
-
-记录人整理，结论确认后标 confirmed；参与者不自动等于全部材料的可访问人。
-
-## 状态与关联
-
-行动写 Tasks，结论写 Decisions，再把 ID 链回会议纪要。
-
-创建新对象时使用稳定 ID，登记主文件链接；不要按名称建立第二份权威记录。模板文件不是已发生的项目事实。
+Follow [meeting-notes.md](../../meeting-notes.md) for the six brief fields, evidence, actions and cross-meeting conflict tracking. Meeting type (internal/client/catchup) is metadata, not a competing default folder tree. Add further nesting only when explicitly needed.

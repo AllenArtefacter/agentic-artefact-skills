@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.0 — 2026-10-19
+
+- Add raw/note meeting layout, source-linked notes and running Meeting Briefs.
+- Add six-field summaries, cross-meeting conflict tracking and source-discrepancy handling.
+- Generate meeting subfolders without publishing empty note templates.
+
 ## 0.8.3 — 2026-10-19
 
 - Standardize six required Project metadata fields and native person-chip publishing.

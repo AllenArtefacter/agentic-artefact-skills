@@ -50,3 +50,7 @@ python3 scripts/initialize.py --brief /absolute/path/filled-brief.json --output 
 返回项目入口、核心文件、维护者、初始资料、尚待确认事项，以及新人使用 work 的示例。写入部分成功时列出已创建 ID 与缺失步骤，恢复时只补未完成部分。
 
 Project 必须按 [project-metadata.md](project-metadata.md) 填写六项统一 metadata；缺失项写 TBD，Google Docs 人员使用经邮箱核实的原生 @person chip。
+
+## Meeting layout
+
+Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.

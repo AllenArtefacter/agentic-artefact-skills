@@ -2,9 +2,7 @@
 
 ## Meetings
 
-Create one record per meeting, identified by a stable meeting ID, date/time with timezone and source URL. Classify internal, client or catchup; audience is separate from meeting type. Include attendees, purpose, factual notes, confirmed decisions, proposed decisions, actions, open questions and source references/timestamps.
-
-Do not treat an inferred action as assigned or an utterance as an approved scope change. Create proposed tasks when owner or due date is unknown. Deduplicate imports by source meeting/conference ID and artifact ID. Meet artifacts may be in the organizer's personal Drive; record a link or authorized copy, never assume they already live in the project root. Missing transcript means work from supplied notes, not invented meeting content.
+Follow [meeting-notes.md](meeting-notes.md): raw originals → linked individual notes → running Meeting Briefs with six-field summaries and cross-meeting conflict tracking. Keep source evidence and decisions distinct; confirm writes before publishing.
 
 ## Plans and tasks
 

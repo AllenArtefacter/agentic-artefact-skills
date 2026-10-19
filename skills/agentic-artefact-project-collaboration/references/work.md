@@ -10,7 +10,7 @@
 
 1. 指定团队 folder、个人本地 workspace 和本人 Google 连接（不收集 token）。
 2. 必要时复制 local-personal 模板，创建 ME.md；先列出团队文件并读 Project.md，从正式成员表确认 person_id、邮箱和职责。姓名/邮箱缺失时补问本人，不新建一份团队成员身份。
-3. 默认使用已登录 gws 关联目标 folder 并核对连接账户；如选择独立 Python reader，才用其 join / whoami 与本地状态。Google 账号、本人声明和团队成员信息冲突时先说明；可继续不依赖个人归属的一般阅读。
+3. 优先使用当前宿主的 Google MCP/连接器关联目标 folder 并核对可查询的连接账户；如选择独立 Python reader，才用其 join / whoami 与本地状态。Google 账号、本人声明和团队成员信息冲突时先说明；可继续不依赖个人归属的一般阅读。
 4. 个人端只保留 ME.md 作为必读身份入口；团队端只保留 Project.md / STATUS.md 两份必读上下文。
 
 ## 云端格式
@@ -61,3 +61,7 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 本轮做了什么；写入的实际文件与状态；验证结果；仍在个人空间的待发布内容；依赖/阻塞与下一步。把“完成工作”“发布成功”“审核通过”“客户接受”分别报告。
 
 工具能力见 google-reader.md：当前自带 Python reader 能读取/发现变化，不能云端更新；已登录 gws 可作为实际读写连接器。上表是 work 的执行协议；云端更新需要已授权且实际可用的写入连接器或项目维护者执行。
+
+## Meeting layout
+
+Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.

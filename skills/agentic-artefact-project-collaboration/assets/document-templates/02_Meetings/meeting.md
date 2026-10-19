@@ -1,19 +1,31 @@
-# 会议记录
+# {{DATE}} — {{TOPIC}}
 
-meeting_id：MEET-UUID
-类型：internal / client / catchup
-会议状态：draft
-时间及 timezone：
-参会人：
-calendar_id / event_id：
-原始材料 URL：
+Meeting ID: TBD
+Date / time / timezone: TBD
+Type: internal / client / catchup
+Review status: Draft
+Attendees: TBD — confirmed @emails only
+Raw source links: TBD — files in 02_Meetings/raw
+Meeting Briefs link: TBD
 
-## 事实与来源位置
+## Quick notes
 
-## 已确认结论
+Topics: TBD
+Requirements: TBD
+Difficulties: TBD
+Options: TBD
+Conclusions: TBD — distinguish confirmed decisions from proposals
+Follow-up: TBD
 
-## 提议、假设与未确认事项
+## Full notes
 
-## 行动项与决策链接
+Material discussion with source links and timestamps; no inferred speaker identities.
 
-TASK-ID / DEC-ID；不要在此另行维护当前任务状态。
+## Actions
+
+| Task / action | Owner (@email or TBD) | Due date | Evidence / task link |
+|---|---|---|---|
+
+## Conflicts and open questions
+
+Conflict IDs and links to the relevant earlier notes and Meeting Briefs. State explicitly when no comparison is possible.

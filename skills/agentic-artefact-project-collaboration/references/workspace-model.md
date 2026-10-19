@@ -76,3 +76,7 @@ For current read-only installations: prepare `outbox/publish-request-template.md
 ## Mandatory agent context
 
 Personal ME.md establishes identity and individual focus; team Project.md / STATUS.md establish shared context. Read them every session or reuse only after verifying unchanged versions. See [identity-and-tasks.md](identity-and-tasks.md). The roster owns formal assignments; a person's self-description cannot grant project decision authority or change task ownership.
+
+## Meeting layout
+
+Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.

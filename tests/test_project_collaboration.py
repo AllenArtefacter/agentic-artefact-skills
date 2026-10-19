@@ -187,6 +187,8 @@ class TemplateTests(unittest.TestCase):
             self.assertEqual({str(p.relative_to(team)) for p in team.rglob('*') if p.is_file()},
                 {'Project.md', 'STATUS.md', '01_Management/working-plan.md', '00_Start_Here/project.manifest.json'})
             self.assertFalse(list(team.rglob('_templates')))
+            self.assertEqual({p.name for p in (team/'02_Meetings').iterdir()}, {'raw', 'note'})
+            self.assertFalse(list((team/'02_Meetings').rglob('*.*')))
             self.assertIn('个人',(Path(tmp)/'local-personal/README.md').read_text())
 
 if __name__=='__main__':unittest.main()

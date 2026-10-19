@@ -28,6 +28,8 @@ def scaffold(output, name, folder, space="team"):
             for folder_name in ('00_Start_Here', '01_Management', '02_Meetings',
                                 '04_Deliverables', '05_Materials', '90_Archive'):
                 (stage / folder_name).mkdir(exist_ok=True)
+            for subfolder in ('raw', 'note'):
+                (stage / '02_Meetings' / subfolder).mkdir(exist_ok=True)
         for path in stage.rglob('*'):
             if not path.is_file():
                 continue

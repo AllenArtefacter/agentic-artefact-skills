@@ -68,6 +68,10 @@ Consult the skill's folder guidance before placing output; read a project-specif
 
 Without a cloud writer, complete local work and an explicit outbox proposal; report pending publication instead of claiming shared updates. Apply the global restrictions before any mutation; a previous approval covers only the specific changes it approved.
 
+## Meeting records
+
+For meeting capture, minutes or summaries, follow [meeting-notes.md](references/meeting-notes.md). Use 02_Meetings/raw for unchanged originals and 02_Meetings/note for linked individual notes plus one running Meeting Briefs Doc. Each brief records Topics, Requirements, Difficulties, Options, Conclusions and Follow-up, with evidence-backed possible conflicts between meetings.
+
 ## Common rules
 
 All offline space is personal. Online personal and online team spaces are distinct. Credentials stay outside project Markdown and never enter chat. Use [workspace-model.md](references/workspace-model.md) for layout and [workflows.md](references/workflows.md) for meetings and role handoffs.

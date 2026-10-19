@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.3**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.9.0**。
 
 ## 给 agent 一个链接即可安装
 
@@ -57,7 +57,9 @@ Project                 Google Doc：背景、范围、成员与职责
 STATUS                  Google Doc：当前进展、阻塞、下一步
 00_Start_Here/          项目索引及入口
 01_Management/          工作计划、任务和决策
-02_Meetings/            内部、客户、catchup 纪要
+02_Meetings/
+  raw/                 原始录音、转录等资料
+  note/                单次会议纪要及 Meeting Briefs 汇总
 04_Deliverables/        报告及正式产出
 05_Materials/           输入与参考资料
 90_Archive/             旧版和归档
@@ -66,6 +68,10 @@ STATUS                  Google Doc：当前进展、阻塞、下一步
 尊重已有项目实际结构，不自动补回被删目录。通用说明、流程和空白模板只放在 skill 内。离线空间全部属于个人；个人草稿不会自动上传。
 
 项目索引是低频维护的导航。文件版本、修改时间由 Drive 管理；当前用户、读取进度、同步游标和机器映射保存在各自本机。
+
+## 会议纪要
+
+每次会议的 note 链接 raw 原始文件，采用 Quick notes / Full notes / Actions。note 内维护一份 Meeting Briefs，按会议记录话题、需求、困难、方案、结论、会后安排，并标注会议间可能冲突的说法、双方来源与待确认事项。自动摘要不等于确认结论。[完整流程](skills/agentic-artefact-project-collaboration/references/meeting-notes.md)。
 
 ## 全局限制
 
