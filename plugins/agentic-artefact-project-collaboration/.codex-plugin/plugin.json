@@ -1,6 +1,6 @@
 {
   "name": "agentic-artefact-project-collaboration",
-  "version": "0.16.8",
+  "version": "0.16.9",
   "description": "Artefact team/client project collaboration from shared Google Drive context: initialize a project or work on assigned tasks, meeting notes and status updates.",
   "author": {
     "name": "Allen Liang",

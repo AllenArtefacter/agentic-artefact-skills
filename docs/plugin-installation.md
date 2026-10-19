@@ -38,7 +38,21 @@ codex plugin add agentic-artefact-project-collaboration@agentic-artefact-skills
 
 Start a new conversation to load the update. Marketplace refresh and plugin installation are separate steps. Do not assume Claude's “Check for updates” wording or automatic-update behavior applies to every Codex version.
 
-## Claude Code
+## Claude web / desktop (recommended UI)
+
+1. **Customize → Plugins → Add → Add marketplace**.
+2. URL: `AllenArtefacter/agentic-artefact-skills` (the full GitHub URL also works).
+3. Keep **Sync automatically** enabled for ongoing updates, or choose manual updates if preferred, then click **Sync**.
+4. After synchronization/security scanning, open **Agentic Artefact Project Collaboration** and click **Add**. Adding the marketplace is not the same as installing its plugin.
+5. Connect Google separately with your own authorized account and verify project access.
+
+![Claude marketplace menu](../skills/agentic-artefact-project-collaboration/assets/onboarding/claude-add-marketplace-menu.png)
+
+![Claude marketplace sync](../skills/agentic-artefact-project-collaboration/assets/onboarding/claude-add-marketplace-sync.png)
+
+For manual updates, use **Add → Manage marketplaces** and the marketplace's available sync/check-for-updates action. Verify the synchronized version. Agents should show both screenshots and these steps directly; see the [bundled guide](../skills/agentic-artefact-project-collaboration/references/claude-marketplace-install.md).
+
+## Claude Code CLI alternative
 
 Run these in a terminal:
 
@@ -82,7 +96,7 @@ Commit generated package changes with the source changes. Run the check command 
 
 ## Brand asset (0.16.0)
 
-The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.8. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
+The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.9. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
 
 Claude receives the image as a bundled asset, but Claude Code does not read the directory-listing `icon` field, so downloading the asset does not guarantee a custom icon in its UI. See the [official manifest reference](https://code.claude.com/docs/en/plugins-reference).
 

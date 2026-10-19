@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.9 — 2026-10-19
+
+- Prefer Claude web/desktop Add marketplace onboarding with both supplied screenshots.
+- Explain automatic sync, separate plugin installation and Google authorization; retain Claude Code CLI as a distinct alternative.
+
 ## 0.16.8 — 2026-10-19
 
 - Prefer Codex desktop Add marketplace onboarding with the provided screenshot.
