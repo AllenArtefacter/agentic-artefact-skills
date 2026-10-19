@@ -182,10 +182,10 @@ class TemplateTests(unittest.TestCase):
                 with self.assertRaises(FileExistsError):s.scaffold(out,'wrong','other',space)
             manifest=json.loads((Path(tmp)/'team/00_Start_Here/project.manifest.json').read_text())
             self.assertEqual(manifest['project_name'],'客户 "AI"')
-            self.assertEqual(manifest['authority']['task_status'],'Project Control/Tasks')
+            self.assertEqual(manifest['authority']['task_status'],'Tasks/Tasks')
             team = Path(tmp)/'team'
             self.assertEqual({str(p.relative_to(team)) for p in team.rglob('*') if p.is_file()},
-                {'Project.md', 'STATUS.md', '01_Management/working-plan.md', '00_Start_Here/project.manifest.json'})
+                {'Project.md', 'STATUS.md', '00_Start_Here/project.manifest.json'})
             self.assertFalse(list(team.rglob('_templates')))
             self.assertEqual({p.name for p in (team/'02_Meetings').iterdir()}, {'raw', 'note'})
             self.assertFalse(list((team/'02_Meetings').rglob('*.*')))
@@ -217,7 +217,7 @@ class InitializeTests(unittest.TestCase):
             self.assertIn('| Start date | TBD |', project)
             self.assertIn('| Status | TBD |', project)
             self.assertIn('| Client contacts | TBD |', project)
-            self.assertIn('| Team | @pm@example.test (PM, consultant) |', project)
+            self.assertIn('| Team | @pm@example.test |', project)
             self.assertIn(data['context'],project);self.assertIn(data['vision'],project)
             self.assertIn(data['project_name'],project)
             self.assertIn('| P-existing | 项目经理 | @pm@example.test |',project)

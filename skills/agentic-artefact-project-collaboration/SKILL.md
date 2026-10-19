@@ -52,7 +52,7 @@ Read [initialize.md](references/initialize.md). Gather project context/vision, s
 
 Inspect the intended destination. Generate a local template with `scripts/initialize.py --brief BRIEF_JSON --output NEW_LOCAL_PATH` when a complete brief is available; otherwise prepare the template with `scripts/scaffold.py --space team` and populate it from confirmed information. The local generator does not create Google files.
 
-Populate the team's only two mandatory context files, `Project.md` and `STATUS.md`, then working plan, canonical object registry and initial task/material records as supported by the brief. Apply the actual requested scope: do not invent milestones, assignments or start dates.
+Populate the team's only two mandatory context files, `Project.md` and `STATUS.md`, then the Tasks spreadsheet (Tasks and Backlog tabs), canonical links and initial material records as supported by the brief. Apply the actual requested scope: do not invent milestones, assignments or start dates.
 
 Use an available authorized cloud writer to create/upload the project, register actual IDs and verify readback. The bundled Python tools are read-only for Google; authenticated gws can serve as the cloud writer for supported authorized operations: if no writer exists, finish the local initialized draft and clearly mark `draft_ready`, with the precise remaining cloud setup. Never call a folder live/ready solely because template files exist. Do not modify sharing or send invitations merely because emails appear in the roster.
 
@@ -67,6 +67,10 @@ With gws, read current identity, scoped folder inventory and changed source file
 Consult the skill's folder guidance before placing output; read a project-specific README only if one exists. Publish only filled project artifacts or targeted edits via an available authorized writer. Update task/deliverable evidence and status after actual success. Update STATUS.md when the work changes project-level progress, blockers, confirmed decisions or next priorities. Update Project.md only for confirmed context, scope, membership or responsibility changes.
 
 Without a cloud writer, complete local work and an explicit outbox proposal; report pending publication instead of claiming shared updates. Apply the global restrictions before any mutation; a previous approval covers only the specific changes it approved.
+
+## Task tracking
+
+Follow [task-tracking.md](references/task-tracking.md) for the default two-tab Tasks Google Sheet, human validation, text step IDs, merged groups, owner chips and status dropdowns. Do not create a separate Work Plan. This schema supersedes legacy Control task fields for new or explicitly migrated projects; preserve unrelated legacy schemas unless migration is authorized.
 
 ## Meeting records
 

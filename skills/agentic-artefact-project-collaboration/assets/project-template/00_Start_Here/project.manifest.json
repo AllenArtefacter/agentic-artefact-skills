@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "project_id": "{{PROJECT_ID}}",
   "project_name": "{{PROJECT_NAME}}",
   "team_root_id_or_url": "{{PROJECT_FOLDER}}",
@@ -8,10 +8,10 @@
   "initialization_status": "template_only",
   "timezone": "Asia/Shanghai",
   "canonical_files": {
-    "working_plan_id": null,
     "project_control_id": null,
     "project_context_id": null,
-    "project_status_id": null
+    "project_status_id": null,
+    "tasks_sheet_id": null
   },
   "calendar": {
     "id": null,
@@ -23,12 +23,13 @@
   "sprint_enabled": false,
   "sync_mode": "on_demand",
   "authority": {
-    "task_status": "Project Control/Tasks",
+    "task_status": "Tasks/Tasks",
     "deliverable_status": "Project Control/Deliverables",
     "content": "canonical_file_id",
     "event_time": "Google Calendar",
     "project_membership": "Project.md/personnel table",
-    "personal_identity": "Personal ME.md (declared source)"
+    "personal_identity": "Personal ME.md (declared source)",
+    "task_suggestions": "Tasks/Backlog"
   },
   "personal_settings": "Stored only in each member local workspace; do not list private folder IDs here.",
   "required_team_context": [

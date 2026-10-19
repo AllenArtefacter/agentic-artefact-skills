@@ -20,7 +20,7 @@ Operational guidance lives in this skill, including references/folder-guides/. B
 Project             native Google Doc: purpose, scope, roster and responsibilities
 STATUS              native Google Doc: dated overview
 00_Start_Here/      project index with canonical links
-01_Management/      working plan, tasks and decisions
+01_Management/      Tasks Sheet (Tasks / Backlog) and decisions
 02_Meetings/        internal/client/catchup records
 04_Deliverables/    outputs and reports
 05_Materials/       inputs and references
@@ -32,7 +32,11 @@ Local Markdown/JSON templates are draft inputs, not the cloud format. Workstream
 
 Do not create a full folder hierarchy for every task. A lightweight task is a Control row; a complex task links a detail document in its workstream. Create subfolders only when actual materials justify them. Do not partition shared work into four disconnected consultant/DS/DA/DE silos.
 
-## Project Control: select only useful records
+## Default task register
+
+Follow [task-tracking.md](task-tracking.md). Use Tasks / Backlog tabs with the specified eight columns and five status values. Do not create a separate Work Plan. Task IDs use taskId.stepId text; the legacy ID/status conventions below do not apply to the new task register.
+
+## Optional and legacy Project Control records
 
 | Optional tab/record | Owns | Linked content |
 |---|---|---|

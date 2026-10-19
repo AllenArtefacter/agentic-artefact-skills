@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.10.0 — 2026-10-19
+
+- Replace the default Work Plan with a Tasks Google Sheet: human-validated Tasks and AI-proposed Backlog.
+- Add eight shared columns, stable text step IDs, explicit promotion rules, person/file chips and five status options.
+- Define task/step/deliverable merges and update initialization, identity lookup and local seeds.
+
 ## 0.9.5 — 2026-10-19
 
 - Add native meeting cards with blue headers, six bold summary labels, optional yellow open checks and file-chip sources.

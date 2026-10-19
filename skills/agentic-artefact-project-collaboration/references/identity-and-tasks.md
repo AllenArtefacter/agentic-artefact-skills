@@ -22,7 +22,11 @@ If the configured person ID and email point to different members, or multiple me
 
 A member marked inactive does not acquire new work through an old personal profile; surface relevant handover questions. An external member remains subject to actual file ACLs. Membership/decision_scope fields do not grant API access.
 
-## Query recipe
+## Current Tasks / Backlog schema
+
+For the two-tab Tasks Sheet, follow [task-tracking.md](task-tracking.md). Match Owner chip email to confirmed primary/aliases; read merged groups using merge metadata, retain text ID and show Backlog separately as suggestions. Do not require contributors/reviewer/person_id columns or legacy statuses in the new schema. The query below applies only to existing legacy Control tables.
+
+## Legacy query recipe
 
 Read all relevant returned Tasks rows/tabs, retaining task_id and source. Use exact identity membership, not substring matching:
 

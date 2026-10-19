@@ -100,7 +100,7 @@ def initialize(brief, output):
         '; '.join(m['email_aliases']) or '—',
         '; '.join(m['roles'] + m['responsibilities']))) + ' |'
         for m in b['members'])
-    team_mentions = '; '.join('@' + m['email'] + ' (' + ', '.join(m['roles']) + ')' for m in b['members'])
+    team_mentions = ' '.join('@' + m['email'] for m in b['members'])
     client_mentions = '; '.join(('@' + c['email']) if c['email'] else c['name'] + ' (email: TBD)' for c in b['client_contacts']) or 'TBD'
     (out / 'Project.md').write_text(f"""# {b['project_name']}
 
@@ -144,7 +144,7 @@ PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Proje
 ## 项目入口
 
 团队目录：{b['team_folder']}
-当前进展：STATUS.md；工作计划：01_Management/working-plan.md；正式文件 ID：00_Start_Here/project.manifest.json。
+当前进展：STATUS.md；任务：01_Management/Tasks（Google Sheets，Tasks / Backlog）；正式文件 ID：00_Start_Here/project.manifest.json。
 
 ## 待确认
 
@@ -159,21 +159,6 @@ PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Proje
 已填写项目目标、范围、验收标准和 {len(b['members'])} 位成员。
 待办：发布核心文件，配置 Control 与真实文件 ID，然后回读验收。
 
-{bullets(b['open_questions'])}
-""")
-    (out / '01_Management/working-plan.md').write_text(f"""# {b['project_name']} 工作计划
-
-## 已确认工作范围
-
-{bullets(b['in_scope'])}
-
-## 验收依据
-
-{bullets(b['success_criteria'])}
-
-## 排期与分工
-
-尚未提供正式日期及具体任务分工。PM：{b['maintainer_person_id']}。
 {bullets(b['open_questions'])}
 """)
     manifest['initialization_status'] = 'draft_ready'

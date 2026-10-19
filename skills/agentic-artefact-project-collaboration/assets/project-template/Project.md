@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | Project name | {{PROJECT_NAME}} |
-| Team | TBD — @email and role for each confirmed member |
+| Team | TBD — flat @email chips for confirmed members |
 | Start date | TBD |
 | Status | TBD |
 | Last updated | TBD — set on actual edit |
