@@ -26,6 +26,10 @@ Follow-up: TBD
 
 Material discussion with source links and timestamps; no inferred speaker identities.
 
+## Decisions
+
+DEC-ID — statement; source/timestamp; confirmation scope and reviewer/status where known. Summarize the same ID in Meeting Briefs.
+
 ## Actions
 
 | Task / action | Owner (@email or TBD) | Due date | Evidence / task link |

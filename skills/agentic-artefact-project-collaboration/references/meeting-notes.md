@@ -76,3 +76,7 @@ In shared Google Docs, render source files, notes, Meeting Briefs and task docum
 ## Publish and verify
 
 Prepare the concrete note, brief entry and any conflict updates for user confirmation; an explicit request to publish those prepared changes is sufficient. After approval: preserve/move the raw source as authorized, publish the individual note, then update Meeting Briefs and links. Route unconfirmed actions recorded by people or AI to Backlog; promote only human-validated actions to Tasks under [task-tracking.md](task-tracking.md). Update Decisions/STATUS only for approved changes. Use current revision guards for existing Docs. Preserve people chips, tables, existing content and links. Verify file parents, raw links, the meeting entry and conflict status. If only part succeeds, report it and retry the missing step without duplication. No background listener is implied.
+
+## Decision recording
+
+For each substantive decision, record a stable DEC-... ID, concise statement, source/timestamp, and confirmation scope in the individual meeting note. Summarize the same decision IDs under Conclusions / Decisions in that meeting's brief card. Distinguish proposals, internal directions, pending team review and client approval. Link affected task IDs where known; do not create action assignments merely because a decision exists. Preserve conflicts and superseded decisions with their resolution history. A separate decision index, if retained, points to the meeting record and must not become a conflicting authority.

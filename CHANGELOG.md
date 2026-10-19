@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.11.0 — 2026-10-19
+
+- Track key meetings and milestones alongside tasks, preserving confirmation boundaries.
+- Uppercase status options with colored dropdown chips; white body cells.
+- Record decisions in meeting notes and summarize matching IDs in Meeting Briefs.
+
 ## 0.10.1 — 2026-10-19
 
 - Classify Tasks and Backlog by confirmation state, not author. Both people and AI can record Backlog entries.

@@ -1,17 +1,17 @@
 # Tasks and Backlog
 
-In 01_Management, use one native Google Sheets file named Tasks with exactly two default tabs: Tasks and Backlog. Do not create a separate Work Plan. Keep substantive decisions in their existing source or a concise Decisions Doc; a task migration must not discard them.
+In 01_Management, use one native Google Sheets file named Tasks with exactly two default tabs: Tasks and Backlog. Do not create a separate Work Plan. Record substantive decisions in the corresponding meeting note and summarize them in Meeting Briefs with matching decision IDs. Preserve existing decisions during migration; any separate Decisions Doc is an optional index, not an independent authority.
 
 ## Shared columns
 
-Task | Step | ID | Description | Owner | Deadline | Status | Deliverables
+Task / Meeting / Milestone | Step | ID | Description | Owner | Deadline | Status | Deliverables
 
 - Task is the parent work item; Step is a concrete action.
 - ID is a stable text identifier in taskId.stepId form, e.g. 3.1, 3.4, 4.15. Never store it as a decimal: 4.10 and 4.1 differ. Keep IDs unique across both tabs; retain IDs when promoting, moving or reordering. Preserve legacy ID mappings in Description or a cell note.
 - Description states the work and links the originating meeting, chat or plan when available. Use native file chips for supported sources, descriptive hyperlinks otherwise. Preserve proposal/confirmation and evidence dates.
 - Owner uses a native person chip from a confirmed email; TBD when unassigned. Do not infer an owner from a role, speaker number or roster order. Plain @email is only a disclosed fallback.
 - Deadline is a confirmed date with date formatting; TBD when unknown. A meeting date or completion date is not automatically a deadline.
-- Status is a strict dropdown with exactly: todo, doing, pending, done, partially done. Pending includes waiting for input/verification, explained in Description. Completion requires evidence. Status does not represent human approval.
+- Status is a strict dropdown with exactly: TODO, DOING, PENDING, DONE, PARTIALLY DONE. Pending includes waiting for input/verification, explained in Description. Completion requires evidence. Status does not represent human approval.
 - Deliverables contains actual output links/chips, one per physical row. Use TBD when an output does not exist; never invent links.
 
 ## Approval boundary
@@ -33,3 +33,9 @@ Use a plain formatted grid with cell-level status dropdowns because the requeste
 Read existing task/plan/decision records before migrating. Separate confirmed tasks from unconfirmed entries regardless of author, retain historical status caveats and preserve decisions. After the new Sheet is verified, update canonical links in Project/index/meeting records. Remove or archive superseded files only within the user's explicit authorization; prefer recoverable deletion. Do not create a second authoritative task register.
 
 Verify both tab names, eight headers, text IDs, dropdown values/strictness, person/file chips, deadline types, merged ranges and source-to-destination row coverage. Check a multi-step Task and a multi-output Step where real records exist; do not add fake project rows just to demonstrate formatting. Preserve unknowns. Keep reusable seeds and this guide inside the skill.
+
+## Key meetings and milestones
+
+Include key meetings and milestones in the same eight-column grid, using [MEETING] and [MILESTONE] prefixes in column A. Use stable MEET-... and MS-... IDs; task IDs remain taskId.stepId. Step states the event or acceptance action. Description links the source and records confirmation evidence. Confirmed events belong in Tasks; proposals or unverified schedules belong in Backlog regardless of author. Do not invent milestone dates, acceptance criteria or owners. Deadline may hold a confirmed scheduled event date for meeting/milestone rows; explain its meaning in Description. An event date is not a deadline for a related task. Actual historical dates can remain in Description.
+
+Keep body rows and Status cells white: no item-type row fills or status conditional background fills. Use native colored dropdown chips only: TODO gray (#e6e6e6), DOING blue (#bfe1f6), PENDING yellow (#ffe5a0), DONE green (#d4edbc), PARTIALLY DONE purple (#e6cff2). Configure option colors and Chip display using the native UI when the connector cannot expose them; cell background formatting is not a substitute. Preserve colored validation when extending rows or copying between tabs. Verify uppercase values, option colors and display style after writes; disclose unsupported UI work rather than claiming chips were configured.

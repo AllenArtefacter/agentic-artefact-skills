@@ -19,7 +19,7 @@ Coverage: TBD — recorded meetings and any missing sources
 **Requirements:** TBD
 **Difficulties:** TBD
 **Options:** TBD
-**Conclusions:** TBD
+**Conclusions / Decisions:** TBD — matching DEC IDs; distinguish proposals and approval scope
 **Follow-up:** TBD — task IDs; confirmed owners/dates or TBD
 
 ### Open-check row · pale yellow · omit if none
