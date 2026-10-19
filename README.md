@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.0**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.1**。
 
 ## 给 agent 一个链接即可安装
 
@@ -23,6 +23,8 @@
 3. 用户完成必要的安装确认和 Google 浏览器授权，agent 验证指定项目访问后继续 work。
 
 **默认不需要 gws/gog、团队 OAuth JSON 或自行配置 GCP。** MCP/连接器的具体能力和认证方式以所选实现为准；没有合适集成时才询问是否使用 CLI 或浏览器备用路线。
+
+Codex 的连接入口：**设置 → 插件 → 搜索 google → Google Drive → 完成认证**。[查看图文指引](skills/agentic-artefact-project-collaboration/references/codex-google-drive-setup.md)。
 
 接入问题联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com)。自带 OAuth 的 CLI 备用方案仍保留在 [团队配置指南](skills/agentic-artefact-project-collaboration/references/team-google-setup.md)，不再作为新人默认步骤。
 

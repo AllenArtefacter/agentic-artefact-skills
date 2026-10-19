@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1 — 2026-10-19
+
+- Bundle the maintainer-provided Codex Google Drive setup screenshot.
+- Add explicit Settings → Plugins → Google Drive sign-in guidance and scoped verification.
+
 ## 0.8.0 — 2026-10-16
 
 - Prefer host Google Drive/Workspace MCP and connectors across installation, initialize and work.

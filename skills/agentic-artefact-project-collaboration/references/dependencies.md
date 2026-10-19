@@ -10,7 +10,7 @@
 
 ## 2. 没有连接时由 agent 引导
 
-- **Codex**：使用宿主插件发现/管理能力查找 Google Drive；读取返回的插件身份与状态，提供宿主支持的安装/连接入口或建议卡片。已安装则引导连接而不是重复安装。插件支持统一 Drive/Docs/Sheets/Slides 时不额外要求分别安装。不得把建议卡片已显示说成已安装。
+- **Codex**：安装时若尚未连接，必须按 [Codex 图文接入指引](codex-google-drive-setup.md) 告知用户：设置 → 插件 → 搜索 google → 点开 Google Drive → 认证页面完成授权，并按需展示随 skill 打包的截图。使用宿主插件发现/管理能力查找 Google Drive；读取返回的插件身份与状态，提供宿主支持的安装/连接入口或建议卡片。已安装则引导连接而不是重复安装。插件支持统一 Drive/Docs/Sheets/Slides 时不额外要求分别安装。不得把建议卡片已显示说成已安装。
 - **Claude / Claude Code**：先检查当前会话可见的连接器/MCP。优先使用该宿主现有 Google Workspace/Drive 集成；参照当前官方文档及实际 UI 引导启用。不要假设所有 Claude 客户端共享连接、权限和能力。
 - **其他宿主或自定义 MCP**：查阅宿主和选定提供方的官方文档，确定准确包名、服务器 URL、安装方法和认证方式。不凭“Google MCP”名称安装未知第三方服务器，不编造 MCP URL。
 

@@ -28,6 +28,14 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 不默认安装 gws/gog，不索取团队客户端 JSON，不要求用户配置 GCP。仅在用户明确选择备用 CLI 路线时执行对应指南。不要把“安装了插件”当作“已授权”，也不要把“已授权”当作“能访问项目”。
 
+### Codex 用户的认证入口
+
+若 Google Drive 尚未连接，agent 应明确告诉用户：**Codex → 设置 → 插件 → 搜索 `google` → 点开 Google Drive → 在认证页面完成授权**。用户完成后，agent 验证指定项目的只读访问；已连接则跳过重复认证。
+
+[完整图文指引](skills/agentic-artefact-project-collaboration/references/codex-google-drive-setup.md)
+
+![Codex Google Drive plugin setup](skills/agentic-artefact-project-collaboration/assets/onboarding/codex-google-drive-setup.png)
+
 ## 3. 验证与说明
 
 确认目标目录中的 SKILL.md 可读，脚本及引用资源齐全；报告安装位置与源 commit。按照当前宿主的加载机制说明何时生效；若本轮无法加载新技能，明确告诉用户下一轮或重新打开会话后使用。
