@@ -1,0 +1,16 @@
+{
+  "name": "agentic-artefact-skills",
+  "description": "Artefact team skills for Claude: project collaboration over shared Google Drive context.",
+  "owner": {
+    "name": "Allen Liang",
+    "email": "allen.liang@artefact.com"
+  },
+  "plugins": [
+    {
+      "name": "agentic-artefact-project-collaboration",
+      "source": ".",
+      "description": "Artefact team/client project collaboration from shared Google Drive context: initialize a project or work on assigned tasks, meeting notes and status updates.",
+      "category": "productivity"
+    }
+  ]
+}
