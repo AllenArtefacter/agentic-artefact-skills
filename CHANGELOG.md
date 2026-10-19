@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.5 — 2026-10-19
+
+- Set a Claude `displayName` with a colored leading symbol, because self-hosted marketplaces do not render the manifest `icon`.
+- No skill content changes; Claude and Codex plugin versions stay aligned.
+
 ## 0.16.4 — 2026-10-19
 
 - Retry Claude directory icon with the exact root-relative `icon: ./logo.png` configuration requested by the maintainer.
