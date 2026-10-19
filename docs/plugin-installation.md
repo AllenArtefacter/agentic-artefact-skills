@@ -63,3 +63,9 @@ python3 -m unittest discover -s tests -p 'test_project_collaboration.py'
 ```
 
 Commit generated package changes with the source changes. Run the check command before every push to catch stale copies. When publishing a new content release, increment both plugin manifests' versions together; refresh README and CHANGELOG as appropriate. No credentials, personal project bindings or customer materials belong in either package.
+
+## Brand asset (0.16.0)
+
+The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.0. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
+
+Claude receives the image as a bundled asset, but Claude Code does not read the directory-listing `icon` field, so downloading the asset does not guarantee a custom icon in its UI. See the [official manifest reference](https://code.claude.com/docs/en/plugins-reference).

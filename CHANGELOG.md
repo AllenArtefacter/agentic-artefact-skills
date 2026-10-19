@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.0 — 2026-10-19
+
+- Publish the approved shared-A Agentic Artefact logo in the skill assets.
+- Configure Codex plugin and standalone skill icons; align both plugin versions for updates.
+
 ## Marketplace packaging — 2026-10-19
 
 - Add a Codex marketplace and validated plugin package alongside the Claude marketplace.
