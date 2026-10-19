@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.4 — 2026-10-19
+
+- Add Codex Linked users → Add guidance for enabled plugins connected to another account.
+- Require actionable, host-specific access recovery without assuming the cause or disconnecting other accounts.
+
 ## 0.15.3 — 2026-10-19
 
 - Apply native person, date/time and file chip conventions throughout future Google project authoring.

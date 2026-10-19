@@ -35,3 +35,7 @@ Python 仅在运行本 skill 的本地脚本时需要，不是使用远程 Googl
 When the user needs to connect Google, send the relevant host screenshot together with the shortest click path in the same response. A code-formatted filesystem path or the sentence “the skill contains a guide” is not visual delivery. Follow the host setup guide's image-delivery rules. If images cannot render, say so briefly and provide a clickable public repository image link plus the full text steps. Do not require a separate request for the guide. Keep installation diagnostics (file counts, comparison details) secondary to the user's next action. Ask users to choose their own authorized account; do not default coworkers to the maintainer's email.
 
 After installation, include the short capability welcome in [welcome.md](welcome.md), alongside any necessary connection steps.
+
+## Connected but project inaccessible
+
+Do not stop at “not found” or a list of possible causes. Provide an actionable host-specific account check. In Codex, if another account may be connected, follow [the linked-user branch](codex-google-drive-setup.md#enabled-plugin-different-connected-account): 设置 → 插件 → Google Drive → 下拉菜单 → 已链接用户 → 添加. Use the user’s own project-authorized account, preserve other connections, then retry the exact project root. Treat account mismatch as unverified unless the tool or user confirms it. Identify the actual host before choosing UI instructions.

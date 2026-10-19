@@ -36,6 +36,8 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 ![Codex Google Drive plugin setup](skills/agentic-artefact-project-collaboration/assets/onboarding/codex-google-drive-setup.png)
 
+Google Drive 已启用但链接了其他账号时，不必重装：**设置 → 插件 → Google Drive → 下拉菜单 → 已链接用户 → 添加**，用该同事自己的、能访问项目的账号授权，再重新验证项目链接。未找到文件夹不能直接断定账号错误；也需考虑链接和文件权限。
+
 ### Claude 用户的认证入口
 
 Google Drive 尚未连接时，引导用户：**Settings → Connectors → Google Drive → Connect → 完成 Google 授权**。若 Yours 中没有 Google Drive，可在 Discover 或搜索中查找。截图中已有状态勾选，应先验证项目访问，不重复认证。Claude Code 需另行核验当前会话实际可用工具。
