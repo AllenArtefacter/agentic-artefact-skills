@@ -1,17 +1,21 @@
-# 项目进展报告
+# {{REPORT_TITLE}}
 
-报告周期：
-as_of（含时区）：
-受众：internal / client
+Period: {{REPORTING_PERIOD}}
+As of: {{AS_OF_WITH_TIMEZONE}}
+Audience: {{AUDIENCE}}
 
-## 业务目标与里程碑进展
+## Objectives and milestones
 
-## 本期已完成及已验收成果
+{{OBJECTIVE_AND_MILESTONE_PROGRESS}}
 
-区分内部完成、已提交、客户已接受，并附 DEL-ID / evidence URL。
+## Results
 
-## 风险、阻塞和待决策事项
+{{RESULTS_AND_ACCEPTANCE_EVIDENCE}}
 
-## 下期计划
+## Risks and decisions needed
 
-引用 TASK / MS；报告不修改当前状态主记录。
+{{RISKS_BLOCKERS_AND_DECISIONS}}
+
+## Next steps
+
+{{TASK_AND_MILESTONE_LINKS}}

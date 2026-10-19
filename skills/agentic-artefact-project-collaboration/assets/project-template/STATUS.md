@@ -1,5 +1,20 @@
-# {{PROJECT_NAME}} 当前状态
+# {{PROJECT_NAME}} — Status
 
-阶段：template_only，项目背景及人员待补齐，尚未发布。
+Updated: {{UPDATED_AT}}
+Stage: {{PROJECT_STAGE}}
 
-目标目录：{{PROJECT_FOLDER}}
+## Progress
+
+{{VERIFIED_PROGRESS}}
+
+## Backlog and next steps
+
+{{TASK_LINKS_AND_PRIORITIES}}
+
+## Blockers and decisions needed
+
+{{BLOCKERS_AND_DECISIONS_NEEDED}}
+
+## Sources
+
+{{SOURCE_FILE_CHIPS}}

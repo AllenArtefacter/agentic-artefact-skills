@@ -1,6 +1,7 @@
 # Deliverables
 
 Project: {{PROJECT_NAME}}
-Updated: {{DATE}}
+Updated: {{UPDATED_AT}}
 
-{{VERIFIED_FOLDER_ENTRIES_OR_EMPTY_STATE}}
+| File | Purpose | Owner | Review status | Related task | Updated |
+|---|---|---|---|---|---|

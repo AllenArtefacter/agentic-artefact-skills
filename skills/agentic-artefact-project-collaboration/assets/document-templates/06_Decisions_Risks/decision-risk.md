@@ -1,14 +1,21 @@
-# 决策 / 风险 / 范围变更说明
+# {{RECORD_TITLE}}
 
-record_id：DEC-UUID / RISK-UUID
-主记录：Control.Decisions / Risks
-来源 MEET-ID / MAT-ID：
-影响 TASK / DEL / MS：
+ID: {{RECORD_ID}}
+Source: {{SOURCE_FILE_CHIPS}}
+Related work: {{RELATED_IDS_AND_LINKS}}
 
-## 背景与证据
+## Context and evidence
 
-## 选项、影响与建议
+{{CONTEXT_AND_EVIDENCE}}
 
-## 确认依据或风险应对
+## Options and impact
 
-确认状态、owner 和确认时间以 Control 为准。
+{{OPTIONS_AND_IMPACT}}
+
+## Decision / response
+
+{{DECISION_OR_RESPONSE}}
+
+## Confirmation
+
+{{CONFIRMATION_EVIDENCE}}

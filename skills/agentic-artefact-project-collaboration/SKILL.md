@@ -91,3 +91,5 @@ Report actual outcome, file links/IDs, source freshness, pending setup/publicati
 For materials/output inventories and task-to-output links, use [folder-indexes.md](references/folder-indexes.md). Maintain a native Materials Doc and Deliverables Doc inside their respective project folders.
 
 For folder-specific placement and procedures, follow [folder-guides/README.md](references/folder-guides/README.md); historical guide numbering does not override actual project folder names.
+
+For reusable file slots, document structures and empty Sheet formatting, use [template-catalog.md](references/template-catalog.md). Templates contain placeholders only; publish actual project records, never mock rows.

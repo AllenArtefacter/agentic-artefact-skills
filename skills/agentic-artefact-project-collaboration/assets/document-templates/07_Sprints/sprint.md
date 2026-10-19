@@ -1,18 +1,20 @@
-# Sprint
+# {{SPRINT_NAME}}
 
-sprint_id：SPRINT-UUID
-主记录：Control.Sprints
+ID: {{SPRINT_ID}}
+Period: {{DATE_RANGE}}
 
-## 本期目标与完成定义
+## Goal and completion criteria
+
+{{GOAL_AND_CRITERIA}}
 
 ## Planning
 
-链接 Tasks.sprint_id 筛选视图，关联 DEL-ID。不复制任务文件。
+{{TASK_AND_DELIVERABLE_LINKS}}
 
 ## Review
 
-记录本期完成事实、证据及截至时间；它是历史快照。
+{{DATED_RESULTS_AND_EVIDENCE}}
 
-## Retro 与跟进行动
+## Retrospective
 
-改进事项关联新 TASK-ID。
+{{LESSONS_AND_FOLLOW_UP_TASKS}}

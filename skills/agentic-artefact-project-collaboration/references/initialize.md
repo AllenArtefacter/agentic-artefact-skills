@@ -10,6 +10,8 @@ Two valid entry paths:
 - **Existing project folder:** verify the exact authorized root. Reconcile existing files; initialize an empty folder or resume missing pieces without overwriting work.
 - **No project folder yet:** obtain an explicitly authorized creation container and desired project name. Create one project root in that container, record its returned ID, then work only inside that root. This does not permit discovering or traversing a supplied project's parent. If folder creation is unsupported, ask the user to create the root and provide its link; finish a local draft meanwhile.
 
+Use [template-catalog.md](template-catalog.md) and its folder/file layout before creating artifacts.
+
 ## Build and publish
 
 1. Inspect integration capabilities for folder creation, native Docs, Sheets, chips and moves. Read the authorized destination; record existing IDs and unfinished setup. Tool availability is not proof of access.

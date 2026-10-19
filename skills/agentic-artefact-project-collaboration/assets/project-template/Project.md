@@ -5,19 +5,20 @@
 | Field | Value |
 |---|---|
 | Project name | {{PROJECT_NAME}} |
-| Team | TBD — flat @email chips for confirmed members |
-| Start date | TBD |
-| Status | TBD |
-| Last updated | TBD — set on actual edit |
-| Client contacts | TBD — @email when confirmed |
+| Team | {{TEAM_PERSON_CHIPS}} |
+| Start date | {{START_DATE}} |
+| Status | {{PROJECT_STATUS}} |
+| Last updated | {{UPDATED_AT}} |
+| Client contacts | {{CLIENT_PERSON_CHIPS}} |
 
 ## Purpose
 
-TBD
+{{PURPOSE_AND_SCOPE}}
 
 ## Team responsibilities
 
-Member IDs, confirmed emails and responsibilities: TBD.
+| Member ID | Person | Responsibilities |
+|---|---|---|
 
 ## Key links
 

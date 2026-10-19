@@ -1,40 +1,37 @@
 # {{TOPIC}}
 
 {{DATE_CHIP}}
-{{INVITEES_OR_ATTENDEES_LABEL}}: {{PERSON_CHIPS}}
+{{PARTICIPANT_LABEL}}: {{PERSON_CHIPS}}
 
-<!-- Native Google Docs header: bold title, date chip, then verified person chips. Preserve existing header when editing. Populate only this meeting’s date and people; label invitation versus confirmed attendance. See references/meeting-notes.md. -->
-
-Meeting ID: TBD
-Date / time / timezone: TBD
-Type: internal / client / catchup
-Review status: Draft
-Attendees: TBD — confirmed @emails only
-Raw source links: TBD — files in 02_Meetings/raw
-Meeting Briefs link: TBD
+Meeting ID: {{MEETING_ID}}
+Type: {{MEETING_TYPE}}
+Review status: {{REVIEW_STATUS}}
+Raw: {{RAW_FILE_CHIPS}}
+Brief: {{MEETING_BRIEFS_FILE_CHIP}}
 
 ## Quick notes
 
-Topics: TBD
-Requirements: TBD
-Difficulties: TBD
-Options: TBD
-Conclusions: TBD — distinguish confirmed decisions from proposals
-Follow-up: TBD
+**Topics:** {{TOPICS}}
+**Requirements:** {{REQUIREMENTS}}
+**Difficulties:** {{DIFFICULTIES}}
+**Options:** {{OPTIONS}}
+**Conclusions / Decisions:** {{CONCLUSIONS_AND_DECISION_IDS}}
+**Follow-up:** {{FOLLOW_UP}}
 
 ## Full notes
 
-Material discussion with source links and timestamps; no inferred speaker identities.
+{{DISCUSSION_AND_SOURCE_TIMESTAMPS}}
 
 ## Decisions
 
-DEC-ID — statement; source/timestamp; confirmation scope and reviewer/status where known. Summarize the same ID in Meeting Briefs.
+| ID | Decision | Evidence | Confirmation scope |
+|---|---|---|---|
 
 ## Actions
 
-| Task / action | Owner (@email or TBD) | Due date | Evidence / task link |
+| Task ID / action | Owner | Due date | Task / evidence link |
 |---|---|---|---|
 
 ## Conflicts and open questions
 
-Conflict IDs and links to the relevant earlier notes and Meeting Briefs. State explicitly when no comparison is possible.
+{{CONFLICTS_AND_SOURCE_LINKS}}

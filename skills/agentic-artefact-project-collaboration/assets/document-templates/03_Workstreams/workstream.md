@@ -1,21 +1,20 @@
-# 工作线说明
+# {{WORKSTREAM_NAME}}
 
-workstream_id：WS-UUID
-Owner：
-业务目标：
+ID: {{WORKSTREAM_ID}}
+Owner: {{OWNER_PERSON_CHIP}}
 
-## 上游输入与下游交付
+## Objective
 
-MAT-ID → TASK-ID → DEL-ID
+{{OBJECTIVE}}
 
-## 主文件与系统入口
+## Inputs and outputs
 
-代码仓库 / 数据平台 / 实验追踪 URL：
+{{INPUT_AND_OUTPUT_LINKS}}
 
-## 本目录布局
+## Working locations
 
-根据实际需要创建 Analysis、Experiments、Engineering、Deployment；小项目不必全部建立。每个子目录说明用途与主文件。
+{{VERIFIED_LOCATIONS}}
 
-## 当前任务
+## Tasks
 
-链接 Control.Tasks 的 workstream 筛选视图，不复制状态。
+{{TASK_LINKS}}

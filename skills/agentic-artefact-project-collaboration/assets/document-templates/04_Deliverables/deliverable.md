@@ -1,15 +1,26 @@
-# 交付物说明
+# {{DELIVERABLE_TITLE}}
 
-deliverable_id：DEL-UUID
-主记录：Project Control / Deliverables
-主内容文件 URL：
+ID: {{DELIVERABLE_ID}}
+Owner: {{OWNER_PERSON_CHIP}}
+Index: {{DELIVERABLES_INDEX_FILE_CHIP}}
+Tasks: {{TASK_IDS_AND_LINKS}}
 
-## 内容范围与验收方法
+## Purpose and acceptance criteria
 
-## 输入材料、关联任务与版本
+{{PURPOSE_AND_ACCEPTANCE_CRITERIA}}
 
-## Review 意见与处理证据
+## Content
 
-## 发布快照和客户验收来源
+{{DELIVERABLE_CONTENT}}
 
-业务状态在 Control。review 草稿留同一主文档；仅正式提交或冻结时创建有版本的快照，并记录源版本。不要创建 final-final 文件。
+## Sources
+
+{{INPUT_FILE_CHIPS_AND_VERSIONS}}
+
+## Review
+
+{{REVIEW_EVIDENCE}}
+
+## Release and acceptance
+
+{{RELEASE_AND_ACCEPTANCE_EVIDENCE}}

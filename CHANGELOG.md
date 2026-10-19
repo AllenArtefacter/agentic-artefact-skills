@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.0 — 2026-10-19
+
+- Standardize placeholder-only document templates and empty index tables.
+- Add folder/file slots and a zero-row Tasks layout with formatting definitions.
+- Separate template structure from workflow guidance; never publish mock content.
+
 ## 0.13.0 — 2026-10-19
 
 - Audit zero-to-ready initialization, explicit destination authorization, partial recovery and native artifact acceptance.

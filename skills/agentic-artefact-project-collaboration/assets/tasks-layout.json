@@ -1,0 +1,64 @@
+{
+  "format_version": 1,
+  "tabs": [
+    {
+      "name": "Tasks",
+      "title": "Tasks \u2014 Confirmed"
+    },
+    {
+      "name": "Backlog",
+      "title": "Backlog \u2014 Pending confirmation"
+    }
+  ],
+  "columns": [
+    "Task / Meeting / Milestone",
+    "Step",
+    "ID",
+    "Description",
+    "Owner",
+    "Deadline",
+    "Status",
+    "Deliverables"
+  ],
+  "rows": [],
+  "header_row": 4,
+  "frozen_rows": 4,
+  "column_widths": [
+    180,
+    200,
+    100,
+    350,
+    180,
+    105,
+    150,
+    220
+  ],
+  "status_options": [
+    {
+      "value": "TODO",
+      "color": "#e6e6e6"
+    },
+    {
+      "value": "DOING",
+      "color": "#bfe1f6"
+    },
+    {
+      "value": "PENDING",
+      "color": "#ffe5a0"
+    },
+    {
+      "value": "DONE",
+      "color": "#d4edbc"
+    },
+    {
+      "value": "PARTIALLY DONE",
+      "color": "#e6cff2"
+    }
+  ],
+  "status_display": "CHIP",
+  "row_colors": {
+    "TASK": "#FFFFFF",
+    "MEETING": "#EAF3FC",
+    "MILESTONE": "#F2ECFA"
+  }
+}
