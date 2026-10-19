@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.6 — 2026-10-19
+
+- Remove the Claude manifest `icon` key; claude.ai sync flagged it as unrecognized and stripped it, leaving a warning.
+- No skill content changes; Claude and Codex plugin versions stay aligned.
+
 ## 0.16.5 — 2026-10-19
 
 - Set a Claude `displayName` with a colored leading symbol, because self-hosted marketplaces do not render the manifest `icon`.
