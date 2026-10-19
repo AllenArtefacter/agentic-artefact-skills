@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.12.0 — 2026-10-19
+
+- Maintain native Materials and Deliverables index Docs within their respective folders.
+- Reconcile output/task links when files change; keep descriptions concise and history in notes.
+
 ## 0.11.1 — 2026-10-19
 
 - Distinguish meeting and milestone rows with pale blue and purple backgrounds, retaining colored status chips.

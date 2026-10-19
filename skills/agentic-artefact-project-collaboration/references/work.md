@@ -40,8 +40,8 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 |---|---|
 | 会议结束 | 会议纪要；人或 AI 记录的待确认行动进入 Backlog；人工确认后进入 Tasks；决策保留在纪要/Decisions 并互链 |
 | 任务推进、阻塞或完成 | Tasks 的 Status、Description 依据和 Deliverables；不新增旧版 Control 专属列 |
-| 新产出或评审结果 | 交付主内容 + Deliverables 状态/证据 |
-| 新收到客户材料 | Materials 登记 + 原始输入目录 |
+| 新产出或评审结果 | 交付主内容 + Deliverables 目录索引 + 对应 Tasks 的 Deliverables 链接 |
+| 新收到客户材料 | Materials 目录索引 + 原始输入目录 |
 | 项目重要进展、阻塞、优先级变化 | STATUS.md 对应部分，刷新 as_of 和来源 |
 | 确认的范围、愿景、成员或职责变化 | Project.md 对应部分，更新 updated_at 和依据 |
 | 仅个人笔记/偏好变化 | ME.md 的个人关注或个人 working，不自动发布 |
@@ -65,3 +65,5 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 ## Meeting layout
 
 Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.
+
+材料和产出变更时，按 [folder-indexes.md](folder-indexes.md) 更新目录索引及关联任务。

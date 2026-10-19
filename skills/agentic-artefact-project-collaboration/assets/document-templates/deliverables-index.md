@@ -1,0 +1,6 @@
+# Deliverables
+
+Project: {{PROJECT_NAME}}
+Updated: {{DATE}}
+
+{{VERIFIED_FOLDER_ENTRIES_OR_EMPTY_STATE}}

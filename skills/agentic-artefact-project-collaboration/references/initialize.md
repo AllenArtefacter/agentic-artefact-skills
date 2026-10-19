@@ -54,3 +54,5 @@ Project 必须按 [project-metadata.md](project-metadata.md) 填写六项统一 
 ## Meeting layout
 
 Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.
+
+6. **目录索引。** 按 [folder-indexes.md](folder-indexes.md)，在 Materials 和 Deliverables 实际目录内各维护同名 Google Doc，登记已有文件；空目录明确写暂无文件。将两个 Doc ID 写入 manifest。

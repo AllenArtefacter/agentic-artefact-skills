@@ -45,8 +45,8 @@ Follow [task-tracking.md](task-tracking.md). Use Tasks / Backlog tabs with the s
 | Milestones | Target, acceptance criteria, status | Deliverable IDs |
 | Sprints | Window, goal, owner, status | Sprint brief |
 | Tasks | Owner, reviewer, priority, status, deadline, dependencies | Source IDs, optional details, evidence |
-| Deliverables | State, owner, acceptance, canonical file ID | Deliverable content and submission evidence |
-| Materials | Source, version, owner, usage notes | Original files or controlled external links |
+| Deliverables folder / Deliverables Doc | Output index, owner, review/acceptance state, canonical file ID, task links | Deliverable content and submission evidence |
+| Materials folder / Materials Doc | Input index, source, version, owner, usage notes | Original files or controlled external links |
 | Meetings | Meeting IDs, date, type, notes URL | Calendar event and task/decision IDs |
 | Decisions | Confirmed/proposed/superseded state and decision owner | Rationale and source |
 | Risks | Owner, open/mitigating/closed state, response | Analysis and affected IDs |
