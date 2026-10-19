@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.3 — 2026-10-19
+
+- Remove the Claude manifest icon field after the actual marketplace sync rejected it as unrecognized.
+- Preserve the approved logo asset and Codex icon configuration.
+
 ## 0.16.2 — 2026-10-19
 
 - Improve small-icon readability with the approved heavier GENTIC lettering, retaining the original magenta and no outline.

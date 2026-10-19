@@ -66,8 +66,8 @@ Commit generated package changes with the source changes. Run the check command 
 
 ## Brand asset (0.16.0)
 
-The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.2. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
+The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.3. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
 
 Claude receives the image as a bundled asset, but Claude Code does not read the directory-listing `icon` field, so downloading the asset does not guarantee a custom icon in its UI. See the [official manifest reference](https://code.claude.com/docs/en/plugins-reference).
 
-Version 0.16.1 declares `icon` in `.claude-plugin/plugin.json` for Claude directory consumers. This is separate from Codex interface metadata. Official documentation guarantees directory submission support, not every custom marketplace UI. Older Claude CLI validators may reject this newer field; the installed client version must be considered.
+Version 0.16.3 removes the Claude manifest `icon` field: the tested Claude marketplace sync reports it as unrecognized and strips it. The bundled image and Codex icon metadata remain. Do not promise a custom Claude plugin avatar via this field; directory documentation does not establish support in this sync path.
