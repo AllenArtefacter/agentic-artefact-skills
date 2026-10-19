@@ -38,6 +38,10 @@ For this Google Drive workflow, publish human-facing content in native Google fo
 
 Use a native project index to record canonical links and actual folder layout when the team prefers all-Google files; keep any machine JSON mapping in personal local state. Read/export native Docs through the available API. Migration preserves content, records new IDs, rewrites links, verifies readback and archives old files only after verification. Archived copies are not authoritative. Prefer targeted, revision-controlled native edits for ongoing work.
 
+## Installation welcome
+
+After installation, proactively show the short capability introduction and example requests in [welcome.md](references/welcome.md). Distinguish installation from connection/project readiness; do not repeat this welcome on every work turn.
+
 ## Google access: host integration first
 
 Follow [dependencies.md](references/dependencies.md) before accessing Google. Prefer the current host's connected Google Drive / Workspace plugin, connector or MCP. If unavailable, guide the user to install/connect the host-supported integration, using discovery and installation tools where available. When connection is needed, send the host-specific screenshot and concise steps directly; never substitute a bare local path for the illustrated guide. User completes Google consent and any host installation approval. Verify actual tools and scoped project reads before claiming readiness.

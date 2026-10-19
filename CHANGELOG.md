@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.1 — 2026-10-19
+
+- Introduce core capabilities and natural-language examples immediately after installation.
+- Tailor the welcome to actual connection, project binding and read/write availability.
+
 ## 0.15.0 — 2026-10-19
 
 - Remove retired CLI/OAuth guides, custom reader/wrapper and their backend-only tests.

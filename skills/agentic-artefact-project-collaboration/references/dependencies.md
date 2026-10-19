@@ -33,3 +33,5 @@ Python 仅在运行本 skill 的本地脚本时需要，不是使用远程 Googl
 ## Required visual onboarding response
 
 When the user needs to connect Google, send the relevant host screenshot together with the shortest click path in the same response. A code-formatted filesystem path or the sentence “the skill contains a guide” is not visual delivery. Follow the host setup guide's image-delivery rules. If images cannot render, say so briefly and provide a clickable public repository image link plus the full text steps. Do not require a separate request for the guide. Keep installation diagnostics (file counts, comparison details) secondary to the user's next action. Ask users to choose their own authorized account; do not default coworkers to the maintainer's email.
+
+After installation, include the short capability welcome in [welcome.md](welcome.md), alongside any necessary connection steps.

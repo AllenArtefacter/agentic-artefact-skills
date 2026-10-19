@@ -52,6 +52,8 @@ Google Drive 尚未连接时，引导用户：**Settings → Connectors → Goog
 
 安装本身无需 Google 凭据，不会启动监听器，也不会自动加入项目。不为验证安装而修改真实项目。不要求用户把 token 发到聊天或提交仓库。
 
+安装成功后，必须按 [功能欢迎指引](skills/agentic-artefact-project-collaboration/references/welcome.md) 主动介绍主要用途，并给出“总结会议纪要”“我的任务”“项目情况”等可直接发送的示例。不要只报告安装路径和 commit。
+
 ## 4. 加入已有项目
 
 用户提供 Artefact 项目文件夹链接、姓名、邮箱和职责后，使用 work 模式。先验证当前连接能读取指定项目，再读取 Project、STATUS 和任务入口。只读测试不修改项目、不访问父目录。个人绑定或共享资料更改遵守先询问的全局限制。
