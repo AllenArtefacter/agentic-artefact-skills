@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.3 — 2026-10-19
+
+- Keep Meeting Briefs compact with six inline summaries and short open checks; link detailed evidence from notes.
+
 ## 0.9.2 — 2026-10-19
 
 - Use native file chips for meeting source and related-document links; preserve useful deep links.

@@ -18,9 +18,8 @@ Options: TBD
 Conclusions: TBD
 Follow-up: TBD — task links, confirmed owners/dates or TBD
 
-## Potential conflicts
+## Open checks
 
-| Conflict ID | Topic | Meeting A + evidence | Meeting B + evidence | Impact | Status | Clarification owner / question | Resolution evidence / date |
-|---|---|---|---|---|---|---|---|
+One line per issue: conflict ID · opposing claims · status · owner/TBD · detail chip.
 
-Preserve earlier entries. Distinguish cross-meeting conflicts from source discrepancies and confirmed updates. No later statement automatically supersedes an earlier decision.
+<!-- Keep each meeting to roughly 100–150 English words. Six inline labels, one short sentence each. Detailed evidence and resolution history belong in the individual note. Preserve earlier entries and distinguish source discrepancies from confirmed cross-meeting conflicts. -->

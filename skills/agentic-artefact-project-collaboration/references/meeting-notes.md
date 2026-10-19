@@ -40,11 +40,13 @@ Maintain exactly one canonical Meeting Briefs document in note. For every meetin
 
 For an existing project, enumerate scoped meeting records to establish coverage. If some meetings are unavailable, label missing coverage; do not claim complete history. Unknown dates go in an undated section, not an invented position in the timeline.
 
+Keep Meeting Briefs scannable: one compact block per meeting, about 100–150 English words, with each of the six fields limited to one short sentence. Use inline bold labels rather than six section headings. Link details through file chips; do not duplicate task tables or source analysis. Show only concise conflict IDs, the opposing claims, status and clarification owner here; keep detailed evidence and resolution history in the individual note, linked from the brief. Preserve uncertainty and material commitments when shortening.
+
 ## Cross-meeting conflicts
 
 Before publishing new notes, compare relevant earlier briefs and source notes for changes in requirements, scope, definitions, targets, dates, ownership, methods, decisions and completion claims. Search only within the authorized project.
 
-Record possible conflicts in a dedicated section of Meeting Briefs with:
+Record detailed conflicts in the relevant individual note and link a one-line summary from Meeting Briefs. The detailed record contains:
 - Stable conflict ID and topic.
 - Meeting A and B IDs/dates, both source links and precise statements or timestamps.
 - Impact, status (unverified / confirmed conflict / resolved / superseded), clarification owner or TBD and question to resolve.
