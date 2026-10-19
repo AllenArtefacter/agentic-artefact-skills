@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.7 — 2026-10-19
+
+- Remove the colored symbol from the Claude `displayName`; custom plugin icons are not supported for self-hosted marketplaces yet (anthropics/claude-code#28187).
+- No skill content changes; Claude and Codex plugin versions stay aligned.
+
 ## 0.16.6 — 2026-10-19
 
 - Remove the Claude manifest `icon` key; claude.ai sync flagged it as unrecognized and stripped it, leaving a warning.
