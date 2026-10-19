@@ -18,7 +18,17 @@ If Google Drive is not listed under Yours, use the visible Discover tab or searc
 
 This screenshot is for Claude Settings, not proof that a separate Claude Code session can already access the connector. In Claude Code, inspect the tools visible to that session; follow current host guidance if the connection is unavailable. Never claim cross-client access without checking.
 
-Show the bundled screenshot when helpful, resolving it relative to the installed skill directory. Use an absolute local image path where supported, otherwise the repository link:
-https://github.com/AllenArtefacter/agentic-artefact-skills/blob/main/skills/agentic-artefact-project-collaboration/assets/onboarding/claude-google-drive-setup.png
+Display the screenshot directly in the same reply as the connection steps whenever onboarding is required. Do not merely mention its location or output a path in backticks. Resolve `assets/onboarding/claude-google-drive-setup.png` from the installed skill root.
+
+- If the host supports user-visible local images, use its native image attachment/display method or a Markdown image with the absolute local path. Reading an image with an inspection tool alone does not ensure the user sees it.
+- If the host supports remote Markdown images, use:
+
+![Claude Google Drive connection guide](https://raw.githubusercontent.com/AllenArtefacter/agentic-artefact-skills/main/skills/agentic-artefact-project-collaboration/assets/onboarding/claude-google-drive-setup.png)
+
+- If neither image mode is available, explain that the client cannot display the image inline and include this clickable fallback along with the steps:
+
+[Open the illustrated connection guide](https://github.com/AllenArtefacter/agentic-artefact-skills/blob/main/skills/agentic-artefact-project-collaboration/assets/onboarding/claude-google-drive-setup.png)
+
+Never give only a container-local path such as `/root/...` that the user may be unable to open. Never claim the image was displayed if the interface only returned a path. Do not change account permissions or authentication behavior to work around rendering limitations.
 
 The user selects their account and grants consent. After connection, verify the tools and read only the supplied project folder; do not search the entire Drive or access its parent. If a new session is needed for tool discovery, explain that explicitly. Report success only after the scoped read succeeds.

@@ -40,7 +40,7 @@ Use a native project index to record canonical links and actual folder layout wh
 
 ## Google access: host integration first
 
-Follow [dependencies.md](references/dependencies.md) before accessing Google. Prefer the current host's connected Google Drive / Workspace plugin, connector or MCP. If unavailable, guide the user to install/connect the host-supported integration, using discovery and installation tools where available. User completes Google consent and any host installation approval. Verify actual tools and scoped project reads before claiming readiness.
+Follow [dependencies.md](references/dependencies.md) before accessing Google. Prefer the current host's connected Google Drive / Workspace plugin, connector or MCP. If unavailable, guide the user to install/connect the host-supported integration, using discovery and installation tools where available. When connection is needed, send the host-specific screenshot and concise steps directly; never substitute a bare local path for the illustrated guide. User completes Google consent and any host installation approval. Verify actual tools and scoped project reads before claiming readiness.
 
 Do not require gws, gog, a custom GCP project or client JSON for the default path. These are optional fallbacks, not prerequisites. Only if the user chooses CLI access follow [cli-dependencies.md](references/cli-dependencies.md), [team-google-setup.md](references/team-google-setup.md) and [authentication.md](references/authentication.md). Browser fallback also requires user choice. Never assume every Google MCP provides identical operations or managed OAuth.
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.14.1 — 2026-10-19
+
+- Require inline illustrated connection steps, with a clickable public image fallback when the host cannot render images.
+- Do not substitute local paths for user-visible onboarding or default coworkers to the maintainer account.
+
 ## 0.14.0 — 2026-10-19
 
 - Standardize placeholder-only document templates and empty index tables.

@@ -44,6 +44,8 @@ Google Drive 尚未连接时，引导用户：**Settings → Connectors → Goog
 
 ![Claude Google Drive connector setup](skills/agentic-artefact-project-collaboration/assets/onboarding/claude-google-drive-setup.png)
 
+**回复要求：** 需要用户连接时，直接发送对应客户端的截图和点击步骤，不要仅输出图片路径。优先使用宿主可展示的图片；无法内嵌时给出上面指引中的 GitHub 图片链接，并明确显示限制。不要等待用户再索要图文指引。
+
 ## 3. 验证与说明
 
 确认目标目录中的 SKILL.md 可读，脚本及引用资源齐全；报告安装位置与源 commit。按照当前宿主的加载机制说明何时生效；若本轮无法加载新技能，明确告诉用户下一轮或重新打开会话后使用。

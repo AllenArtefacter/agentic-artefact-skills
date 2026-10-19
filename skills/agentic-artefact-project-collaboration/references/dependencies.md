@@ -10,8 +10,8 @@
 
 ## 2. 没有连接时由 agent 引导
 
-- **Codex**：安装时若尚未连接，必须按 [Codex 图文接入指引](codex-google-drive-setup.md) 告知用户：设置 → 插件 → 搜索 google → 点开 Google Drive → 认证页面完成授权，并按需展示随 skill 打包的截图。使用宿主插件发现/管理能力查找 Google Drive；读取返回的插件身份与状态，提供宿主支持的安装/连接入口或建议卡片。已安装则引导连接而不是重复安装。插件支持统一 Drive/Docs/Sheets/Slides 时不额外要求分别安装。不得把建议卡片已显示说成已安装。
-- **Claude / Claude Code**：未连接的 Claude 用户按 [Claude 图文接入指引](claude-google-drive-setup.md) 操作 Settings → Connectors → Google Drive → Connect → 完成认证；按需展示截图。截图中的勾选为已连接示例，先验证再决定是否需认证。先检查当前会话可见的连接器/MCP。优先使用该宿主现有 Google Workspace/Drive 集成；参照当前官方文档及实际 UI 引导启用。不要假设所有 Claude 客户端共享连接、权限和能力。
+- **Codex**：安装时若尚未连接，必须按 [Codex 图文接入指引](codex-google-drive-setup.md) 告知用户：设置 → 插件 → 搜索 google → 点开 Google Drive → 认证页面完成授权，并在同一回复直接展示随 skill 打包的截图。使用宿主插件发现/管理能力查找 Google Drive；读取返回的插件身份与状态，提供宿主支持的安装/连接入口或建议卡片。已安装则引导连接而不是重复安装。插件支持统一 Drive/Docs/Sheets/Slides 时不额外要求分别安装。不得把建议卡片已显示说成已安装。
+- **Claude / Claude Code**：未连接的 Claude 用户按 [Claude 图文接入指引](claude-google-drive-setup.md) 操作 Settings → Connectors → Google Drive → Connect → 完成认证；在同一回复直接展示截图。截图中的勾选为已连接示例，先验证再决定是否需认证。先检查当前会话可见的连接器/MCP。优先使用该宿主现有 Google Workspace/Drive 集成；参照当前官方文档及实际 UI 引导启用。不要假设所有 Claude 客户端共享连接、权限和能力。
 - **其他宿主或自定义 MCP**：查阅宿主和选定提供方的官方文档，确定准确包名、服务器 URL、安装方法和认证方式。不凭“Google MCP”名称安装未知第三方服务器，不编造 MCP URL。
 
 能调用安装/配置工具时，先展示具体方案并询问用户，确认后由 agent 执行；宿主仅提供安装卡片或 UI 时，请用户点击对应按钮。Google 账号选择、同意授权，以及宿主要求的安装/信任确认由用户完成，不代替用户同意权限。
@@ -29,3 +29,7 @@
 Python 仅在运行本 skill 的本地脚本时需要，不是使用远程 Google 连接器的前置。安装 skill 不会启动监听器。
 
 参考：[Claude Google Workspace connectors](https://support.claude.com/en/articles/10166901-use-google-workspace-connectors)、[Claude Code MCP](https://code.claude.com/docs/en/mcp)。具体入口以当前宿主实际界面和官方文档为准。
+
+## Required visual onboarding response
+
+When the user needs to connect Google, send the relevant host screenshot together with the shortest click path in the same response. A code-formatted filesystem path or the sentence “the skill contains a guide” is not visual delivery. Follow the host setup guide's image-delivery rules. If images cannot render, say so briefly and provide a clickable public repository image link plus the full text steps. Do not require a separate request for the guide. Keep installation diagnostics (file counts, comparison details) secondary to the user's next action. Ask users to choose their own authorized account; do not default coworkers to the maintainer's email.
