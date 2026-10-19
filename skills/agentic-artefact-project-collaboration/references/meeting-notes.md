@@ -42,6 +42,19 @@ For an existing project, enumerate scoped meeting records to establish coverage.
 
 Keep Meeting Briefs scannable: one compact block per meeting, about 100–150 English words, with each of the six fields limited to one short sentence. Use inline bold labels rather than six section headings. Link details through file chips; do not duplicate task tables or source analysis. Show only concise conflict IDs, the opposing claims, status and clarification owner here; keep detailed evidence and resolution history in the individual note, linked from the brief. Preserve uncertainty and material commitments when shortening.
 
+### Meeting Briefs card layout
+
+Render each meeting as its own native Google Docs single-column table, separated from other cards by a blank paragraph. Use assets/document-templates/02_Meetings/meeting-briefs.md as the content guide. This card layout applies to Meeting Briefs; individual full notes keep their own structure.
+
+- Header row: bold meeting title, then native date chip, review status and stable meeting ID. Add person chips only when useful and supported by confirmed meeting evidence; never copy a project roster or template invitees.
+- Summary row: the six inline bold labels, one short sentence each, with normal-weight values.
+- Optional open-check row: pale yellow; one concise line per conflict ID with status and owner/TBD. Omit the row when there are no open checks. Keep full evidence and resolution history in the linked individual note.
+- Sources row: native file chips for the note and raw source, plus relevant tasks or conflict detail. Add a reference only when actually used; retain useful deep links as descriptive hyperlinks.
+
+Default appearance: light-blue header (#E6F0FA), white summary/source rows, pale-yellow checks (#FFFAED), 0.5 pt light-gray-blue borders (#D1DBE6), 12 pt horizontal and 7 pt vertical cell padding. Use a bold 14 pt card title and 10 pt body, 110% line spacing and 3 pt paragraph spacing. Preserve chips as native editable elements; do not render the card as an image. Avoid fixed row heights that clip text.
+
+When using the Docs API, insert the table, read its actual cell paragraph indexes, then fill cells from highest index to lowest. Style returned text ranges, not structural boundaries. Use revision guards; verify native table rows, chip destinations and formatting after publishing. Locate updates by meeting ID and edit the existing card rather than appending duplicates or rebuilding the entire document. Inspect a rendered preview when available before claiming visual fidelity. If table styling is unavailable, disclose the limitation and keep a compact editable block.
+
 ## Cross-meeting conflicts
 
 Before publishing new notes, compare relevant earlier briefs and source notes for changes in requirements, scope, definitions, targets, dates, ownership, methods, decisions and completion claims. Search only within the authorized project.

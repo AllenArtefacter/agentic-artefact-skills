@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.5 — 2026-10-19
+
+- Add native meeting cards with blue headers, six bold summary labels, optional yellow open checks and file-chip sources.
+- Specify editable table styling and safe updates by meeting ID.
+
 ## 0.9.4 — 2026-10-19
 
 - Flatten Project metadata team chips without titles and use native chips for known dates.

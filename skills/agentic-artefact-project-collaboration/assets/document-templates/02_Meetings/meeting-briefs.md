@@ -1,25 +1,35 @@
 # Meeting Briefs
 
 Project: TBD
-Last updated: TBD
+Last updated: {{DATE_CHIP_OR_TBD}}
 Coverage: TBD — recorded meetings and any missing sources
 
-## {{DATE}} — {{TOPIC}}
+<!-- Publish each meeting below as a separate native single-column Google Docs table, not as this Markdown layout. See references/meeting-notes.md for card styling and publishing checks. -->
 
-Meeting ID: TBD
-Review status: Draft
-Note link: TBD
-Raw source links: TBD
+## Card — {{MEETING_ID}}
 
-Topics: TBD
-Requirements: TBD
-Difficulties: TBD
-Options: TBD
-Conclusions: TBD
-Follow-up: TBD — task links, confirmed owners/dates or TBD
+### Header row · light blue
 
-## Open checks
+**{{TOPIC}}**
+{{DATE_CHIP_OR_TBD}} · Draft · {{MEETING_ID}}
 
-One line per issue: conflict ID · opposing claims · status · owner/TBD · detail chip.
+### Summary row · white
 
-<!-- Keep each meeting to roughly 100–150 English words. Six inline labels, one short sentence each. Detailed evidence and resolution history belong in the individual note. Preserve earlier entries and distinguish source discrepancies from confirmed cross-meeting conflicts. -->
+**Topics:** TBD
+**Requirements:** TBD
+**Difficulties:** TBD
+**Options:** TBD
+**Conclusions:** TBD
+**Follow-up:** TBD — task IDs; confirmed owners/dates or TBD
+
+### Open-check row · pale yellow · omit if none
+
+**Open checks:** conflict ID · opposing claims · status · owner/TBD.
+
+### Sources row · white
+
+**Note:** {{NOTE_FILE_CHIP}}
+**Raw:** {{RAW_FILE_CHIPS}}
+**Tasks / conflict details:** {{RELEVANT_FILE_CHIPS_OR_OMIT}}
+
+<!-- Roughly 100–150 English words per meeting. Detailed evidence and resolution history belong in the individual note. Preserve earlier cards; update the matching meeting ID. Do not publish empty placeholder cards or infer participants. -->
