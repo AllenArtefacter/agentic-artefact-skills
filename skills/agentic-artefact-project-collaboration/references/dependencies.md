@@ -1,6 +1,6 @@
 # Google 接入：优先宿主 MCP / 连接器
 
-本 skill 的默认接入方式是宿主提供的 Google Drive / Google Workspace 插件、连接器或 MCP，不默认安装 gws/gog，也不默认要求团队 OAuth JSON 或 GCP 配置。MCP 是协议，不是唯一产品；不同实现的认证要求和能力不同。
+本 skill 的默认接入方式是宿主提供的 Google Drive / Google Workspace 插件、连接器或 MCP，不默认安装 Google CLI 工具，也不默认要求团队 OAuth JSON 或 GCP 配置。MCP 是协议，不是唯一产品；不同实现的认证要求和能力不同。
 
 ## 1. 检查已有连接
 
@@ -24,7 +24,7 @@
 
 分别报告 skill 安装、Google 连接、当前账号（工具能够核验时）和项目可访问性。账号不可查询时如实说明，不以本地 ME.md 代替实际登录证据。完成后继续 initialize/work，所有修改仍先询问用户。
 
-能力不足时说明缺少哪项，保留已可用的只读工作；不要立即要求换工具或扩大权限。无合适宿主集成时，向用户提出可选路线：经同意使用 [CLI 接入](cli-dependencies.md) 或 [浏览器接入](browser-access.md)。CLI 的团队 OAuth 配置见 team-google-setup.md；只有选择此路线才读取并执行。
+能力不足时说明缺少哪项，保留已可用的只读工作；不要立即要求换工具或扩大权限。无合适宿主集成时，说明能力缺口；经用户选择可使用 [浏览器接入](browser-access.md)。本 skill 不再分发 CLI/OAuth 自建接入路线。
 
 Python 仅在运行本 skill 的本地脚本时需要，不是使用远程 Google 连接器的前置。安装 skill 不会启动监听器。
 

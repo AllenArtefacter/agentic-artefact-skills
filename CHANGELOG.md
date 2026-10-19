@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.15.0 — 2026-10-19
+
+- Remove retired CLI/OAuth guides, custom reader/wrapper and their backend-only tests.
+- Keep host Google integration and local draft generation; remove old release ZIPs from the current tree.
+- Preserve legacy sources in Git history and local recoverable backup.
+
 ## 0.14.1 — 2026-10-19
 
 - Require inline illustrated connection steps, with a clickable public image fallback when the host cannot render images.

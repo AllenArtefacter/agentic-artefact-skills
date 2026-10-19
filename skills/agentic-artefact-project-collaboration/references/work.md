@@ -2,7 +2,7 @@
 
 **全局限制：** 遵守 SKILL.md 的 Global restrictions：不得访问项目父目录或其他范围外目录；任何删除 / 更改先展示具体方案并询问用户。以下创建、发布、更新、归档步骤均受此限制。
 
-先按 [dependencies.md](dependencies.md) 检查宿主 Google MCP/连接器；已有连接直接复用，否则指引安装与授权。验证指定项目的只读访问后继续。gws/gog 与团队 OAuth JSON 仅在用户选择 CLI 备用路线时使用。
+先按 [dependencies.md](dependencies.md) 检查宿主 Google MCP/连接器；已有连接直接复用，否则指引安装与授权。验证指定项目的只读访问后继续。
 
 既用于新同事第一次加入，也用于成员每天继续工作。已有团队项目不重复 initialize。
 
@@ -10,7 +10,7 @@
 
 1. 指定团队 folder、个人本地 workspace 和本人 Google 连接（不收集 token）。
 2. 必要时复制 local-personal 模板，创建 ME.md；先列出团队文件并读 Project.md，从正式成员表确认 person_id、邮箱和职责。姓名/邮箱缺失时补问本人，不新建一份团队成员身份。
-3. 优先使用当前宿主的 Google MCP/连接器关联目标 folder 并核对可查询的连接账户；如选择独立 Python reader，才用其 join / whoami 与本地状态。Google 账号、本人声明和团队成员信息冲突时先说明；可继续不依赖个人归属的一般阅读。
+3. 优先使用当前宿主的 Google MCP/连接器关联目标 folder 并核对可查询的连接账户。Google 账号、本人声明和团队成员信息冲突时先说明；可继续不依赖个人归属的一般阅读。
 4. 个人端只保留 ME.md 作为必读身份入口；团队端只保留 Project.md / STATUS.md 两份必读上下文。
 
 ## 云端格式
@@ -21,7 +21,7 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 
 ### 获取 context
 
-- 用实际连接器检查文件变化，记录最后成功扫描时间；gws 与 Python reader 的本地状态不自动互通。
+- 用实际连接器检查文件变化，记录最后成功扫描时间；本地仅记录实际已读取文件的版本和时间。
 - 读 ME.md → Project.md → STATUS.md；首次或布局变化时读 manifest 和 skill 中的目录指引。
 - 按 [task-tracking.md](task-tracking.md) 读 Tasks Sheet，按经确认的 Owner 芯片邮箱匹配本人任务，Backlog 建议单列；再读相关任务依赖、材料和会议/决策来源。
 - STATUS.md 是摘要，如果比源表旧就重读源表，不能把旧摘要当当前事实。
@@ -54,13 +54,12 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 - 内容成功、状态更新失败时明确部分成功，仅补缺失步骤。
 - 无 cloud writer 时完成个人产出与 outbox 提案，列出目标 ID、修改内容和证据；不得称为共享已更新。
 - 在个人 ME.md 的可选关注部分留下必要的下一步，避免复制团队任务全表。
-- 处理过的同步项才 ack；他人下一次 sync 可发现变化。未配置后台机制就不声称实时通知。
+- 记录已读取的版本；其他成员下次运行 work 时重新检查变化。未配置后台机制就不声称实时通知。
 
 ## 结束报告
 
 本轮做了什么；写入的实际文件与状态；验证结果；仍在个人空间的待发布内容；依赖/阻塞与下一步。把“完成工作”“发布成功”“审核通过”“客户接受”分别报告。
 
-工具能力见 google-reader.md：当前自带 Python reader 能读取/发现变化，不能云端更新；已登录 gws 可作为实际读写连接器。上表是 work 的执行协议；云端更新需要已授权且实际可用的写入连接器或项目维护者执行。
 
 ## Meeting layout
 

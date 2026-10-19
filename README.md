@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.14.1**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.15.0**。
 
 ## 给 agent 一个链接即可安装
 
@@ -22,13 +22,13 @@
 2. 已连接则直接验证；未连接时，agent 提供安装/连接入口，并执行宿主允许且用户确认的配置。
 3. 用户完成必要的安装确认和 Google 浏览器授权，agent 验证指定项目访问后继续 work。
 
-**默认不需要 gws/gog、团队 OAuth JSON 或自行配置 GCP。** MCP/连接器的具体能力和认证方式以所选实现为准；没有合适集成时才询问是否使用 CLI 或浏览器备用路线。
+**默认不需要 gws/gog、团队 OAuth JSON 或自行配置 GCP。** MCP/连接器的具体能力和认证方式以所选实现为准；没有合适集成时说明缺项，或按用户选择使用浏览器。
 
 Codex 的连接入口：**设置 → 插件 → 搜索 google → Google Drive → 完成认证**。[查看图文指引](skills/agentic-artefact-project-collaboration/references/codex-google-drive-setup.md)。
 
 Claude 的连接入口：**Settings → Connectors → Google Drive → Connect → 完成认证**。[查看图文指引](skills/agentic-artefact-project-collaboration/references/claude-google-drive-setup.md)。
 
-接入问题联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com)。自带 OAuth 的 CLI 备用方案仍保留在 [团队配置指南](skills/agentic-artefact-project-collaboration/references/team-google-setup.md)，不再作为新人默认步骤。
+接入问题联系 [allen.liang@artefact.com](mailto:allen.liang@artefact.com)。使用本人已连接的 Google 账号。
 
 ## 两个入口
 
@@ -81,9 +81,8 @@ STATUS                  Google Doc：当前进展、阻塞、下一步
 
 ## 能力与限制
 
-- 优先通过宿主 Google MCP/连接器执行已确认操作；按实际工具验证 Drive / Docs / Sheets / Slides 能力。gws/gog 仅为可选备用。
+- 优先通过宿主 Google MCP/连接器执行已确认操作；按实际工具验证 Drive / Docs / Sheets / Slides 能力。不再分发旧 CLI 接入路线。
 - 本地 scaffold / initialize 脚本仅生成 Markdown / JSON 草稿，发布时转换或填充为原生 Google 文件。
-- 独立 Python reader 支持项目范围清单、内容读取、全量清单差异和本地确认，不执行云端写入；它与 gws 使用独立凭据入口和同步状态。
 - 浏览器是 API 受阻时的备用入口，不能绕过文件权限。
 - 不含通用的一键云端部署器、事务化写入协调器、Changes API 增量 worker 或后台通知服务。任务分工不等于访问权限。
 - 单账号 Drive 读写、文件移动和原生 Docs 转换已在项目试点验证；不代表任意公司策略或多账号场景已通过。单元测试使用模拟 API。
@@ -98,7 +97,7 @@ python3 -m unittest discover -s tests -p 'test_project_collaboration.py'
 
 brief 结构见 `skills/agentic-artefact-project-collaboration/assets/initialize-brief.json`。输出目录必须不存在。
 
-[Skill 入口](skills/agentic-artefact-project-collaboration/SKILL.md) · [授权](skills/agentic-artefact-project-collaboration/references/authentication.md) · [空间模型](skills/agentic-artefact-project-collaboration/references/workspace-model.md) · [读取器](skills/agentic-artefact-project-collaboration/references/google-reader.md)
+[Skill 入口](skills/agentic-artefact-project-collaboration/SKILL.md) · [Google 连接](skills/agentic-artefact-project-collaboration/references/dependencies.md) · [空间模型](skills/agentic-artefact-project-collaboration/references/workspace-model.md)
 
 ## 发布内容
 

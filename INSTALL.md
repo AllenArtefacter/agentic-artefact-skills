@@ -26,7 +26,7 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 执行 [Google 接入流程](skills/agentic-artefact-project-collaboration/references/dependencies.md)。优先复用当前宿主的 Google Drive/Workspace MCP 或连接器；缺失时由 agent 查找正确集成并提供安装/连接入口。能由 agent 执行的配置在确认后执行；用户完成宿主要求的安装点击和 Google 浏览器授权。
 
-不默认安装 gws/gog，不索取团队客户端 JSON，不要求用户配置 GCP。仅在用户明确选择备用 CLI 路线时执行对应指南。不要把“安装了插件”当作“已授权”，也不要把“已授权”当作“能访问项目”。
+不默认安装 gws/gog，不索取团队客户端 JSON，不要求用户配置 GCP。旧 CLI/OAuth 路线已移出当前包。不要把“安装了插件”当作“已授权”，也不要把“已授权”当作“能访问项目”。
 
 ### Codex 用户的认证入口
 

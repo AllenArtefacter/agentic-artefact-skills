@@ -67,7 +67,7 @@ A task can serve multiple deliverables; sprint may be empty. Long-lived workstre
 
 Current Tasks: TODO / DOING / PENDING / DONE / PARTIALLY DONE; approval is represented by Tasks versus Backlog. Record blockers and cancellation evidence in notes. Reopen with evidence and preserve why. Deliverables: draft → in_review → approved_internal → submitted → accepted; changes_requested returns to draft. Decisions: proposed → confirmed → superseded. Meeting draft is not confirmed evidence of agreement.
 
-Person doing the work proposes progress and evidence; the designated Control steward serializes accepted sheet changes. Reviewer checks technical/quality completion; customer acceptance has an explicit source. This is a workflow ownership convention, not a technical mutex. The bundled Python reader cannot write; host connector capabilities are checked separately.
+Person doing the work proposes progress and evidence; the designated Control steward serializes accepted sheet changes. Reviewer checks technical/quality completion; customer acceptance has an explicit source. This is a workflow ownership convention, not a technical mutex. Local preparation scripts do not access Google; check host connector capabilities separately.
 
 Separate local/publication state: local_only → pending_publish → published; conflict or stale needs re-read/reconciliation. A published document may still be a business draft. A locally completed task is not marked done in the shared table until that update actually succeeds.
 

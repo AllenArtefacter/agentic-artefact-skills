@@ -17,161 +17,7 @@ def module(name):
     spec.loader.exec_module(result)
     return result
 
-r = module('drive_reader')
 s = module('scaffold')
-
-def item(fid, mime='text/plain', parents=None, version='1'):
-    return {'id': fid, 'name': fid, 'mimeType': mime, 'parents': parents or [], 'version': version, 'driveId': 'shared'}
-
-class FakeGoogle:
-    def __init__(self, token='unused'):
-        self.items = {'root': item('root', r.FOLDER), 'sub': item('sub', r.FOLDER, ['root']),
-                      'doc': item('doc', 'application/vnd.google-apps.document', ['sub']),
-                      'outside': item('outside'), 'shortcut': item('shortcut', r.SHORTCUT, ['root'])}
-        self.principal = 'person-A'
-        self.fail = False
-        self.requests = []
-
-    def identity(self):
-        return self.principal
-
-    def metadata(self, fid):
-        if self.fail:
-            raise r.ReaderError('simulated access failure')
-        if fid not in self.items:
-            raise r.ReaderError('not accessible')
-        return copy.deepcopy(self.items[fid])
-
-    def children(self, fid, drive_id):
-        if self.fail:
-            raise r.ReaderError('simulated scan failure')
-        yield from [copy.deepcopy(v) for v in self.items.values() if fid in v.get('parents', [])]
-
-    def get(self, path, params=None, base=None, binary=False):
-        self.requests.append((path, params, base, binary))
-        if base and 'sheets.googleapis.com' in base:
-            return {'sheets': [{'properties': {'title': 'Tasks'}}, {'properties': {'title': 'Deliverables'}}]}
-        return b'Current project content'
-
-class ReaderTests(unittest.TestCase):
-    def test_folder_url_and_validation(self):
-        self.assertEqual(r.file_id('https://drive.google.com/drive/u/0/folders/abc_123?usp=sharing'), 'abc_123')
-        for bad in ('https://evil.test/folders/root', "x' or true", '../root'):
-            with self.assertRaises(r.ReaderError): r.file_id(bad)
-
-    def test_inventory_scope_and_shortcuts(self):
-        api = FakeGoogle()
-        self.assertEqual(set(r.inventory(api, 'root')), {'root','sub','doc','shortcut'})
-        with self.assertRaises(r.ReaderError): r.scoped_metadata(api,'root','outside')
-        with self.assertRaises(r.ReaderError): r.read_content(api,'root','shortcut')
-        self.assertEqual(r.scoped_metadata(api,'root','doc')['id'],'doc')
-
-    def test_folder_move_out_excludes_subtree(self):
-        api=FakeGoogle()
-        old=r.reconcile({},r.inventory(api,'root'))
-        api.items['sub']['parents']=['outside']
-        new=r.reconcile(old,r.inventory(api,'root'))
-        unavailable=[e for e in new['inbox'] if e['kind']=='unavailable_or_moved_out']
-        self.assertEqual({e['file_id'] for e in unavailable},{'sub','doc'})
-        self.assertTrue(all('name' not in e for e in unavailable))
-        again=r.reconcile(new,r.inventory(api,'root'))
-        self.assertEqual(again['inbox'],new['inbox'])
-        with self.assertRaises(r.ReaderError): r.read_content(api,'root','doc')
-
-    def test_delta_no_repeat_and_ack_separate(self):
-        api=FakeGoogle(); first=r.reconcile({},r.inventory(api,'root'))
-        second=r.reconcile(first,r.inventory(api,'root'))
-        self.assertEqual(first['inbox'],second['inbox'])
-        second['inbox']=[]
-        self.assertEqual(r.reconcile(second,r.inventory(api,'root'))['inbox'],[])
-        api.items['doc']['version']='2'
-        update=r.reconcile(second,r.inventory(api,'root'))
-        self.assertEqual([(e['file_id'],e['kind']) for e in update['inbox']],[('doc','updated')])
-
-    def test_paginated_shared_drive(self):
-        api=r.Google('fake'); calls=[]
-        pages=[{'files':[item('a')],'nextPageToken':'page2'}, {'files':[item('b')]}]
-        def fake_get(path,params):
-            calls.append(dict(params));return pages.pop(0)
-        api.get=fake_get
-        self.assertEqual([x['id'] for x in api.children('root','shared')],['a','b'])
-        self.assertEqual(calls[1]['pageToken'],'page2')
-        self.assertEqual(calls[0]['corpora'],'drive')
-        self.assertEqual(calls[0]['supportsAllDrives'],'true')
-
-    def test_incomplete_and_repeating_pagination_fail(self):
-        api=r.Google('fake')
-        api.get=lambda *a:{'incompleteSearch':True}
-        with self.assertRaises(r.ReaderError):list(api.children('root','shared'))
-        api.get=lambda *a:{'files':[],'nextPageToken':'same'}
-        with self.assertRaises(r.ReaderError):list(api.children('root','shared'))
-
-    def test_reads_docs_and_all_sheet_tabs(self):
-        api=FakeGoogle()
-        self.assertEqual(r.read_content(api,'root','doc')['text'],'Current project content')
-        api.items['doc']['mimeType']='application/vnd.google-apps.spreadsheet'
-        out=r.read_content(api,'root','doc')
-        self.assertEqual(len(out['sheets']),2)
-        self.assertEqual(api.requests[-1][1]['includeGridData'],'true')
-        self.assertNotIn('ranges',api.requests[-1][1])
-
-    def test_concurrent_read_change_fails(self):
-        api=FakeGoogle(); original=api.get
-        def get(*a,**kw):
-            api.items['doc']['version']='2';return original(*a,**kw)
-        api.get=get
-        with self.assertRaises(r.ReaderError):r.read_content(api,'root','doc')
-
-    def test_whoami_uses_authenticated_account_not_role(self):
-        api=r.Google('fake-token')
-        api.get=lambda path, params: {'user': {'permissionId': 'principal-A', 'emailAddress': 'member@example.test', 'displayName': 'Member'}}
-        self.assertEqual(api.identity(),'principal-A')
-        self.assertEqual(api.current_user()['emailAddress'],'member@example.test')
-        self.assertNotIn('roles',api.current_user())
-
-    def test_missing_token(self):
-        with patch.dict(os.environ,{},clear=True):
-            with self.assertRaises(r.ReaderError):r.get_token({'token_env':'MISSING_TEST_TOKEN'})
-
-    def test_refresh_uses_fixed_google_endpoint(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            path=Path(tmp)/'creds.json'
-            path.write_text(json.dumps({'type':'authorized_user','client_id':'test','client_secret':'secret',
-                                        'refresh_token':'refresh','token_uri':'https://evil.test'}))
-            with patch.object(r,'http',return_value=b'{"access_token":"test-access"}') as call:
-                self.assertEqual(r.get_token({'credentials_file':str(path)}),'test-access')
-                self.assertEqual(call.call_args.args[0],'https://oauth2.googleapis.com/token')
-
-    def test_lock_exclusion(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            with r.workspace_lock(Path(tmp)):
-                with self.assertRaises(r.ReaderError):
-                    with r.workspace_lock(Path(tmp)):pass
-            self.assertFalse((Path(tmp)/'.collab/reader.lock').exists())
-
-    def test_workflow_failure_preserves_snapshot_and_account_boundary(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            api=FakeGoogle()
-            args=types.SimpleNamespace(command='join',workspace=tmp,folder='root',token_env='TEST_TOKEN',
-                                       personal_folder='personal',credentials_file=None)
-            with patch.object(r,'Google',return_value=api), patch.dict(os.environ,{'TEST_TOKEN':'never-store-this'}):
-                r.run(args)
-                stored=(Path(tmp)/'.collab/config.json').read_text()
-                self.assertNotIn('never-store-this',stored)
-                self.assertIn('personal',stored)
-                before=(Path(tmp)/'.collab/state.json').read_bytes()
-                args.command='sync';api.fail=True
-                with self.assertRaises(r.ReaderError):r.run(args)
-                self.assertEqual((Path(tmp)/'.collab/state.json').read_bytes(),before)
-                api.fail=False;api.principal='person-B'
-                with self.assertRaises(r.ReaderError):r.run(args)
-                self.assertEqual((Path(tmp)/'.collab/state.json').read_bytes(),before)
-                api.principal='person-A';api.items['doc']['version']='2'
-                result=r.run(args)
-                change=next(e for e in result['pending_changes'] if e['file_id']=='doc' and e['kind']=='updated')
-                args.command='ack';args.change_id=change['change_id'];r.run(args)
-                args.command='sync'
-                self.assertFalse(any(e['change_id']==change['change_id'] for e in r.run(args)['pending_changes']))
 
 class TemplateTests(unittest.TestCase):
     def test_all_spaces_and_json_escape(self):
@@ -190,8 +36,6 @@ class TemplateTests(unittest.TestCase):
             self.assertEqual({p.name for p in (team/'02_Meetings').iterdir()}, {'raw', 'note'})
             self.assertFalse(list((team/'02_Meetings').rglob('*.*')))
             self.assertIn('个人',(Path(tmp)/'local-personal/README.md').read_text())
-
-if __name__=='__main__':unittest.main()
 
 class InitializeTests(unittest.TestCase):
     def test_initialize_populates_context_and_preserves_draft_boundary(self):
@@ -251,3 +95,5 @@ class InitializeTests(unittest.TestCase):
             self.assertNotEqual(result.returncode,0)
             self.assertIn('ambiguous',result.stderr)
             self.assertFalse(out.exists())
+
+if __name__=='__main__': unittest.main()
