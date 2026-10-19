@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.4 — 2026-10-19
+
+- Retry Claude directory icon with the exact root-relative `icon: ./logo.png` configuration requested by the maintainer.
+- Include the approved logo at the Claude plugin root; display support remains unverified.
+
 ## 0.16.3 — 2026-10-19
 
 - Remove the Claude manifest icon field after the actual marketplace sync rejected it as unrecognized.
