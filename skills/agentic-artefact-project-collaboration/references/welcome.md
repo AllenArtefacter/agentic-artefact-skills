@@ -17,3 +17,5 @@ If the project is not bound, ask for its Drive folder link and only the missing 
 Meeting processing preserves raw sources, creates linked notes/briefs and proposes actions to Backlog; explicit human confirmation moves actions to Tasks. Output updates maintain folder indexes and task links. These actions follow the existing authorization rules; example prompts do not grant blanket write permission. Do not promise background monitoring or automatic notifications. Mention limitations briefly when relevant, without turning the welcome into a technical checklist.
 
 When the user first encounters the project Tasks Sheet, also explain the two-tab confirmation workflow using [task-tracking.md](task-tracking.md#explain-the-tracker-to-users). Keep the initial installation welcome short; defer detailed column/status guidance until the tracker is available.
+
+任务表首次使用提示：“如果希望把 Backlog 中的任务放进 Tasks，可以直接和我说：把 Backlog 中的 XX 加入 Tasks。XX 可以是任务名称或 ID。”

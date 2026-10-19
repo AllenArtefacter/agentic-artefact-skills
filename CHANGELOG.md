@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.15.6 — 2026-10-19
+
+- Explicitly invite users to promote Backlog items by task name or ID through conversation.
+
 ## 0.15.5 — 2026-10-19
 
 - Explain Tasks versus Backlog, confirmation, status options and output links at tracker handoff and first use.

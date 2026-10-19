@@ -58,3 +58,9 @@ Introduce columns briefly: Task is the grouped item, Step the action, ID the sta
 Status meanings: TODO = not started; DOING = in progress; PENDING = waiting/blocked, with reason in notes; DONE = completed with evidence; PARTIALLY DONE = some work/output exists but the item is unfinished. DONE is not automatically client acceptance. Colors follow the specified dropdown palette.
 
 Offer simple examples: “把这条加入 Backlog”, “确认这两项由我负责”, “把我的任务改为 DOING”, “把这份产出关联到任务 2.1”. Examples are guidance, not authorization to mutate data. Keep full reusable guidance in the skill, not a third instructions tab; the existing short tab subtitles may explain their purpose.
+
+When explaining the two tabs, explicitly tell the user:
+
+> 如果希望把 Backlog 中的任务放进 Tasks，可以直接和我说：“把 Backlog 中的 XX 加入 Tasks。”XX 可以是任务名称或 ID。
+
+Treat this explicit request as confirmation of the identified item; resolve an ambiguous name before moving it. Preserve the ID, existing owner/date/status and output links. Do not infer missing assignments or mark the item DONE merely because it was confirmed.
