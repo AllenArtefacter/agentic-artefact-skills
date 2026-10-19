@@ -38,7 +38,7 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 
 | 发生的事情 | 更新哪里 |
 |---|---|
-| 会议结束 | 会议纪要；AI 行动建议进入 Backlog；人工确认后进入 Tasks；决策保留在纪要/Decisions 并互链 |
+| 会议结束 | 会议纪要；人或 AI 记录的待确认行动进入 Backlog；人工确认后进入 Tasks；决策保留在纪要/Decisions 并互链 |
 | 任务推进、阻塞或完成 | Tasks 的 Status、Description 依据和 Deliverables；不新增旧版 Control 专属列 |
 | 新产出或评审结果 | 交付主内容 + Deliverables 状态/证据 |
 | 新收到客户材料 | Materials 登记 + 原始输入目录 |

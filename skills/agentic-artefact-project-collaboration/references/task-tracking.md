@@ -16,9 +16,9 @@ Task | Step | ID | Description | Owner | Deadline | Status | Deliverables
 
 ## Approval boundary
 
-Tasks contains only human-validated work. Backlog contains agent/AI suggestions extracted from meetings, chats and planning. An AI interpretation, a meeting mention, an existing draft, or a done status does not prove human validation. Record who approved, when and the source in Description or an ordinary cell note where known; do not invent attribution or approval dates. An explicit user request to do a concrete task is validation of that task.
+Tasks contains confirmed work. Backlog contains tasks awaiting confirmation, recorded by people or AI from meetings, chats or planning. Classify by confirmation state, never by author. Use titles Tasks — Confirmed and Backlog — Pending confirmation. Human entry alone does not constitute approval. An AI interpretation, a meeting mention, an existing draft, or a done status does not prove human validation. Record who approved, when and the source in Description or an ordinary cell note where known; do not invent attribution or approval dates. An explicit user request to do a concrete task is validation of that task.
 
-Promote only explicitly approved IDs/steps from Backlog to Tasks, preserving IDs, source links, ownership, status and deliverables. Verify destination rows before removing the source entry, and do not leave two active copies. Resolve duplicate IDs or concurrent edits before writing. Unapproved steps stay in Backlog even when another step of the same Task is approved. New AI suggestions default to Backlog. Owner's tasks are matched by exact chip email/confirmed aliases, with Backlog suggestions reported separately from assignments.
+Promote only explicitly approved IDs/steps from Backlog to Tasks, preserving IDs, source links, ownership, status and deliverables. Verify destination rows before removing the source entry, and do not leave two active copies. Resolve duplicate IDs or concurrent edits before writing. Unapproved steps stay in Backlog even when another step of the same Task is approved. New unconfirmed items from people or AI default to Backlog. Owner's tasks are matched by exact chip email/confirmed aliases, with Backlog suggestions reported separately from assignments.
 
 ## Merged layout
 
@@ -30,6 +30,6 @@ Use a plain formatted grid with cell-level status dropdowns because the requeste
 
 ## Migration and verification
 
-Read existing task/plan/decision records before migrating. Separate proven human requests from AI suggestions, retain historical status caveats and preserve decisions. After the new Sheet is verified, update canonical links in Project/index/meeting records. Remove or archive superseded files only within the user's explicit authorization; prefer recoverable deletion. Do not create a second authoritative task register.
+Read existing task/plan/decision records before migrating. Separate confirmed tasks from unconfirmed entries regardless of author, retain historical status caveats and preserve decisions. After the new Sheet is verified, update canonical links in Project/index/meeting records. Remove or archive superseded files only within the user's explicit authorization; prefer recoverable deletion. Do not create a second authoritative task register.
 
 Verify both tab names, eight headers, text IDs, dropdown values/strictness, person/file chips, deadline types, merged ranges and source-to-destination row coverage. Check a multi-step Task and a multi-output Step where real records exist; do not add fake project rows just to demonstrate formatting. Preserve unknowns. Keep reusable seeds and this guide inside the skill.

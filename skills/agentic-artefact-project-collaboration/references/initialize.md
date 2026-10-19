@@ -25,7 +25,7 @@
 2. **建立目录。** 默认使用用户确认的六个目录：00_Start_Here、01_Management、02_Meetings、04_Deliverables、05_Materials、90_Archive。现有项目尊重实际布局，不自动补回删去的目录。 在新的本地目录生成项目专属文件和所需工作目录；通用 README、空白模板、CSV 表头及操作指南留在 skill 中。云端有已授权写入器时在指定位置新建项目根目录或使用指定空目录，登记创建返回的 ID；避免靠同名文件判断唯一性。重试复用已创建 ID，不能生成重复套件。
 3. **写 Project.md。** 将 context、vision、范围、成功标准、成员邮箱/职责、PM、协作约定和入口写成项目特定内容。为新成员分配稳定 person_id；不另建 AGENTS.md / TEAM.md / SOUL.md。
 4. **写 STATUS.md。** 根据实际事实给出项目阶段、已完成的设置、未确定事项、初始阻塞和下一步；填 as_of、来源和汇总者。初始化不是交付已完成；准备完本地草稿也不是云端已发布。
-5. **准备工作资料。** 按 [task-tracking.md](task-tracking.md) 创建 Tasks Google Sheet，默认仅 Tasks / Backlog 两个 tab。人工确认任务进入 Tasks；AI 提炼建议进入 Backlog。不要创建 Work Plan；其他记录按实际需要添加，通用 CSV 表头不发布到项目。
+5. **准备工作资料。** 按 [task-tracking.md](task-tracking.md) 创建 Tasks Google Sheet，默认仅 Tasks / Backlog 两个 tab。已确认任务进入 Tasks；人或 AI 记录的待确认任务进入 Backlog。不要创建 Work Plan；其他记录按实际需要添加，通用 CSV 表头不发布到项目。
 6. **发布和登记。** 用真实云端 file IDs 更新 manifest；记录 Project.md、STATUS.md、Tasks Sheet 和各入口。团队 Project、STATUS、决策和纪要默认发布为原生 Google Docs，不使用 .md 后缀；任务表优先 Sheets，接口不可用时可用 Docs 表格并注明。本地 Markdown 仅为草稿。团队项目索引可为原生 Docs，机器 JSON 映射保存在本机；按实际 ID 找文件。没有云端 writer 时产出本地 draft_ready，不模拟发布。
 7. **回读验收。** 从实际目标根目录重新列出并读取关键文件，核对成员、链接、内容和权限内可读性。成功后才能将 initialization_status 设为 ready。初始状态摘要对应的是上线设置结果，不代表业务验收。
 
