@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.2 — 2026-10-19
+
+- Improve small-icon readability with the approved heavier GENTIC lettering, retaining the original magenta and no outline.
+
 ## 0.16.1 — 2026-10-19
 
 - Declare the official Claude plugin directory icon field using the approved bundled logo.
