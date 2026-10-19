@@ -8,5 +8,8 @@
   "success_criteria": [],
   "project_manager_email": "",
   "members": [],
-  "open_questions": []
+  "open_questions": [],
+  "start_date": null,
+  "project_status": null,
+  "client_contacts": []
 }

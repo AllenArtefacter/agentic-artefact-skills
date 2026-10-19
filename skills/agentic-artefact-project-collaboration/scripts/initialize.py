@@ -56,6 +56,24 @@ def validate(brief):
     matches = [m for m in result['members'] if m['email'] == result['project_manager_email']]
     if len(matches) != 1:
         raise ValueError('project_manager_email must exactly match one member primary email')
+    result['start_date'] = brief.get('start_date') or 'TBD'
+    if result['start_date'] != 'TBD':
+        value = nonempty(result['start_date'], 'start_date')
+        if datetime.strptime(value, '%Y-%m-%d').strftime('%Y-%m-%d') != value:
+            raise ValueError('start_date must be YYYY-MM-DD')
+        result['start_date'] = value
+    result['project_status'] = nonempty(brief.get('project_status') or 'TBD', 'project_status')
+    contacts = brief.get('client_contacts', [])
+    if not isinstance(contacts, list):
+        raise ValueError('client_contacts must be a list')
+    result['client_contacts'] = []
+    for contact in contacts:
+        if not isinstance(contact, dict):
+            raise ValueError('client contact must be an object')
+        email = contact.get('email') or ''
+        if not isinstance(email, str) or (email and (email.count('@') != 1 or any(c.isspace() for c in email) or not all(email.split('@')))):
+            raise ValueError('client contact requires a complete email or no email')
+        result['client_contacts'].append({'name': str(contact.get('name') or 'TBD'), 'email': email})
     result['maintainer_person_id'] = matches[0]['person_id']
     return result
 
@@ -78,13 +96,26 @@ def initialize(brief, output):
     def cell(value):
         return str(value).replace('|', r'\|').replace('\n', ' ')
     roster = '\n'.join('| ' + ' | '.join(cell(v) for v in (
-        m['person_id'], m['name'], m['email'],
+        m['person_id'], m['name'], '@' + m['email'],
         '; '.join(m['email_aliases']) or '—',
         '; '.join(m['roles'] + m['responsibilities']))) + ' |'
         for m in b['members'])
+    team_mentions = '; '.join('@' + m['email'] + ' (' + ', '.join(m['roles']) + ')' for m in b['members'])
+    client_mentions = '; '.join(('@' + c['email']) if c['email'] else c['name'] + ' (email: TBD)' for c in b['client_contacts']) or 'TBD'
     (out / 'Project.md').write_text(f"""# {b['project_name']}
 
-更新：{timestamp} · 项目 ID：{manifest['project_id']}
+## Metadata
+
+| Field | Value |
+|---|---|
+| Project name | {cell(b['project_name'])} |
+| Team | {cell(team_mentions)} |
+| Start date | {b['start_date']} |
+| Status | {cell(b['project_status'])} |
+| Last updated | {timestamp} |
+| Client contacts | {cell(client_mentions)} |
+
+Project ID: {manifest['project_id']}
 
 ## 项目目标
 

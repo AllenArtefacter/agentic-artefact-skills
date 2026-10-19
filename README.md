@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.2**。
+面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.8.3**。
 
 ## 给 agent 一个链接即可安装
 
@@ -43,6 +43,10 @@ Agent 检查身份和目录，准备项目上下文、人员、状态、计划�
 > 我是……，邮箱是……。使用 agentic-artefact-project-collaboration 对这个项目执行 work，告诉我目前需要做什么。
 
 Agent 读取个人 ME.md、团队 Project 和 STATUS，定位本人负责/参与/审核任务，只读取本轮需要的资料。完成授权的工作后更新产出和状态，回读核验。
+
+## Project metadata
+
+每个 Project 固定包含 Project name、Team（@邮箱人员芯片及职责）、Start date、Status、Last updated、Client contacts（@邮箱人员芯片）。缺失值明确写 TBD；不推测开始日期或客户邮箱。[字段规范](skills/agentic-artefact-project-collaboration/references/project-metadata.md)。
 
 ## 默认资料布局
 

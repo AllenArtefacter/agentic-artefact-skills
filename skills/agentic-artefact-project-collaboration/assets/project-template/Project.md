@@ -1,14 +1,27 @@
 # {{PROJECT_NAME}}
 
-项目目标：待填写。
+## Metadata
 
-## 人员
+| Field | Value |
+|---|---|
+| Project name | {{PROJECT_NAME}} |
+| Team | TBD — @email and role for each confirmed member |
+| Start date | TBD |
+| Status | TBD |
+| Last updated | TBD — set on actual edit |
+| Client contacts | TBD — @email when confirmed |
 
-成员 ID、邮箱和职责待确认；不预设人员。
+## Purpose
 
-## 项目入口
+TBD
 
-团队目录：{{PROJECT_FOLDER}}
-项目 ID：{{PROJECT_ID}}
-当前进展：STATUS.md
-正式文件入口：00_Start_Here/project.manifest.json
+## Team responsibilities
+
+Member IDs, confirmed emails and responsibilities: TBD.
+
+## Key links
+
+Project folder: {{PROJECT_FOLDER}}
+Project ID: {{PROJECT_ID}}
+Progress: STATUS.md
+Canonical file IDs: 00_Start_Here/project.manifest.json

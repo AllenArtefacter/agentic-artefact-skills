@@ -48,3 +48,5 @@ python3 scripts/initialize.py --brief /absolute/path/filled-brief.json --output 
 **ready：** 目标团队文件夹实际存在；两份核心 MD 可回读；真实成员及职责已配置；Control、工作计划及必需 canonical IDs 有效；未启用的可选功能标明；用成员实际权限验证后才能声称该成员可用。未做双账号验证只报告 PM 身份下验证通过。
 
 返回项目入口、核心文件、维护者、初始资料、尚待确认事项，以及新人使用 work 的示例。写入部分成功时列出已创建 ID 与缺失步骤，恢复时只补未完成部分。
+
+Project 必须按 [project-metadata.md](project-metadata.md) 填写六项统一 metadata；缺失项写 TBD，Google Docs 人员使用经邮箱核实的原生 @person chip。

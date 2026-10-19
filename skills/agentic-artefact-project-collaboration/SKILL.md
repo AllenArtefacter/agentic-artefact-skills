@@ -28,6 +28,10 @@ These restrictions apply to initialize, work, API tools, browser operations and 
 
 These are skill-wide operational restrictions, not host/system-level enforcement. Supporting workflow instructions to publish or update remain subject to these restrictions.
 
+## Project metadata
+
+Apply [project-metadata.md](references/project-metadata.md) to every Project document: Project name, Team (@email person chips with roles), Start date, Status, Last updated, and Client contacts (@email person chips). Keep unknown values explicitly TBD. Do not infer a start date or fabricate client emails. Use native person chips where supported, and verify them.
+
 ## Cloud document format
 
 For this Google Drive workflow, publish human-facing content in native Google formats: Docs for Project, STATUS, plans and meeting notes; Sheets for structured trackers when available; Slides for presentations. Project and STATUS are logical context documents, not mandatory `.md` extensions. References to Project.md / STATUS.md elsewhere denote their local source equivalents. Resolve live native files by recorded IDs; never recreate Markdown copies beside them. Local Markdown templates remain private build inputs. If Sheets is unavailable, a native Docs tracker is acceptable with the limitation stated.

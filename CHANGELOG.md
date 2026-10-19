@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.3 — 2026-10-19
+
+- Standardize six required Project metadata fields and native person-chip publishing.
+- Add optional start date, project status and client contacts to initialization briefs; preserve unknown values as TBD.
+
 ## 0.8.2 — 2026-10-19
 
 - Bundle Claude connector screenshot and host-specific sign-in guidance.
