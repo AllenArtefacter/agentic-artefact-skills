@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.16.8 — 2026-10-19
+
+- Prefer Codex desktop Add marketplace onboarding with the provided screenshot.
+- Clarify default Git ref, empty sparse paths, separate plugin installation and Google authorization.
+- Keep CLI installation as an alternative.
+
 ## 0.16.7 — 2026-10-19
 
 - Remove the colored symbol from the Claude `displayName`; custom plugin icons are not supported for self-hosted marketplaces yet (anthropics/claude-code#28187).

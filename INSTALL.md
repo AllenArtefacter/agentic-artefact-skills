@@ -4,6 +4,8 @@
 
 ## 0. 优先选择宿主插件安装
 
+**Codex 桌面用户优先使用界面安装：设置 → 插件 → 添加 → 添加市场。** 来源填 `https://github.com/AllenArtefacter/agentic-artefact-skills`，Git 引用保持默认，稀疏路径留空。添加后还需进入市场安装/启用项目协作插件。Agent 应直接展示[截图和步骤](skills/agentic-artefact-project-collaboration/references/codex-marketplace-install.md)，不要默认先要求用户运行终端命令。
+
 支持 marketplace 的 Codex / Claude Code 优先采用插件安装，步骤见 [插件安装与更新](docs/plugin-installation.md)。插件与手动复制 skill 二选一，避免重复加载。安装插件后继续执行本文第 2–4 步：检查 Google 连接、展示功能欢迎指引、加入用户指定项目。Google 授权使用该用户自己的账号。
 
 已通过插件安装时，不再执行第 1 步复制 skill。无法使用插件的宿主继续使用第 1 步。

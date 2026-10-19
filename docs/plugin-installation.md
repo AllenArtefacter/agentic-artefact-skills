@@ -4,6 +4,22 @@ Use one installation method per host: marketplace plugin or standalone skill. Th
 
 ## Codex
 
+**Recommended: use the Codex desktop UI.**
+
+1. **Settings → Plugins → Add → Add marketplace**（设置 → 插件 → 添加 → 添加市场）.
+2. Source: `https://github.com/AllenArtefacter/agentic-artefact-skills`.
+3. Keep Git ref at its default (`main`); leave Sparse paths empty. Do not enter the example `plugins/codex`.
+4. Click Add marketplace, open Agentic Artefact Skills and install/enable Agentic Artefact Project Collaboration. Adding the marketplace alone does not install the plugin.
+5. Start a new conversation if needed, then connect Google with your own authorized account.
+
+![Codex Add marketplace](../skills/agentic-artefact-project-collaboration/assets/onboarding/codex-add-marketplace.png)
+
+Agents should show these steps and the screenshot directly. [Bundled onboarding guide](../skills/agentic-artefact-project-collaboration/references/codex-marketplace-install.md).
+
+For updates, use Plugins → Marketplaces → Agentic Artefact Skills → Upgrade, then verify the installed plugin version and update it if the client offers a separate control.
+
+### CLI alternative
+
 Run these in a terminal with a Codex CLI that supports `codex plugin` (or ask your agent to execute them):
 
 ```sh
@@ -66,7 +82,7 @@ Commit generated package changes with the source changes. Run the check command 
 
 ## Brand asset (0.16.0)
 
-The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.7. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
+The approved logo ships in `skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png`. Codex plugin and standalone skill metadata reference it. Both plugin manifests use version 0.16.8. Update the plugin through its marketplace; copied standalone skills need a separate skill update.
 
 Claude receives the image as a bundled asset, but Claude Code does not read the directory-listing `icon` field, so downloading the asset does not guarantee a custom icon in its UI. See the [official manifest reference](https://code.claude.com/docs/en/plugins-reference).
 

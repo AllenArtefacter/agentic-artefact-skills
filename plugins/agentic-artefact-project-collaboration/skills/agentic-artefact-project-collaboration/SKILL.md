@@ -5,6 +5,8 @@ description: Artefact team project collaboration only. Use when the user explici
 
 # Agentic Artefact Project Collaboration
 
+For Codex desktop installation or onboarding questions, prefer the UI marketplace route and show [the screenshot and steps](references/codex-marketplace-install.md).
+
 ## Applicability / 适用范围
 
 This skill is for Artefact team/client projects. Invoke only when explicitly named by the user or when the user has clearly identified the current project as an Artefact team project. A company email, Google Drive link, project folder, or generic initialize/work request alone does not establish that scope. Do not apply this skill or its restrictions to unrelated personal projects. If the project identity is unclear, clarify before binding it; never assume every project of an Artefact employee is a team project.
