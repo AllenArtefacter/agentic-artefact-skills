@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.2 — 2026-10-19
+
+- Bundle Claude connector screenshot and host-specific sign-in guidance.
+- Distinguish an already-connected UI from verified project access and Claude Code tool availability.
+
 ## 0.8.1 — 2026-10-19
 
 - Bundle the maintainer-provided Codex Google Drive setup screenshot.

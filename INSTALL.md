@@ -36,6 +36,14 @@ python3 <skill-installer目录>/scripts/install-skill-from-github.py --repo Alle
 
 ![Codex Google Drive plugin setup](skills/agentic-artefact-project-collaboration/assets/onboarding/codex-google-drive-setup.png)
 
+### Claude 用户的认证入口
+
+Google Drive 尚未连接时，引导用户：**Settings → Connectors → Google Drive → Connect → 完成 Google 授权**。若 Yours 中没有 Google Drive，可在 Discover 或搜索中查找。截图中已有状态勾选，应先验证项目访问，不重复认证。Claude Code 需另行核验当前会话实际可用工具。
+
+[完整图文指引](skills/agentic-artefact-project-collaboration/references/claude-google-drive-setup.md)
+
+![Claude Google Drive connector setup](skills/agentic-artefact-project-collaboration/assets/onboarding/claude-google-drive-setup.png)
+
 ## 3. 验证与说明
 
 确认目标目录中的 SKILL.md 可读，脚本及引用资源齐全；报告安装位置与源 commit。按照当前宿主的加载机制说明何时生效；若本轮无法加载新技能，明确告诉用户下一轮或重新打开会话后使用。
