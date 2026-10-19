@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.15.2 — 2026-10-19
+
+- Use native date chips for STATUS dates and omit PM from its header.
+
 ## 0.15.1 — 2026-10-19
 
 - Introduce core capabilities and natural-language examples immediately after installation.

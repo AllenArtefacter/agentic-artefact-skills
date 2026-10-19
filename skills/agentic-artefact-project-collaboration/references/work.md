@@ -66,3 +66,7 @@ Project 与 STATUS 默认是原生 Google Docs，名称不带 .md；下文 .md �
 Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.
 
 材料和产出变更时，按 [folder-indexes.md](folder-indexes.md) 更新目录索引及关联任务。
+
+## STATUS presentation
+
+Use native Google Docs date chips for known status-as-of, edited and event dates; preserve any known time/timezone. Keep the status-as-of date distinct from the edit date. Do not append a PM field to the STATUS header. Unknown dates remain TBD; do not invent dates or use literal @date text as a chip. Verify dateElement readback.
