@@ -1,17 +1,3 @@
-# 90_Archive
+# Archive
 
-用途：归档。
-
-## 存放与主记录
-
-被替代说明、旧发布版本、结项资料。
-
-## 使用与编辑
-
-负责人记录 superseded_by / archived_at / 原因；不自动删除。
-
-## 状态与关联
-
-保留旧 ID 到新 ID 的链接；不要移动仍被活跃任务引用的主文件。
-
-创建新对象时使用稳定 ID，登记主文件链接；不要按名称建立第二份权威记录。模板文件不是已发生的项目事实。
+Store superseded outputs and closed records only when archiving is authorized. Before moving, inspect active links and identify the canonical successor; keep an active canonical source in place when still needed. Record original location, reason, archive date and successor ID/link in the affected index or record. Move recoverably, update Materials/Deliverables indexes and affected task links, then verify. Archiving does not imply task completion or authorization to delete. Preserve history and restore by ID when requested.

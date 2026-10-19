@@ -1,17 +1,5 @@
-# 04_Deliverables
+# Deliverables
 
-用途：交付对象。
+Store actual project outputs and one native Deliverables index Doc. Flat files are sufficient; create per-deliverable subfolders only when useful. Follow [folder-indexes.md](../../folder-indexes.md).
 
-## 存放与主记录
-
-每个 DEL-ID_名称 一个目录；主文件 + review 记录 + 必要的发布快照。
-
-## 使用与编辑
-
-内容 owner 编辑、reviewer 审核；业务状态只在 Control.Deliverables。
-
-## 状态与关联
-
-内部批准后按授权发布到客户区；记录实际提交和验收证据。
-
-创建新对象时使用稳定 ID，登记主文件链接；不要按名称建立第二份权威记录。模板文件不是已发生的项目事实。
+Workflow: read related task and sources → prepare/edit canonical output → record draft/review status → publish within authorized scope → update folder index and Task Deliverables chip → verify both links. Include task IDs/backlinks where appropriate. Content owner prepares work; reviewers approve only when evidenced. Draft, internal approval, submission and client acceptance are distinct. Never infer task DONE from file existence or release to the client without authorization. Preserve revision/supersession evidence and link successor files when archived.

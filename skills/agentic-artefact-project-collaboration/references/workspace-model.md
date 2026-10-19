@@ -22,15 +22,15 @@ STATUS              native Google Doc: dated overview
 00_Start_Here/      project index with canonical links
 01_Management/      Tasks Sheet (Tasks / Backlog) and decisions
 02_Meetings/        internal/client/catchup records
-04_Deliverables/    outputs and reports
-05_Materials/       inputs and references
+03_Deliverables/    outputs and reports
+04_Materials/       inputs and references
 90_Archive/         superseded records
 ```
 
 Local Markdown/JSON templates are draft inputs, not the cloud format. Workstreams, sprints and detailed risks can use management records; add optional folders only when needed. Existing layouts take precedence. Native Project/STATUS docs satisfy all context requirements below.
 
 
-Do not create a full folder hierarchy for every task. A lightweight task is a Control row; a complex task links a detail document in its workstream. Create subfolders only when actual materials justify them. Do not partition shared work into four disconnected consultant/DS/DA/DE silos.
+Do not create a full folder hierarchy for every task. A lightweight task is a Tasks row; a complex task links a detail document in its workstream. Create subfolders only when actual materials justify them. Do not partition shared work into four disconnected consultant/DS/DA/DE silos.
 
 ## Default task register
 
@@ -65,9 +65,9 @@ A task can serve multiple deliverables; sprint may be empty. Long-lived workstre
 
 ## Status and editing responsibilities
 
-Tasks: proposed → ready → in_progress → in_review → done. blocked requires reason/dependency; cancellation needs reason. Reopen with evidence and preserve why. Deliverables: draft → in_review → approved_internal → submitted → accepted; changes_requested returns to draft. Decisions: proposed → confirmed → superseded. Meeting draft is not confirmed evidence of agreement.
+Current Tasks: TODO / DOING / PENDING / DONE / PARTIALLY DONE; approval is represented by Tasks versus Backlog. Record blockers and cancellation evidence in notes. Reopen with evidence and preserve why. Deliverables: draft → in_review → approved_internal → submitted → accepted; changes_requested returns to draft. Decisions: proposed → confirmed → superseded. Meeting draft is not confirmed evidence of agreement.
 
-Person doing the work proposes progress and evidence; the designated Control steward serializes accepted sheet changes. Reviewer checks technical/quality completion; customer acceptance has an explicit source. This is a workflow ownership convention, not a technical mutex. The current reader cannot modify any cloud state.
+Person doing the work proposes progress and evidence; the designated Control steward serializes accepted sheet changes. Reviewer checks technical/quality completion; customer acceptance has an explicit source. This is a workflow ownership convention, not a technical mutex. The bundled Python reader cannot write; host connector capabilities are checked separately.
 
 Separate local/publication state: local_only → pending_publish → published; conflict or stale needs re-read/reconciliation. A published document may still be a business draft. A locally completed task is not marked done in the shared table until that update actually succeeds.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.13.0 — 2026-10-19
+
+- Audit zero-to-ready initialization, explicit destination authorization, partial recovery and native artifact acceptance.
+- Align default folder numbering and generate project-specific index drafts locally.
+- Add folder workflow routing and raw/note procedures; replace stale Control references in active guides.
+- Extend local initialization tests for required folders, indexes and unset cloud IDs.
+
 ## 0.12.0 — 2026-10-19
 
 - Maintain native Materials and Deliverables index Docs within their respective folders.

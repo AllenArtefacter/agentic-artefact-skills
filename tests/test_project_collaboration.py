@@ -222,6 +222,18 @@ class InitializeTests(unittest.TestCase):
             self.assertIn(data['project_name'],project)
             self.assertIn('| P-existing | 项目经理 | @pm@example.test |',project)
             self.assertFalse(list(out.rglob('README.md')))
+            expected_dirs = {'00_Start_Here', '01_Management', '02_Meetings',
+                             '03_Deliverables', '04_Materials', '90_Archive'}
+            self.assertEqual({x.name for x in out.iterdir() if x.is_dir()}, expected_dirs)
+            for relative in ('00_Start_Here/Project Index.md',
+                             '03_Deliverables/Deliverables.md', '04_Materials/Materials.md'):
+                draft = (out / relative).read_text()
+                self.assertIn(data['project_name'], draft)
+                self.assertNotIn('{{', draft)
+            self.assertIsNone(manifest['canonical_files']['materials_index_id'])
+            self.assertIsNone(manifest['canonical_files']['deliverables_index_id'])
+            self.assertFalse(list(out.rglob('*.csv')))
+
             self.assertIn('云端部署与回读尚未完成',(out/'STATUS.md').read_text())
             before=(out/'Project.md').read_bytes()
             self.assertNotEqual(subprocess.run(command,capture_output=True).returncode,0)

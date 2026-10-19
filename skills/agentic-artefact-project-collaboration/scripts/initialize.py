@@ -139,7 +139,7 @@ Project ID: {manifest['project_id']}
 |---|---|---|---|---|
 {roster}
 
-PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Project Control 为准。
+PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Tasks 表为准。
 
 ## 项目入口
 
@@ -157,17 +157,24 @@ PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Proje
 初始化草稿已准备（draft_ready）。云端部署与回读尚未完成。
 
 已填写项目目标、范围、验收标准和 {len(b['members'])} 位成员。
-待办：发布核心文件，配置 Control 与真实文件 ID，然后回读验收。
+待办：发布核心文件，配置 Tasks、目录索引与真实文件 ID，然后回读验收。
 
 {bullets(b['open_questions'])}
 """)
+    for directory, title in [('03_Deliverables', 'Deliverables'), ('04_Materials', 'Materials')]:
+        (out / directory / (title + '.md')).write_text(
+            f'# {title}\n\nProject: {b["project_name"]}\nUpdated: {timestamp}\n\n'
+            'Local initialization draft. No folder files registered yet; verify cloud inventory before publishing.\n')
+    (out / '00_Start_Here/Project Index.md').write_text(
+        f'# Project Index\n\nProject: {b["project_name"]}\nFolder: {b["team_folder"]}\n\n'
+        'Local draft: cloud links pending. Publish Project, STATUS, Tasks, Materials and Deliverables, then register verified links here.\n')
     manifest['initialization_status'] = 'draft_ready'
     manifest['project_manager_person_id'] = b['maintainer_person_id']
     manifest['control_steward'] = None  # PM does not silently become an assigned table steward.
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     return {'output': str(out), 'mode': 'initialize', 'initialization_status': 'draft_ready',
             'member_count': len(b['members']), 'cloud_writes': False,
-            'remaining': 'Cloud deployment, canonical IDs and readback; assign Control steward.'}
+            'remaining': 'Cloud deployment, canonical IDs and readback; verify Tasks and folder indexes.'}
 
 
 def main():

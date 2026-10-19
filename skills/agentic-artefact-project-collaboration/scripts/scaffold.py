@@ -26,7 +26,7 @@ def scaffold(output, name, folder, space="team"):
             # Only project-specific seed files belong in the publication tree.
             # Reusable guides and blank object templates stay inside the skill.
             for folder_name in ('00_Start_Here', '01_Management', '02_Meetings',
-                                '04_Deliverables', '05_Materials', '90_Archive'):
+                                '03_Deliverables', '04_Materials', '90_Archive'):
                 (stage / folder_name).mkdir(exist_ok=True)
             for subfolder in ('raw', 'note'):
                 (stage / '02_Meetings' / subfolder).mkdir(exist_ok=True)

@@ -13,7 +13,8 @@
     "project_status_id": null,
     "tasks_sheet_id": null,
     "materials_index_id": null,
-    "deliverables_index_id": null
+    "deliverables_index_id": null,
+    "project_index_id": null
   },
   "calendar": {
     "id": null,
@@ -43,5 +44,15 @@
       "path": "STATUS.md",
       "file_id_key": "project_status_id"
     }
-  ]
+  ],
+  "folder_ids": {
+    "start_here": null,
+    "management": null,
+    "meetings": null,
+    "meeting_raw": null,
+    "meeting_note": null,
+    "deliverables": null,
+    "materials": null,
+    "archive": null
+  }
 }

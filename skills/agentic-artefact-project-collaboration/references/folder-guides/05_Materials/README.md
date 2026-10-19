@@ -1,17 +1,5 @@
-# 05_Materials
+# Materials
 
-用途：输入与证据。
+Store original project inputs/references and one native Materials index Doc. Optional Client_Inputs, Research, Data_Catalog and Assets subfolders are created only for actual content.
 
-## 存放与主记录
-
-Client_Inputs 原始输入；Research 研究参考；Data_Catalog 数据字典与访问入口；Assets 素材。
-
-## 使用与编辑
-
-来源文件原则上不改写，清洗或分析结果放 Workstreams；登记来源与使用限制。
-
-## 状态与关联
-
-用 MAT-ID 链到任务、决策和产出，不在每个 sprint 重复存一份。
-
-创建新对象时使用稳定 ID，登记主文件链接；不要按名称建立第二份权威记录。模板文件不是已发生的项目事实。
+Workflow: receive within authorized scope → preserve original/source/version → index file chip, short purpose, known source/owner and usage constraints → link relevant tasks/notes → verify index and location. Do not overwrite raw inputs with analysis; publish derived work as an output and link its source. Credentials stay outside project files. Register revisions by canonical ID/version and update affected links. Follow [folder-indexes.md](../../folder-indexes.md).
