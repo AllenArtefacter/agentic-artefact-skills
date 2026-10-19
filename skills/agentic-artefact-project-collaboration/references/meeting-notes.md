@@ -20,6 +20,12 @@ Use assets/document-templates/02_Meetings/meeting.md as a local authoring guide,
 
 Metadata: title, meeting ID, date/time/timezone, type, review status, confirmed attendees (@person chips where supported), and original source links in raw. Unknown details are TBD. A project roster or invitation list is not attendance evidence; never infer speaker identity from a role or name similarity.
 
+### Native meeting header
+
+Retain the existing meeting header when simplifying or translating notes: bold meeting title, native date chip, then native person chips on the next line. For new notes, use the same compact layout before metadata and Quick notes. Preserve the title wording and existing chip identities unless the user asks to change them. Use the source date and verified emails; never turn chips into plain text or a screenshot merely to preserve appearance.
+
+Label people as Invitees or Attendees according to the evidence. A reference used only for styling supplies no participants or dates for a different meeting. If the user explicitly requests its participant header while event identity is uncertain, label it as the reference invitee list and mark attendance unconfirmed. Do not substitute project members for meeting participants. When native chips are unavailable, disclose the limitation and use labeled text; do not claim text beginning with @ is a chip. Verify native date/person elements after publishing.
+
 Order the document as:
 1. Quick notes: Topics, Requirements, Difficulties, Options, Conclusions, Follow-up. Keep each short; use Not discussed or TBD instead of inventing content.
 2. Full notes: only material discussion and evidence, with timestamps/sections linking to the raw source. Distinguish requests, proposals, approved decisions and unresolved questions.

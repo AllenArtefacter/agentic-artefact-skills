@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.1 — 2026-10-19
+
+- Preserve native meeting headers: bold title, date chip and labeled person chips.
+- Keep reference invitees distinct from confirmed attendance; verify native chip readback.
+
 ## 0.9.0 — 2026-10-19
 
 - Add raw/note meeting layout, source-linked notes and running Meeting Briefs.

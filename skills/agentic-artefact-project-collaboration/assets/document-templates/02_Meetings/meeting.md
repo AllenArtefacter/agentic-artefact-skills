@@ -1,4 +1,9 @@
-# {{DATE}} — {{TOPIC}}
+# {{TOPIC}}
+
+{{DATE_CHIP}}
+{{INVITEES_OR_ATTENDEES_LABEL}}: {{PERSON_CHIPS}}
+
+<!-- Native Google Docs header: bold title, date chip, then verified person chips. Preserve existing header when editing. Populate only this meeting’s date and people; label invitation versus confirmed attendance. See references/meeting-notes.md. -->
 
 Meeting ID: TBD
 Date / time / timezone: TBD
