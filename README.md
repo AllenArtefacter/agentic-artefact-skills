@@ -1,6 +1,6 @@
 # Agentic Artefact Skills
 
-<img src="skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png" alt="Agentic Artefact" width="320">
+![Agentic Artefact](https://raw.githubusercontent.com/AllenArtefacter/agentic-artefact-skills/main/skills/agentic-artefact-project-collaboration/assets/branding/agentic-artefact.png)
 
 面向 Artefact 团队/客户项目的 Google Drive 协作 skill，支持 Codex、Claude Code 等 agent。仅在明确点名 skill 或明确指定 Artefact 团队项目时使用，不适用于员工的私人项目。当前版本：**0.16.0**。
 
