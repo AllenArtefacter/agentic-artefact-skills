@@ -54,6 +54,10 @@ Do not treat a later statement as an automatic override. An approved scope chang
 
 Automatic summaries are unverified evidence. When summary and transcript disagree, retain the conflict for human review; do not change Project, mark tasks done, or promise new scope without confirmation. Contacting participants or sending notes requires explicit authorization.
 
+## File links
+
+In shared Google Docs, render source files, notes, Meeting Briefs and task documents as native file smart chips, not bare URLs. Use insertRichLink with the verified resource URL and confirm richLink elements on readback. Preserve existing chips. Keep useful tab/section deep links separately as descriptive hyperlinks alongside the file chip. For unsupported resources or connectors, use descriptive linked text and disclose the limitation; never claim an ordinary hyperlink is a chip.
+
 ## Publish and verify
 
 Prepare the concrete note, brief entry and any conflict updates for user confirmation; an explicit request to publish those prepared changes is sufficient. After approval: preserve/move the raw source as authorized, publish the individual note, then update Meeting Briefs and links. Update Tasks/Decisions/STATUS only for the approved changes. Use current revision guards for existing Docs. Preserve people chips, tables, existing content and links. Verify file parents, raw links, the meeting entry and conflict status. If only part succeeds, report it and retry the missing step without duplication. No background listener is implied.

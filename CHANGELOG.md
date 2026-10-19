@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2 — 2026-10-19
+
+- Use native file chips for meeting source and related-document links; preserve useful deep links.
+
 ## 0.9.1 — 2026-10-19
 
 - Preserve native meeting headers: bold title, date chip and labeled person chips.
