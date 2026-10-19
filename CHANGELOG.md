@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.1 — 2026-10-19
+
+- Declare the official Claude plugin directory icon field using the approved bundled logo.
+- Claude Code ignores this directory field at runtime; custom marketplace UI rendering still needs verification.
+
 ## 0.16.0 — 2026-10-19
 
 - Publish the approved shared-A Agentic Artefact logo in the skill assets.
