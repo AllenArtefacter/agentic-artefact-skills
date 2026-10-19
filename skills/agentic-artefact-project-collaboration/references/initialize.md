@@ -37,3 +37,5 @@ On partial failure, preserve successful IDs, report missing steps and resume tho
 Folder-by-folder procedures: [folder-guides/README.md](folder-guides/README.md).
 
 Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.
+
+At handoff, briefly explain why Tasks and Backlog are separate and how to confirm items, update Status and link outputs, following task-tracking.md.

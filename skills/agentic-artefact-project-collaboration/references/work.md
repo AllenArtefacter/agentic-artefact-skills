@@ -72,3 +72,5 @@ Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-note
 Use native Google Docs date chips for known status-as-of, edited and event dates; preserve any known time/timezone. Keep the status-as-of date distinct from the edit date. Do not append a PM field to the STATUS header. Unknown dates remain TBD; do not invent dates or use literal @date text as a chip. Verify dateElement readback.
 
 Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.
+
+首次向新成员展示任务表时，按 task-tracking.md 的使用指引解释 Tasks / Backlog 区别、确认流程、状态下拉和产出链接。不要仅丢出表格链接。

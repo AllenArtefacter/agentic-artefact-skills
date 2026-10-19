@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.15.5 — 2026-10-19
+
+- Explain Tasks versus Backlog, confirmation, status options and output links at tracker handoff and first use.
+
 ## 0.15.4 — 2026-10-19
 
 - Add Codex Linked users → Add guidance for enabled plugins connected to another account.

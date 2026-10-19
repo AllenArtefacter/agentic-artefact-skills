@@ -43,3 +43,18 @@ Use white rows for ordinary tasks, pale blue (#EAF3FC) for [MEETING] rows and pa
 Maintain output links and the project Deliverables folder index together under [folder-indexes.md](folder-indexes.md).
 
 Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.
+
+## Explain the tracker to users
+
+When creating the tracker, introducing an existing tracker to a new teammate, or first showing their tasks, proactively give a short explanation in the user's language. Do not repeat it on every status update. Explain that this is one Google Sheets file with two tabs, separated by confirmation state, not author or progress:
+
+- Tasks: human-confirmed work and key events; these are the agreed items to track.
+- Backlog: ideas/actions awaiting confirmation, recorded by people or AI. Human entry alone does not make an item approved.
+
+Explain the practical flow: add a suggestion to Backlog → human confirms scope/owner/date where known → move the approved item to Tasks with the same ID and links → update Status as work progresses → attach actual output chips in Deliverables. Do not leave an active duplicate in Backlog. Unknown owner/date stays TBD. A partially completed draft may still await approval in Backlog; approval and completion are different.
+
+Introduce columns briefly: Task is the grouped item, Step the action, ID the stable taskId.stepId identifier, Description a short explanation/source link, Owner a verified person chip, Deadline the confirmed date, Status the uppercase colored dropdown, Deliverables the actual output links. Key meetings/milestones use the same grid. Multiple steps share a merged Task cell; multiple outputs use separate rows with the step cells merged. Do not sort individual rows across merged groups.
+
+Status meanings: TODO = not started; DOING = in progress; PENDING = waiting/blocked, with reason in notes; DONE = completed with evidence; PARTIALLY DONE = some work/output exists but the item is unfinished. DONE is not automatically client acceptance. Colors follow the specified dropdown palette.
+
+Offer simple examples: “把这条加入 Backlog”, “确认这两项由我负责”, “把我的任务改为 DOING”, “把这份产出关联到任务 2.1”. Examples are guidance, not authorization to mutate data. Keep full reusable guidance in the skill, not a third instructions tab; the existing short tab subtitles may explain their purpose.
