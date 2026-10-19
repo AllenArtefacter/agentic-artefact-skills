@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.4 — 2026-10-19
+
+- Flatten Project metadata team chips without titles and use native chips for known dates.
+
 ## 0.9.3 — 2026-10-19
 
 - Keep Meeting Briefs compact with six inline summaries and short open checks; link detailed evidence from notes.
