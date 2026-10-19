@@ -97,3 +97,7 @@ For materials/output inventories and task-to-output links, use [folder-indexes.m
 For folder-specific placement and procedures, follow [folder-guides/README.md](references/folder-guides/README.md); historical guide numbering does not override actual project folder names.
 
 For reusable file slots, document structures and empty Sheet formatting, use [template-catalog.md](references/template-catalog.md). Templates contain placeholders only; publish actual project records, never mock rows.
+
+## Google-native reference formatting
+
+For all future project documents and sheets, use native person, date/time and file chips for supported known references, not plain @text or bare URLs. Follow [smart-chips.md](references/smart-chips.md) for verified values, supported formats, deep links and disclosed limitations. Apply to requested edits; do not bulk-convert historical files without authorization.

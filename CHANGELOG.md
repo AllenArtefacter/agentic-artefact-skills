@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.3 — 2026-10-19
+
+- Apply native person, date/time and file chip conventions throughout future Google project authoring.
+- Verify native elements and disclose unsupported targets or tool capabilities.
+
 ## 0.15.2 — 2026-10-19
 
 - Use native date chips for STATUS dates and omit PM from its header.

@@ -11,3 +11,5 @@ All templates stay inside the skill. They define headings, fields, empty table h
 - Remaining document-templates subfolders: optional workstream, task detail, deliverable, decision/risk, sprint and report structures; historical directory numbering does not create project folders.
 
 Use folder guides and task/meeting references for workflow, permissions, merges and verification; keep those explanations out of content templates. These are source templates for native Google authoring, not already-installed native Docs/Sheets templates. The local initializer may render project-specific drafts in code; cloud creation must map the same fields, fill only verified facts and verify native output. Do not upload empty Markdown templates or layout JSON to the team folder.
+
+Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.

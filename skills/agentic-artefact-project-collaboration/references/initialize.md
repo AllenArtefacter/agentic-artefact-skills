@@ -35,3 +35,5 @@ This generates personal local drafts and folders only: Project, STATUS, Project 
 On partial failure, preserve successful IDs, report missing steps and resume those steps only. Find existing candidates within the authorized root before creation; resolve duplicate names rather than guessing. Never recreate the project to fix a failed file. Return project entry, files, remaining gaps and a short work-mode example.
 
 Folder-by-folder procedures: [folder-guides/README.md](folder-guides/README.md).
+
+Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.

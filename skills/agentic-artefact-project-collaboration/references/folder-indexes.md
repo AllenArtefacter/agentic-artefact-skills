@@ -9,3 +9,5 @@ During work, update the affected index after an authorized file creation, upload
 After publishing an output, add its canonical file chip to the matching Task's Deliverables cell and include the task ID/link in the Deliverables index. Where appropriate and authorized, include the task backlink in the output document as well. Preserve existing multi-output row merges and IDs; an output may support multiple tasks. Do not infer DONE from file existence. Materials entries may link related meetings/tasks when the relationship is known. If no task matches, record the output with task TBD rather than inventing or approving a task.
 
 Keep task execution status in Tasks and output review/acceptance status in the Deliverables index; do not maintain competing registers. These are on-demand updates when the skill runs, not a background watcher. Verify links, folder placement, and changed entries after writing; report any partial update.
+
+Apply the project-wide [native chip convention](smart-chips.md) to people, dates/times and supported file references.
