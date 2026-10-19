@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11.1 — 2026-10-19
+
+- Distinguish meeting and milestone rows with pale blue and purple backgrounds, retaining colored status chips.
+- Treat key kickoff meetings as a single milestone record.
+
 ## 0.11.0 — 2026-10-19
 
 - Track key meetings and milestones alongside tasks, preserving confirmation boundaries.
