@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.16.16 — 2026-10-20
+
+- Add deterministic natural-week date generation and regression checks for partial weeks and year boundaries.
+- Require actual-sheet verification of calendar groups, headers, collapsed columns, status values and readability.
+- Place checkpoints within their related phases rather than collecting them at the bottom by default.
+
 ## 0.16.15 — 2026-10-20
 
 - Align timeline weeks to Monday–Sunday calendar weeks, including partial starting weeks, holidays and year boundaries; preserve actual task dates.

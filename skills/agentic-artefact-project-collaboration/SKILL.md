@@ -82,7 +82,7 @@ Without a cloud writer, complete local work and an explicit outbox proposal; rep
 
 ## Task tracking
 
-Use one Project Timeline Google Sheet with Timeline and Backlog tabs. Read [timeline.md](references/timeline.md) for the blank template, new-plan questions, proactive checkpoint/meeting proposals, scenario-specific updates and approved compact layout: full-width phase rows, D–I collapsed, frozen A–I, static calendar cells, and Deliverables last. Follow [task-tracking.md](references/task-tracking.md) for human validation, text step IDs, merged groups, owner chips and status dropdowns. Do not create a separate Work Plan. This schema supersedes legacy Control task fields for new or explicitly migrated projects; preserve unrelated legacy schemas unless migration is authorized.
+Use one Project Timeline Google Sheet with Timeline and Backlog tabs. Read [timeline.md](references/timeline.md) for the blank template, new-plan questions, proactive checkpoint/meeting proposals, scenario-specific updates and approved compact layout: full-width phase rows, D–I collapsed, frozen A–I, static calendar cells, and Deliverables last. Run the timeline guide’s required completion checks against actual sheet values, structure and rendering before declaring it complete. Follow [task-tracking.md](references/task-tracking.md) for human validation, text step IDs, merged groups, owner chips and status dropdowns. Do not create a separate Work Plan. This schema supersedes legacy Control task fields for new or explicitly migrated projects; preserve unrelated legacy schemas unless migration is authorized.
 
 ## Meeting records
 
