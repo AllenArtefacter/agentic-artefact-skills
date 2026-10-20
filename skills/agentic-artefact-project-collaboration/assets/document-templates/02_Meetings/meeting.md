@@ -9,29 +9,25 @@ Review status: {{REVIEW_STATUS}}
 Raw: {{RAW_FILE_CHIPS}}
 Brief: {{MEETING_BRIEFS_FILE_CHIP}}
 
-## Quick notes
+## Core arguments
 
-**Topics:** {{TOPICS}}
-**Requirements:** {{REQUIREMENTS}}
-**Difficulties:** {{DIFFICULTIES}}
-**Options:** {{OPTIONS}}
-**Conclusions / Decisions:** {{CONCLUSIONS_AND_DECISION_IDS}}
-**Follow-up:** {{FOLLOW_UP}}
+{{CORE_ARGUMENTS_WITH_ATTRIBUTION}}
 
-## Full notes
+## Requirements and viewpoints
 
-{{DISCUSSION_AND_SOURCE_TIMESTAMPS}}
+| Topic | Stakeholder viewpoints and concerns | Confirmation / evidence |
+|---|---|---|
 
-## Decisions
+## Meeting agreements
 
-| ID | Decision | Evidence | Confirmation scope |
+| Decision ID | Agreement | Evidence | Confirmation scope |
 |---|---|---|---|
 
-## Actions
+## Actions and task links
 
-| Task ID / action | Owner | Due date | Task / evidence link |
+| Proposed task | Proposed owner | Related tasks | Expected output / dependencies |
 |---|---|---|---|
 
-## Conflicts and open questions
+## Items to verify
 
-{{CONFLICTS_AND_SOURCE_LINKS}}
+{{OPEN_QUESTIONS_CONFLICT_IDS_AND_SOURCE_LINKS}}

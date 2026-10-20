@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.16.11 — 2026-10-20
+
+- Structure minutes around core arguments, stakeholder/topic viewpoints, agreements, proposed actions and final verification items.
+- Treat actionable drivers as a separate topic when relevant; distinguish controllable actions, predictive association and causal impact.
+- Refresh blank minutes and brief templates; support requested meeting language and document drafts.
+
 ## 0.16.10 — 2026-10-19
 
 - Make starter prompts request the project Drive folder before project work.

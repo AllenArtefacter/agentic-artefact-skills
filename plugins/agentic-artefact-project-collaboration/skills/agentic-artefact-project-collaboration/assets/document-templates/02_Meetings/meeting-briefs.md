@@ -13,6 +13,8 @@ Coverage: {{COVERAGE}}
 
 ### Summary
 
+**Core argument:** {{CORE_ARGUMENT}}
+
 **Topics:** {{TOPICS}}
 **Requirements:** {{REQUIREMENTS}}
 **Difficulties:** {{DIFFICULTIES}}

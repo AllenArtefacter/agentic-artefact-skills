@@ -16,23 +16,35 @@ Keep raw originals unchanged and in their source formats; a native Doc is accept
 
 ## One note per meeting
 
-Use assets/document-templates/02_Meetings/meeting.md as a local authoring guide, not a blank file to publish. Shared notes are concise English Google Docs. Identify a meeting by stable meeting ID plus actual event/source identity; multiple summaries or transcripts of one event are not additional meetings.
+Use assets/document-templates/02_Meetings/meeting.md as a local authoring guide, not a blank file to publish. Shared notes are concise native Google Docs. Follow the requested language; Chinese is appropriate for Chinese meetings when requested. Local review drafts use document format (for example Word), not HTML, unless requested. Identify a meeting by stable meeting ID plus actual event/source identity; multiple summaries or transcripts of one event are not additional meetings.
 
 Metadata: title, meeting ID, date/time/timezone, type, review status, confirmed attendees (@person chips where supported), and original source links in raw. Unknown details are TBD. A project roster or invitation list is not attendance evidence; never infer speaker identity from a role or name similarity.
 
 ### Native meeting header
 
-Retain the existing meeting header when simplifying or translating notes: bold meeting title, native date chip, then native person chips on the next line. For new notes, use the same compact layout before metadata and Quick notes. Preserve the title wording and existing chip identities unless the user asks to change them. Use the source date and verified emails; never turn chips into plain text or a screenshot merely to preserve appearance.
+Retain the existing meeting header when simplifying or translating notes: bold meeting title, native date chip, then native person chips on the next line. For new notes, use the same compact layout before metadata and Core arguments. Preserve the title wording and existing chip identities unless the user asks to change them. Use the source date and verified emails; never turn chips into plain text or a screenshot merely to preserve appearance.
 
 Label people as Invitees or Attendees according to the evidence. A reference used only for styling supplies no participants or dates for a different meeting. If the user explicitly requests its participant header while event identity is uncertain, label it as the reference invitee list and mark attendance unconfirmed. Do not substitute project members for meeting participants. When native chips are unavailable, disclose the limitation and use labeled text; do not claim text beginning with @ is a chip. Verify native date/person elements after publishing.
 
 Order the document as:
-1. Quick notes: Topics, Requirements, Difficulties, Options, Conclusions, Follow-up. Keep each short; use Not discussed or TBD instead of inventing content.
-2. Full notes: only material discussion and evidence, with timestamps/sections linking to the raw source. Distinguish requests, proposals, approved decisions and unresolved questions.
-3. Actions: action, confirmed owner or TBD, due date or TBD, task ID/link and source. Do not silently assign group actions or infer completion.
-4. Conflicts / open questions: link related notes and the running brief's conflict ID.
+1. **Core arguments:** lead with the few central positions and implications supported by the meeting. Attribute contested positions; a synthesis is not automatically a confirmed agreement.
+2. **Requirements and viewpoints:** identify stakeholders first, then topics. Use a compact Topic / Stakeholder viewpoints table to capture each party's core view and concern. Separate requests, proposals, confirmations and unknowns. Use confirmed speaker mappings; do not infer speakers from invitation lists. Summarize by stakeholder or topic only when it adds information, rather than duplicating the matrix.
+3. **Meeting agreements:** preserve material agreements, decision IDs, evidence/timestamps and confirmation scope. Do not promote opinions into decisions when shortening.
+4. **Actions and task links:** use a native table with Proposed task / Proposed owner / Related task IDs or links / Expected output or dependencies. Suggested owners must be internal team members and explicitly marked proposed; use TBD when unknown. Client contributors are dependencies, not internal task owners. Preserve already-confirmed ownership as confirmed. Suggestions do not change task assignments; keep unvalidated actions in Backlog.
+5. **Items to verify:** place unresolved requirements, evidence gaps, scope, ownership, dates and cross-meeting conflicts at the end. Retain conflict IDs and source links; remove resolved speaker ambiguity once the user confirms a mapping.
 
-Quick notes → Full notes → source links follows the useful structure of meeting-assistant output, but omits surveys, tips and unsupported automatic conclusions. Separate tabs are optional, not required. Do not copy example content, participants or facts into a new meeting.
+Keep each point short and avoid chronological transcript retelling or repeating the same content in an executive summary, matrix and full notes. Bold the key claim or label, not whole paragraphs. Link original sources and the running brief with native file chips. Templates contain structure and placeholders only, never project-specific names, assignments or mock findings.
+
+### Actionable drivers in requirements discussions
+
+When the meeting raises business levers or actions, treat **Actionable drivers** as its own topic, alongside accuracy, gap explanation and scenario planning where relevant. Do not force these forecasting topics into unrelated meetings.
+
+- Accuracy asks what will happen; gap explanation asks why a gap exists; actionable drivers ask what the business can change; scenario planning compares outcomes under candidate actions.
+- Record which stakeholder wants which decision or action, and their concern. Distinguish controllable actions, intermediate outcomes and external conditions. A predictive feature or model contribution is not automatically an actionable lever.
+- Capture the decision owner, execution level, timing, feasible range, cost/constraints and evidence of impact only where discussed; otherwise mark the material questions for review. Do not invent feasible actions or causal effects.
+- Keep predictive association, what-if output and causal incremental impact distinct. Feature importance alone does not establish that changing the feature will change sales.
+- For an assessment, a candidate-driver inventory with evidence, data needs and limitations can be a proposed output. It does not commit the team to building a simulator or quantifying causal uplift. Label new analyst suggestions separately from meeting requests or agreements.
+- Reflect this topic in the same meeting's brief and verification items. Updating minutes does not authorize new task assignments or expanded project scope.
 
 ## Meeting Briefs: project-wide chronology
 
@@ -40,14 +52,14 @@ Maintain exactly one canonical Meeting Briefs document in note. For every meetin
 
 For an existing project, enumerate scoped meeting records to establish coverage. If some meetings are unavailable, label missing coverage; do not claim complete history. Unknown dates go in an undated section, not an invented position in the timeline.
 
-Keep Meeting Briefs scannable: one compact block per meeting, about 100–150 English words, with each of the six fields limited to one short sentence. Use inline bold labels rather than six section headings. Link details through file chips; do not duplicate task tables or source analysis. Show only concise conflict IDs, the opposing claims, status and clarification owner here; keep detailed evidence and resolution history in the individual note, linked from the brief. Preserve uncertainty and material commitments when shortening.
+Keep Meeting Briefs scannable: one compact block per meeting, about 100–150 words in English or a similarly compact block in the requested language, with each of the six fields limited to one short sentence. Use inline bold labels rather than six section headings. Link details through file chips; do not duplicate task tables or source analysis. Show only concise conflict IDs, the opposing claims, status and clarification owner here; keep detailed evidence and resolution history in the individual note, linked from the brief. Preserve uncertainty and material commitments when shortening.
 
 ### Meeting Briefs card layout
 
 Render each meeting as its own native Google Docs single-column table, separated from other cards by a blank paragraph. Use assets/document-templates/02_Meetings/meeting-briefs.md as the content guide. This card layout applies to Meeting Briefs; individual full notes keep their own structure.
 
 - Header row: bold meeting title, then native date chip, review status and stable meeting ID. Add person chips only when useful and supported by confirmed meeting evidence; never copy a project roster or template invitees.
-- Summary row: the six inline bold labels, one short sentence each, with normal-weight values.
+- Summary row: a short Core argument first, then the six inline bold labels, one short sentence each, with normal-weight values. Include distinct material topics such as Actionable drivers when supported; do not repeat the full notes.
 - Optional open-check row: pale yellow; one concise line per conflict ID with status and owner/TBD. Omit the row when there are no open checks. Keep full evidence and resolution history in the linked individual note.
 - Sources row: native file chips for the note and raw source, plus relevant tasks or conflict detail. Add a reference only when actually used; retain useful deep links as descriptive hyperlinks.
 
