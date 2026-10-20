@@ -6,7 +6,7 @@ Updated: {{UPDATED_AT}}
 
 Project: {{PROJECT_FILE_CHIP}}
 STATUS: {{STATUS_FILE_CHIP}}
-Tasks: {{TASKS_FILE_CHIP}}
+Timeline: {{TASKS_FILE_CHIP}}
 
 ## Folders and indexes
 

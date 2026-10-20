@@ -1,0 +1,163 @@
+{
+  "format_version": 4,
+  "file_title": "Project Timeline",
+  "mime_type": "application/vnd.google-apps.spreadsheet",
+  "template": "project-plan/Project Timeline Template.xlsx",
+  "tabs": [
+    {
+      "name": "Timeline",
+      "header_rows": [
+        1,
+        2
+      ],
+      "first_data_row": 3,
+      "last_reserved_row": 32,
+      "columns": [
+        "Module",
+        "#",
+        "Task",
+        "Description",
+        "Owner",
+        "Start",
+        "End",
+        "Status",
+        "Dependency"
+      ],
+      "trailing_columns": [
+        "Deliverables"
+      ],
+      "rows": [],
+      "calendar": {
+        "first_date_cell": "J2",
+        "date_slots": 20,
+        "workdays_per_week": 5,
+        "date_headers": "literal typed dates; blank in template",
+        "week_labels": "relative project weeks; actual week starts added on population",
+        "formulas": false,
+        "formula_conditional_formats": false,
+        "bar_mode": "static fills and literal event markers",
+        "holidays_configured": false
+      },
+      "column_widths_px": [
+        75,
+        48,
+        180,
+        170,
+        125,
+        68,
+        68,
+        110,
+        100
+      ],
+      "freeze": {
+        "rows": 2,
+        "columns": 9
+      },
+      "column_groups": [
+        {
+          "start": "D",
+          "end": "I",
+          "collapsed": true
+        }
+      ],
+      "hierarchy": [
+        "full-width major phase row",
+        "Module",
+        "Task"
+      ],
+      "excluded_columns": [
+        "Participants",
+        "Task IDs",
+        "Type"
+      ],
+      "borders": {
+        "major_phase": "thick",
+        "week_and_module": "medium",
+        "day_and_task": "thin"
+      },
+      "full_row_fill_end": "last Deliverables column"
+    },
+    {
+      "name": "Backlog",
+      "columns": [
+        "Task",
+        "Step",
+        "ID",
+        "Description",
+        "Owner",
+        "Deadline",
+        "Status",
+        "Deliverables",
+        "Source task"
+      ],
+      "rows": [],
+      "approval": "pending human confirmation",
+      "header_row": 1,
+      "first_data_row": 2,
+      "last_reserved_row": 31,
+      "column_widths_px": [
+        150,
+        210,
+        85,
+        380,
+        155,
+        95,
+        135,
+        230,
+        110
+      ],
+      "freeze": {
+        "rows": 1,
+        "columns": 3
+      },
+      "style": {
+        "font": "Arial",
+        "font_size": 10,
+        "header_fill": "#0E2340",
+        "header_text": "#FFFFFF",
+        "body_fill": "#FFFFFF",
+        "body_text": "#243247",
+        "horizontal_border": "#E4E9EF",
+        "group_border": "#AAB8C8",
+        "header_height_px": 34,
+        "body_height_px": 76
+      }
+    }
+  ],
+  "status_options": [
+    {
+      "value": "TODO",
+      "color": "#e6e6e6"
+    },
+    {
+      "value": "DOING",
+      "color": "#bfe1f6"
+    },
+    {
+      "value": "PENDING",
+      "color": "#ffe5a0"
+    },
+    {
+      "value": "DONE",
+      "color": "#d4edbc"
+    },
+    {
+      "value": "PARTIALLY DONE",
+      "color": "#e6cff2"
+    }
+  ],
+  "status_display": "CHIP",
+  "row_colors": {
+    "TASK": "#FFFFFF",
+    "MEETING": "#EEF5FC",
+    "MILESTONE": "#FFF0F6",
+    "PHASE": "#0E2340"
+  },
+  "native_conversion_required": [
+    "person chips",
+    "file chips",
+    "colored status dropdown chips"
+  ],
+  "cross_tab_sync": "Explicit approval promotes Backlog entries into Timeline; retain IDs, links and evidence, no automatic sync",
+  "calendar_bar_color": "#D9D9D9"
+}

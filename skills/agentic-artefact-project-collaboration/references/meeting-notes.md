@@ -87,7 +87,7 @@ In shared Google Docs, render source files, notes, Meeting Briefs and task docum
 
 ## Publish and verify
 
-Prepare the concrete note, brief entry and any conflict updates for user confirmation; an explicit request to publish those prepared changes is sufficient. After approval: preserve/move the raw source as authorized, publish the individual note, then update Meeting Briefs and links. Route unconfirmed actions recorded by people or AI to Backlog; promote only human-validated actions to Tasks under [task-tracking.md](task-tracking.md). Update Decisions/STATUS only for approved changes. Use current revision guards for existing Docs. Preserve people chips, tables, existing content and links. Verify file parents, raw links, the meeting entry and conflict status. If only part succeeds, report it and retry the missing step without duplication. No background listener is implied.
+Prepare the concrete note, brief entry and any conflict updates for user confirmation; an explicit request to publish those prepared changes is sufficient. After approval: preserve/move the raw source as authorized, publish the individual note, then update Meeting Briefs and links. Route unconfirmed actions recorded by people or AI to Backlog; promote only human-validated actions to Timeline under [task-tracking.md](task-tracking.md). Update Decisions/STATUS only for approved changes. Use current revision guards for existing Docs. Preserve people chips, tables, existing content and links. Verify file parents, raw links, the meeting entry and conflict status. If only part succeeds, report it and retry the missing step without duplication. No background listener is implied.
 
 ## Decision recording
 

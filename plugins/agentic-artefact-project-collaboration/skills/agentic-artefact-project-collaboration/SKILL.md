@@ -64,7 +64,7 @@ Read [initialize.md](references/initialize.md). Gather project context/vision, s
 
 Inspect the intended destination. Generate a local template with `scripts/initialize.py --brief BRIEF_JSON --output NEW_LOCAL_PATH` when a complete brief is available; otherwise prepare the template with `scripts/scaffold.py --space team` and populate it from confirmed information. The local generator does not create Google files.
 
-Populate the team's only two mandatory context files, `Project.md` and `STATUS.md`, then the Tasks spreadsheet (Tasks and Backlog tabs), Project Index and both folder index Docs, canonical links and initial material records as supported by the brief. Apply the actual requested scope: do not invent milestones, assignments or start dates.
+Populate the team's only two mandatory context files, `Project.md` and `STATUS.md`, then the Project Timeline spreadsheet (Timeline and Backlog tabs), Project Index and both folder index Docs, canonical links and initial material records as supported by the brief. Apply the actual requested scope: do not invent milestones, assignments or start dates.
 
 Use an available authorized cloud writer to create/upload the project, register actual IDs and verify readback. The bundled Python tools only prepare local drafts; if no writer exists, finish the local initialized draft and clearly mark `draft_ready`, with the precise remaining cloud setup. Never call a folder live/ready solely because template files exist. Do not modify sharing or send invitations merely because emails appear in the roster.
 
@@ -82,7 +82,7 @@ Without a cloud writer, complete local work and an explicit outbox proposal; rep
 
 ## Task tracking
 
-Follow [task-tracking.md](references/task-tracking.md) for the default two-tab Tasks Google Sheet, human validation, text step IDs, merged groups, owner chips and status dropdowns. Do not create a separate Work Plan. This schema supersedes legacy Control task fields for new or explicitly migrated projects; preserve unrelated legacy schemas unless migration is authorized.
+Use one Project Timeline Google Sheet with Timeline and Backlog tabs. Read [timeline.md](references/timeline.md) for the blank template, new-plan questions, scenario-specific updates and approved compact layout: full-width phase rows, D–I collapsed, frozen A–I, static calendar cells, and Deliverables last. Follow [task-tracking.md](references/task-tracking.md) for human validation, text step IDs, merged groups, owner chips and status dropdowns. Do not create a separate Work Plan. This schema supersedes legacy Control task fields for new or explicitly migrated projects; preserve unrelated legacy schemas unless migration is authorized.
 
 ## Meeting records
 
@@ -92,7 +92,7 @@ For meeting capture, minutes or summaries, follow [meeting-notes.md](references/
 
 All offline space is personal. Online personal and online team spaces are distinct. Credentials stay outside project Markdown and never enter chat. Use [workspace-model.md](references/workspace-model.md) for layout and [workflows.md](references/workflows.md) for meetings and role handoffs.
 
-One canonical content file per object; stable IDs link tasks, milestones, materials and deliverables. Tasks owns execution status; the Deliverables index owns output review/acceptance status, Calendar owns real schedules, STATUS.md is a dated summary. Personal focus or role membership does not assign a task.
+One canonical content file per object; stable IDs link tasks, milestones, materials and deliverables. Timeline owns execution status; the Deliverables index owns output review/acceptance status, Calendar owns real schedules, STATUS.md is a dated summary. Personal focus or role membership does not assign a task.
 
 For Google Docs writes through another connector, use current requiredRevisionId and targeted changes. Re-read on conflict at most twice, then preserve a proposal rather than force overwriting. Serialize Control writes through its steward until a verified coordinating writer exists. For shared Markdown, require a verified conditional write or a serialized writer; checking modifiedTime alone is not a lock. Local preparation scripts do not perform cloud writes.
 

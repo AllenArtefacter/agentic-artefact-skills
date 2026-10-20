@@ -30,4 +30,4 @@ Coverage: {{COVERAGE}}
 
 **Note:** {{NOTE_FILE_CHIP}}
 **Raw:** {{RAW_FILE_CHIPS}}
-**Tasks:** {{TASKS_FILE_CHIP}}
+**Timeline:** {{TASKS_FILE_CHIP}}

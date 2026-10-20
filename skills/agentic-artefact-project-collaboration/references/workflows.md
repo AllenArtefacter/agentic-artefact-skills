@@ -6,7 +6,7 @@ Follow [meeting-notes.md](meeting-notes.md): raw originals → linked individual
 
 ## Plans and tasks
 
-Use [task-tracking.md](task-tracking.md): Tasks contains confirmed work and Backlog contains unconfirmed entries from people or AI. Do not create Work Plan. Keep actual outputs at their canonical URLs and link them in Deliverables cells. A task detail document is optional and does not duplicate live status. Serialize accepted edits and verify them; local preparation scripts do not access Google.
+Use [task-tracking.md](task-tracking.md): Timeline contains confirmed work and Backlog contains unconfirmed entries from people or AI. Do not create Work Plan. Keep actual outputs at their canonical URLs and link them in Deliverables cells. A task detail document is optional and does not duplicate live status. Serialize accepted edits and verify them; local preparation scripts do not access Google.
 
 Calendar owns real meeting schedule and attendance; notes own discussion and action evidence. Sprint briefs describe goals/review/retro and link tasks via sprint_id. Workstream folders persist across sprints. Materials are inputs; workstream files contain analysis; managed output content belongs in Deliverables. See [workspace-model.md](workspace-model.md) and the skill folder guides before placing new work.
 

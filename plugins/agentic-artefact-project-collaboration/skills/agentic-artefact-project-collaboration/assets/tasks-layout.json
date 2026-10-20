@@ -60,5 +60,6 @@
     "TASK": "#FFFFFF",
     "MEETING": "#EAF3FC",
     "MILESTONE": "#F2ECFA"
-  }
+  },
+  "lifecycle": "Legacy two-tab layout only; do not use for new projects. See project-plan-layout.json."
 }

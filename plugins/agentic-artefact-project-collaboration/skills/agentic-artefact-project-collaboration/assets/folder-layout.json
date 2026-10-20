@@ -1,5 +1,5 @@
 {
-  "format_version": 1,
+  "format_version": 2,
   "default_folders": [
     "00_Start_Here",
     "01_Management",
@@ -35,9 +35,9 @@
     },
     {
       "folder": "01_Management",
-      "title": "Tasks",
+      "title": "Project Timeline",
       "mime_type": "application/vnd.google-apps.spreadsheet",
-      "template": "tasks-layout.json"
+      "template": "project-plan-layout.json"
     },
     {
       "folder": "03_Deliverables",

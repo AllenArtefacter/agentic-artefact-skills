@@ -20,7 +20,7 @@ Operational guidance lives in this skill, including references/folder-guides/. B
 Project             native Google Doc: purpose, scope, roster and responsibilities
 STATUS              native Google Doc: dated overview
 00_Start_Here/      project index with canonical links
-01_Management/      Tasks Sheet (Tasks / Backlog) and decisions
+01_Management/      Project Timeline Sheet (Timeline / Backlog) and decisions
 02_Meetings/        internal/client/catchup records
 03_Deliverables/    outputs and reports
 04_Materials/       inputs and references
@@ -30,11 +30,11 @@ STATUS              native Google Doc: dated overview
 Local Markdown/JSON templates are draft inputs, not the cloud format. Workstreams, sprints and detailed risks can use management records; add optional folders only when needed. Existing layouts take precedence. Native Project/STATUS docs satisfy all context requirements below.
 
 
-Do not create a full folder hierarchy for every task. A lightweight task is a Tasks row; a complex task links a detail document in its workstream. Create subfolders only when actual materials justify them. Do not partition shared work into four disconnected consultant/DS/DA/DE silos.
+Do not create a full folder hierarchy for every task. A lightweight task is a Timeline row; a complex task links a detail document in its workstream. Create subfolders only when actual materials justify them. Do not partition shared work into four disconnected consultant/DS/DA/DE silos.
 
 ## Default task register
 
-Follow [task-tracking.md](task-tracking.md). Use Tasks / Backlog tabs with the specified eight columns and five status values. Do not create a separate Work Plan. Task IDs use taskId.stepId text; the legacy ID/status conventions below do not apply to the new task register.
+Follow [task-tracking.md](task-tracking.md). Use Timeline / Backlog tabs with their respective schemas and five status values. Do not create a separate Work Plan. Task IDs use taskId.stepId text; the legacy ID/status conventions below do not apply to the new task register.
 
 ## Optional and legacy Project Control records
 
@@ -44,7 +44,7 @@ Follow [task-tracking.md](task-tracking.md). Use Tasks / Backlog tabs with the s
 | Workstreams | Workstream IDs, owner and folder URL | Workstream README |
 | Milestones | Target, acceptance criteria, status | Deliverable IDs |
 | Sprints | Window, goal, owner, status | Sprint brief |
-| Tasks | Owner, reviewer, priority, status, deadline, dependencies | Source IDs, optional details, evidence |
+| Timeline | Owner, reviewer, priority, status, deadline, dependencies | Source IDs, optional details, evidence |
 | Deliverables folder / Deliverables Doc | Output index, owner, review/acceptance state, canonical file ID, task links | Deliverable content and submission evidence |
 | Materials folder / Materials Doc | Input index, source, version, owner, usage notes | Original files or controlled external links |
 | Meetings | Meeting IDs, date, type, notes URL | Calendar event and task/decision IDs |
@@ -65,7 +65,7 @@ A task can serve multiple deliverables; sprint may be empty. Long-lived workstre
 
 ## Status and editing responsibilities
 
-Current Tasks: TODO / DOING / PENDING / DONE / PARTIALLY DONE; approval is represented by Tasks versus Backlog. Record blockers and cancellation evidence in notes. Reopen with evidence and preserve why. Deliverables: draft → in_review → approved_internal → submitted → accepted; changes_requested returns to draft. Decisions: proposed → confirmed → superseded. Meeting draft is not confirmed evidence of agreement.
+Current Timeline: TODO / DOING / PENDING / DONE / PARTIALLY DONE; approval is represented by Timeline versus Backlog. Record blockers and cancellation evidence in notes. Reopen with evidence and preserve why. Deliverables: draft → in_review → approved_internal → submitted → accepted; changes_requested returns to draft. Decisions: proposed → confirmed → superseded. Meeting draft is not confirmed evidence of agreement.
 
 Person doing the work proposes progress and evidence; the designated Control steward serializes accepted sheet changes. Reviewer checks technical/quality completion; customer acceptance has an explicit source. This is a workflow ownership convention, not a technical mutex. Local preparation scripts do not access Google; check host connector capabilities separately.
 

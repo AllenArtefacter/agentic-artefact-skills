@@ -8,7 +8,7 @@
 
 ## 使用与编辑
 
-Sprint owner 维护目标；任务归属以 Control.Tasks.sprint_id 为准。
+Sprint owner 维护目标；任务归属以 Control.Timeline.sprint_id 为准。
 
 ## 状态与关联
 

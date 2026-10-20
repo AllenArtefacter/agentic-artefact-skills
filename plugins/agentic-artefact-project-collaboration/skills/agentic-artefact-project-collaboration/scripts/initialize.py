@@ -139,12 +139,12 @@ Project ID: {manifest['project_id']}
 |---|---|---|---|---|
 {roster}
 
-PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Tasks 表为准。
+PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Timeline 表为准。
 
 ## 项目入口
 
 团队目录：{b['team_folder']}
-当前进展：STATUS.md；任务：01_Management/Tasks（Google Sheets，Tasks / Backlog）；正式文件 ID：00_Start_Here/project.manifest.json。
+当前进展：STATUS.md；任务：01_Management/Project Timeline（Google Sheets，Timeline / Backlog）；正式文件 ID：00_Start_Here/project.manifest.json。
 
 ## 待确认
 
@@ -157,7 +157,7 @@ PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Tasks
 初始化草稿已准备（draft_ready）。云端部署与回读尚未完成。
 
 已填写项目目标、范围、验收标准和 {len(b['members'])} 位成员。
-待办：发布核心文件，配置 Tasks、目录索引与真实文件 ID，然后回读验收。
+待办：发布核心文件，配置 Project Timeline、目录索引与真实文件 ID，然后回读验收。
 
 {bullets(b['open_questions'])}
 """)
@@ -167,14 +167,14 @@ PM：{b['maintainer_person_id']}。人员以此表为准；任务归属以 Tasks
             'Local initialization draft. No folder files registered yet; verify cloud inventory before publishing.\n')
     (out / '00_Start_Here/Project Index.md').write_text(
         f'# Project Index\n\nProject: {b["project_name"]}\nFolder: {b["team_folder"]}\n\n'
-        'Local draft: cloud links pending. Publish Project, STATUS, Tasks, Materials and Deliverables, then register verified links here.\n')
+        'Local draft: cloud links pending. Publish Project, STATUS, Project Timeline, Materials and Deliverables, then register verified links here.\n')
     manifest['initialization_status'] = 'draft_ready'
     manifest['project_manager_person_id'] = b['maintainer_person_id']
     manifest['control_steward'] = None  # PM does not silently become an assigned table steward.
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     return {'output': str(out), 'mode': 'initialize', 'initialization_status': 'draft_ready',
             'member_count': len(b['members']), 'cloud_writes': False,
-            'remaining': 'Cloud deployment, canonical IDs and readback; verify Tasks and folder indexes.'}
+            'remaining': 'Cloud deployment, canonical IDs and readback; verify Project Timeline and folder indexes.'}
 
 
 def main():

@@ -16,8 +16,8 @@ Suggested Chinese wording:
 
 If the project is not bound, ask for its Drive folder link and only the missing identity fields (name, own email, responsibility). Reuse confirmed information instead of asking again. If Google is disconnected, include the host-specific illustrated connection instructions and say cloud reading/writing is pending; installation alone does not prove readiness. If the host is read-only, describe publishing as preparation pending a supported writer, not an available action. If a project is already bound and readable, suggest a relevant first action rather than restarting setup.
 
-Meeting processing preserves raw sources, creates linked notes/briefs and proposes actions to Backlog; explicit human confirmation moves actions to Tasks. Output updates maintain folder indexes and task links. These actions follow the existing authorization rules; example prompts do not grant blanket write permission. Do not promise background monitoring or automatic notifications. Mention limitations briefly when relevant, without turning the welcome into a technical checklist.
+Meeting processing preserves raw sources, creates linked notes/briefs and proposes actions to Backlog; explicit human confirmation moves actions to Timeline. Output updates maintain folder indexes and task links. These actions follow the existing authorization rules; example prompts do not grant blanket write permission. Do not promise background monitoring or automatic notifications. Mention limitations briefly when relevant, without turning the welcome into a technical checklist.
 
-When the user first encounters the project Tasks Sheet, also explain the two-tab confirmation workflow using [task-tracking.md](task-tracking.md#explain-the-tracker-to-users). Keep the initial installation welcome short; defer detailed column/status guidance until the tracker is available.
+When the user first encounters the Project Timeline Sheet, also explain the Timeline/Backlog confirmation workflow using [task-tracking.md](task-tracking.md#explain-the-tracker-to-users). Keep the initial installation welcome short; defer detailed column/status guidance until the tracker is available.
 
-任务表首次使用提示：“如果希望把 Backlog 中的任务放进 Tasks，可以直接和我说：把 Backlog 中的 XX 加入 Tasks。XX 可以是任务名称或 ID。”
+任务表首次使用提示：“如果希望把 Backlog 中的任务放进 Timeline，可以直接和我说：把 Backlog 中的 XX 加入 Timeline。XX 可以是任务名称或 ID。”

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.16.12 — 2026-10-20
+
+- Add a blank Project Timeline workbook with Timeline and Backlog; confirmed work is tracked directly in Timeline.
+- Define timeline creation questions, update scenarios, static calendar bars, D–I grouping and full-width event/phase styling.
+- Refine Backlog layout and approval flow; preserve existing IDs, sources and deliverables during explicitly approved migration.
+
 ## 0.16.11 — 2026-10-20
 
 - Structure minutes around core arguments, stakeholder/topic viewpoints, agreements, proposed actions and final verification items.

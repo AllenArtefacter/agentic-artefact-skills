@@ -6,7 +6,7 @@ These are reusable instructions inside the skill, never project-folder READMEs. 
 |---|---|---|
 | Root: Project, STATUS | [workspace-model](../workspace-model.md), [project metadata](../project-metadata.md) | Confirm context changes; refresh dated status after meaningful work |
 | 00_Start_Here | [Start Here](00_Start_Here/README.md) | Maintain project-specific navigation |
-| 01_Management | [Management](01_Management/README.md) | Backlog → confirmation → Tasks → evidence |
+| 01_Management | [Management](01_Management/README.md) | Backlog → confirmation → Timeline → evidence |
 | 02_Meetings/raw | [Raw](02_Meetings/raw/README.md) | Preserve original source and provenance |
 | 02_Meetings/note | [Note](02_Meetings/note/README.md) | Source → note → brief → tasks/decisions |
 | 03_Deliverables | [Deliverables](04_Deliverables/README.md) | Draft → review → authorized release → acceptance |

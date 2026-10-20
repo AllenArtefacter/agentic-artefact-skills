@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "project_id": "{{PROJECT_ID}}",
   "project_name": "{{PROJECT_NAME}}",
   "team_root_id_or_url": "{{PROJECT_FOLDER}}",
@@ -26,13 +26,14 @@
   "sprint_enabled": false,
   "sync_mode": "on_demand",
   "authority": {
-    "task_status": "Tasks/Tasks",
+    "task_status": "Project Timeline/Timeline",
     "deliverable_status": "Deliverables folder/Deliverables Doc",
     "content": "canonical_file_id",
     "event_time": "Google Calendar",
     "project_membership": "Project.md/personnel table",
     "personal_identity": "Personal ME.md (declared source)",
-    "task_suggestions": "Tasks/Backlog"
+    "task_suggestions": "Project Timeline/Backlog",
+    "planned_schedule": "Project Timeline/Timeline"
   },
   "personal_settings": "Stored only in each member local workspace; do not list private folder IDs here.",
   "required_team_context": [

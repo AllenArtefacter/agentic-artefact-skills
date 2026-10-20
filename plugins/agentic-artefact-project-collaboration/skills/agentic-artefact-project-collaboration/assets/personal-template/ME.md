@@ -32,7 +32,7 @@ project_membership:
 
 1. 用 person_id 对应 Project.md 成员，交叉核对完整邮箱与已登记别名。
 2. person_id 尚未填写时，用完整邮箱匹配唯一成员，再使用其 person_id；重名或多个匹配请本人确认。
-3. 查 Control.Tasks：owner=我的 person_id；contributors 包含我；reviewer=我，分三组列出。
+3. 读取 Project Timeline 的 Timeline 页，以已确认的本人邮箱匹配 Owner 芯片；Backlog 中的候选任务单独列出。旧版 Control 表按实际 schema 读取。
 4. 未完成优先；blocked、到期/逾期和等待我 review 的事项分别标注。done/cancelled 按用户需求查历史。
 5. roles/workstream_ids 用于发现相关事项，不构成自动分配；相关但未分配的任务单独列出。
 6. owner/邮箱冲突、账号使用他人身份或职责变化未确认时明确说明，不能静默改身份或认领任务。

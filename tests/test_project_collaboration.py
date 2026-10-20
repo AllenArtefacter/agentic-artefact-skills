@@ -28,7 +28,7 @@ class TemplateTests(unittest.TestCase):
                 with self.assertRaises(FileExistsError):s.scaffold(out,'wrong','other',space)
             manifest=json.loads((Path(tmp)/'team/00_Start_Here/project.manifest.json').read_text())
             self.assertEqual(manifest['project_name'],'客户 "AI"')
-            self.assertEqual(manifest['authority']['task_status'],'Tasks/Tasks')
+            self.assertEqual(manifest['authority']['task_status'],'Project Timeline/Timeline')
             team = Path(tmp)/'team'
             self.assertEqual({str(p.relative_to(team)) for p in team.rglob('*') if p.is_file()},
                 {'Project.md', 'STATUS.md', '00_Start_Here/project.manifest.json'})
