@@ -86,7 +86,7 @@ Use one Project Timeline Google Sheet with Timeline and Backlog tabs. Read [time
 
 ## Meeting records
 
-For meeting capture, minutes or summaries, follow [meeting-notes.md](references/meeting-notes.md). Use 02_Meetings/raw for unchanged originals and 02_Meetings/note for linked individual notes plus one running Meeting Briefs Doc. Each brief records Topics, Requirements, Difficulties, Options, Conclusions and Follow-up, with evidence-backed possible conflicts between meetings. Keep minutes concise: core arguments first, stakeholder-by-topic viewpoints, meeting agreements, proposed-action table, then items to verify. In business-lever discussions, separate Actionable drivers from explanation and scenario planning; use the meeting reference for evidence and scope boundaries.
+For meeting capture, minutes or summaries, follow [meeting-notes.md](references/meeting-notes.md). Use 02_Meetings/raw for unchanged originals and 02_Meetings/note for linked individual notes; keep the single running Meeting Briefs Doc directly in 02_Meetings. Each brief records Topics, Requirements, Difficulties, Options, Conclusions and Follow-up, with evidence-backed possible conflicts between meetings. Keep minutes concise: core arguments first, stakeholder-by-topic viewpoints, meeting agreements, proposed-action table, then items to verify. In business-lever discussions, separate Actionable drivers from explanation and scenario planning; use the meeting reference for evidence and scope boundaries.
 
 ## Common rules
 

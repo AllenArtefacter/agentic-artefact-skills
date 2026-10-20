@@ -9,7 +9,7 @@ Use for internal, client and catchup meetings within an explicitly identified Ar
   raw/                 Original recordings, transcripts, chat exports and source files
   note/
     YYYY-MM-DD Topic   One native Google Doc per meeting
-    Meeting Briefs     One native Google Doc covering every recorded meeting
+  Meeting Briefs       One native Google Doc covering every recorded meeting
 ```
 
 Keep raw originals unchanged and in their source formats; a native Doc is acceptable if that is the received source. Do not translate, correct or overwrite raw material. Store derived notes separately. For existing projects, obtain confirmation for the concrete migration; reuse IDs and move rather than duplicate. Preserve links and unrelated parents. Retry by recorded IDs, not names alone. Never move a user-provided reference document merely because it was supplied as a style example. If an original remains outside the project boundary, use only an explicitly authorized source or link and explain the exception; never follow its parent or other links automatically.
@@ -48,7 +48,7 @@ When the meeting raises business levers or actions, treat **Actionable drivers**
 
 ## Meeting Briefs: project-wide chronology
 
-Maintain exactly one canonical Meeting Briefs document in note. For every meeting, add or update an entry keyed by meeting ID, ordered by date. Include date, note link, raw link, review status, and all six fields: Topics, Requirements, Difficulties, Options, Conclusions, Follow-up. Corrections update the same entry; they do not create a second meeting. Do not erase earlier meetings when adding new ones. Link task IDs rather than maintaining a separate live task-status table.
+Maintain exactly one canonical Meeting Briefs document directly in 02_Meetings, alongside raw/ and note/, never inside note/. For every meeting, add or update an entry keyed by meeting ID, ordered by date. Include date, note link, raw link, review status, and all six fields: Topics, Requirements, Difficulties, Options, Conclusions, Follow-up. Corrections update the same entry; they do not create a second meeting. Do not erase earlier meetings when adding new ones. Link task IDs rather than maintaining a separate live task-status table.
 
 For an existing project, enumerate scoped meeting records to establish coverage. If some meetings are unavailable, label missing coverage; do not claim complete history. Unknown dates go in an undated section, not an invented position in the timeline.
 

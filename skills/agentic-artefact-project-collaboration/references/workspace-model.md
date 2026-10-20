@@ -83,4 +83,4 @@ Personal ME.md establishes identity and individual focus; team Project.md / STAT
 
 ## Meeting layout
 
-Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document. Create the brief when there is real meeting content; do not publish blank templates.
+Use 02_Meetings/raw and 02_Meetings/note. Follow [meeting-notes.md](meeting-notes.md) for source-linked notes and the single running Meeting Briefs document directly in 02_Meetings (not note/). Create the brief when there is real meeting content; do not publish blank templates.

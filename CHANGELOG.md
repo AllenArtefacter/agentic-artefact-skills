@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.18 — 2026-10-20
+
+- Place the canonical Meeting Briefs Doc directly in 02_Meetings; note/ contains individual meeting notes only.
+
 ## 0.16.17 — 2026-10-20
 
 - Remove the separate Decisions document/index from Management guidance; maintain decisions in meeting notes and Meeting Briefs.
