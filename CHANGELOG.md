@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.14 — 2026-10-20
+
+- Proactively propose relevant checkpoints and meetings when drafting a timeline, including timing, purpose, expected evidence and dependencies.
+- Distinguish asynchronous gates from meetings and proposed events from agreed or booked commitments.
+
 ## 0.16.13 — 2026-10-20
 
 - Remove the original-task-link column from Backlog and its blank template; keep meeting sources in Description and outputs in Deliverables.

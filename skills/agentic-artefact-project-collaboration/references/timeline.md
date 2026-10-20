@@ -56,12 +56,29 @@ Read existing Project, STATUS, Project Timeline and relevant agreements first. R
 | Calendar and effort | Workweek, holidays, part-time availability, parallel work, elapsed span versus working effort | Use a disclosed draft assumption only; never silently assume all people are full-time |
 | Fixed commitments | Client reviews, acceptance gates, contractual dates, scheduled events; which dates are immovable | Mark proposed dates as unconfirmed, outside the agreed live schedule |
 | Ownership and dependencies | Internal accountable owner, client/vendor inputs, preceding IDs and dependency meaning | Keep owner TBD; external contributor is a dependency, not an internal owner |
-| Task mapping and planning level | Which Timeline map to each package; detail appropriate for timeline; unapproved Backlog candidates | Do not turn every small step into a timeline row or silently promote Backlog |
+| Task mapping and planning level | Which confirmed tasks map to each package; detail appropriate for timeline; unapproved Backlog candidates | Do not turn every small step into a timeline row or silently promote Backlog |
 | Approval and baseline | Who validates scope/dates, whether an approved baseline already exists, what change history is needed | Publish only the approved portion; retain unresolved items in Backlog/draft |
 
-Offer a compact proposal: scope/work-package outline, major dates, dependencies, unresolved assumptions and the exact file/tab changes. Ask for confirmation once the proposal is reviewable. A user-approved plan or previously confirmed answers need not be approved again. A request for an empty template does not require project facts and does not authorize a live schedule.
+Offer a compact proposal: scope/work-package outline, major dates, proposed checkpoints and meetings, dependencies, unresolved assumptions and the exact file/tab changes. Ask for confirmation once the proposal is reviewable. A user-approved plan or previously confirmed answers need not be approved again. A request for an empty template does not require project facts and does not authorize a live schedule.
 
 If the user requests a recommended schedule, derive a local draft using explicitly labeled assumptions. Do not write estimates into the confirmed Timeline as commitments before validation. Creating a plan does not send calendar invitations or notify participants.
+
+## Propose checkpoints and meetings proactively
+
+When asked to create a project timeline, propose suitable checkpoints and meetings as part of the first draft, even if the user supplied only tasks and dates. Derive them from phase outcomes, decisions needed, dependencies, delivery risks and team availability. Reuse existing booked events and agreed gates before proposing additions; do not insert a fixed meeting cadence or every event below by default.
+
+- **Checkpoint:** a measurable readiness or decision gate, such as data readiness, agreed requirements, evaluation results, handoff readiness or delivery acceptance. State what must be available and what decision or next step it enables. A checkpoint may be asynchronous; it does not automatically require a meeting.
+- **Meeting:** a conversation needed to gather information, resolve a decision or coordinate people, such as kickoff, business interviews, solution review, blocker resolution, handoff or final presentation. State its purpose and expected output. A held meeting does not prove its checkpoint passed.
+- Suggest cadence only when justified by project duration, uncertainty or coordination needs. Combine a meeting with its checkpoint in one linked event when appropriate rather than duplicating it. Schedule handoff/review before a person's availability ends and allow preparation/follow-up time.
+
+Present a compact proposal alongside the work plan:
+
+| Proposed event | Meeting or checkpoint | Suggested date/window | Purpose / expected decision or evidence | Related task/dependency |
+|---|---|---|---|---|
+
+Use relative timing when dates are unknown (for example, after interviews and before solution design). Label estimates and tentative dates as proposed; do not describe them as booked or agreed. Suggest required participant roles only when useful and distinguish them from confirmed attendees; do not add a Participants column or assign meeting owners. Keep meeting Owner blank. Checkpoint owners must be confirmed internal members or TBD.
+
+For a local draft or an explicitly requested TEST proposal, include proposed events visibly marked [PROPOSED] with concise assumptions. In a live agreed Timeline, put unconfirmed events in Backlog until approved; approval moves them into Timeline with stable IDs and the specified meeting/milestone colors. Status is progress, not proposal approval. Ask the user to confirm or adjust the proposed events together with the rest of the draft, rather than making them invent the meeting plan from scratch. A request for a blank template leaves all event rows empty. Calendar event creation and invitations remain a separate explicit authorization.
 
 ## Updating: classify the request before editing
 
