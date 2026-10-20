@@ -1,17 +1,3 @@
-# 06_Decisions_Risks
+# Legacy Decisions / Risks folder
 
-用途：决策和风险依据。
-
-## 存放与主记录
-
-复杂事项的详细记录；状态和负责人分别在 Control.Decisions / Risks。
-
-## 使用与编辑
-
-决策者确认决策；风险 owner 更新应对，不能由 agent 把猜测标成 accepted。
-
-## 状态与关联
-
-每项注明受影响 TASK / DEL / MS，范围变更写明成本和时间影响。
-
-创建新对象时使用稳定 ID，登记主文件链接；不要按名称建立第二份权威记录。模板文件不是已发生的项目事实。
+Do not create this folder or a separate Decisions register in new projects. Record decisions in the relevant meeting note and Meeting Briefs, with source, confirmation scope and supersession history. Record current project blockers/risks in STATUS. For existing folders, read and preserve unique history before any explicitly authorized migration or removal. Do not invent meeting provenance for decisions made in chat or other sources.

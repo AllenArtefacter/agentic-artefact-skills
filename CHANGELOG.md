@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.16.17 — 2026-10-20
+
+- Remove the separate Decisions document/index from Management guidance; maintain decisions in meeting notes and Meeting Briefs.
+- Preserve unique historical decisions before authorized legacy cleanup.
+
 ## 0.16.16 — 2026-10-20
 
 - Add deterministic natural-week date generation and regression checks for partial weeks and year boundaries.

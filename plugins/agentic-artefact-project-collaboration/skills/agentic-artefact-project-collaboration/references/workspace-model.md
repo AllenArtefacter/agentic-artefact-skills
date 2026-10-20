@@ -20,7 +20,7 @@ Operational guidance lives in this skill, including references/folder-guides/. B
 Project             native Google Doc: purpose, scope, roster and responsibilities
 STATUS              native Google Doc: dated overview
 00_Start_Here/      project index with canonical links
-01_Management/      Project Timeline Sheet (Timeline / Backlog) and decisions
+01_Management/      Project Timeline Sheet (Timeline / Backlog)
 02_Meetings/        internal/client/catchup records
 03_Deliverables/    outputs and reports
 04_Materials/       inputs and references
@@ -48,7 +48,7 @@ Follow [task-tracking.md](task-tracking.md). Use Timeline / Backlog tabs with th
 | Deliverables folder / Deliverables Doc | Output index, owner, review/acceptance state, canonical file ID, task links | Deliverable content and submission evidence |
 | Materials folder / Materials Doc | Input index, source, version, owner, usage notes | Original files or controlled external links |
 | Meetings | Meeting IDs, date, type, notes URL | Calendar event and task/decision IDs |
-| Decisions | Confirmed/proposed/superseded state and decision owner | Rationale and source |
+| Decisions within meeting notes / Meeting Briefs | Confirmed/proposed/superseded state and decision owner | Rationale and source |
 | Risks | Owner, open/mitigating/closed state, response | Analysis and affected IDs |
 
 Prefer a native Sheet for structured tracking; use a native Docs table if Sheets is unavailable. Do not create every optional tab for a small project. The CSVs under skill assets/control-seed are initialization headers only. Once the Google Sheet is registered, retire them as live records. Text documents do not duplicate live status. A report or sprint review may contain historical status but must label its as_of time.
