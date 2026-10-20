@@ -32,11 +32,14 @@
         "date_slots": 20,
         "workdays_per_week": 5,
         "date_headers": "literal typed dates; blank in template",
-        "week_labels": "relative project weeks; actual week starts added on population",
+        "week_labels": "Monday start date; optional sequential display label only",
         "formulas": false,
         "formula_conditional_formats": false,
         "bar_mode": "static fills and literal event markers",
-        "holidays_configured": false
+        "holidays_configured": false,
+        "week_alignment": "natural calendar week, Monday through Sunday in project timezone",
+        "first_week": "Monday containing project start date",
+        "working_day_view": "Monday\u2013Friday; retain holiday slots and natural week boundaries"
       },
       "column_widths_px": [
         75,

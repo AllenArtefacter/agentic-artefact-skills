@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.15 — 2026-10-20
+
+- Align timeline weeks to Monday–Sunday calendar weeks, including partial starting weeks, holidays and year boundaries; preserve actual task dates.
+
 ## 0.16.14 — 2026-10-20
 
 - Proactively propose relevant checkpoints and meetings when drafting a timeline, including timing, purpose, expected evidence and dependencies.
