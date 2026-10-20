@@ -87,8 +87,7 @@
         "Owner",
         "Deadline",
         "Status",
-        "Deliverables",
-        "Source task"
+        "Deliverables"
       ],
       "rows": [],
       "approval": "pending human confirmation",
@@ -103,8 +102,7 @@
         155,
         95,
         135,
-        230,
-        110
+        230
       ],
       "freeze": {
         "rows": 1,

@@ -42,7 +42,7 @@ Timeline columns, in order:
 
 ### Existing files and TEST copies
 
-Use the confirmed canonical file ID, not the default name, to identify a live workbook. Never rename or modify another person's Project Plan merely to match this convention. When the user requests a separate test, create **Project Timeline — TEST** in the authorized project folder and keep original files untouched. Include existing Timeline/Backlog only within the approved scope; preserve IDs, owner/status values, original meeting/deliverable links and person/file chips. Add a source-task deep link when copying. A test is a snapshot, not automatic synchronization or a replacement authority. Do not promote Backlog merely because it appears on the timeline.
+Use the confirmed canonical file ID, not the default name, to identify a live workbook. Never rename or modify another person's Project Plan merely to match this convention. When the user requests a separate test, create **Project Timeline — TEST** in the authorized project folder and keep original files untouched. Include existing Timeline/Backlog only within the approved scope; preserve IDs, owner/status values, original meeting/deliverable links and person/file chips. Do not add an original-task-link column when copying. A test is a snapshot, not automatic synchronization or a replacement authority. Do not promote Backlog merely because it appears on the timeline.
 
 ## Creating a timeline: resolve these questions
 

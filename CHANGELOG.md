@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.13 — 2026-10-20
+
+- Remove the original-task-link column from Backlog and its blank template; keep meeting sources in Description and outputs in Deliverables.
+
 ## 0.16.12 — 2026-10-20
 
 - Add a blank Project Timeline workbook with Timeline and Backlog; confirmed work is tracked directly in Timeline.
